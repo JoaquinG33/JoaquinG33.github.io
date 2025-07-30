@@ -1,0 +1,1506 @@
+:root {
+  /* DARK */
+
+  --fondo: rgb(15, 15, 15);
+  --fondoTarjetas: #ededed;
+  --fondoTarjetas2: #1e1e1e;
+  --fondoFormulario: #2d2d2d79;
+  --titulos: #df223f;
+  --titulos2: #ae0000;
+  --texto1: rgb(255, 255, 255);
+  --texto2: #2f2f2f;
+}
+.lightMode {
+  --fondo: #f7f7f7;
+  --sombras: rgb(73, 73, 73);
+  --fondoTarjetas: #ffffff;
+  --fondoTarjetas2: #000000;
+  --fondoFormulario: #efefef;
+  --titulos: #df223f;
+  --titulos2: #cd0000;
+  --texto1: #000000;
+  transition: 120ms ease-in;
+}
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 500ms;
+}
+
+* {
+  transition: 120ms ease-in;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fondo);
+  margin: 0;
+}
+.darkModeSwitchContainer {
+  display: flex;
+  justify-self: end;
+  margin-bottom: -50px;
+}
+.buttonContainer {
+  width: fit-content;
+  padding: 10px;
+}
+#modeSwitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fondoTarjetas);
+  padding: 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+#modeSwitch svg:first-child {
+  display: none;
+}
+.lightMode #modeSwitch svg:last-child {
+  display: none;
+}
+.lightMode #modeSwitch svg:first-child {
+  display: block;
+}
+
+#flexLanding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+}
+html {
+  overflow-x: hidden;
+}
+
+.htmlPlanes {
+  overflow-y: hidden;
+}
+#logo {
+  opacity: 0;
+  max-width: 40%;
+  animation: transicionLogo 2s ease-in-out 0.3s normal forwards,
+    transicionLogoSombra 15s linear 7s infinite forwards;
+  pointer-events: none;
+}
+.tituloIndex,
+.tarjetaTitulo,
+.tituloPlanes {
+  pointer-events: none;
+}
+/* PAGINA PRINCIPAL */
+
+.tituloIndex {
+  opacity: 0;
+  color: var(--texto1);
+  /* border-left: 4px solid var(--texto1);
+  border-right: 4px solid var(--texto1);
+  border-radius: 10px; */
+  padding: 0px 5px 0 5px;
+  font-size: clamp(2rem, 15vw, 3.5rem);
+
+  animation: transicionTitulo 1s linear 0.8s, colorTitulo 1.5s linear 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  margin-left: 20px;
+  font-family: "Russo One", serif;
+}
+
+.textoDIV {
+  margin: 10px auto;
+}
+
+.tituloIndex::before {
+  content: "";
+  opacity: 0;
+  padding-right: 13px;
+  border-top: 4px solid var(--texto1);
+  border-left: 4px solid var(--texto1);
+  border-radius: 3px;
+  animation: bordeArriba 0.8s linear 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+.tituloIndex::after {
+  content: "";
+  opacity: 0;
+  padding-left: 13px;
+  border-radius: 3px;
+  border-bottom: 4px solid var(--texto1);
+  border-right: 4px solid var(--texto1);
+
+  animation: bordeAbajo 0.9s linear 1.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+a:not(.linkParrafos) {
+  color: var(--texto1);
+  text-decoration: none;
+  border-bottom: 4px solid var(--texto1);
+  padding: 1px;
+  border-radius: 10px;
+  transition: 150ms;
+}
+a:hover:not(.linkParrafos) {
+  color: var(--titulos);
+  border-radius: 0px;
+  border-bottom: 6px solid var(--titulos);
+  font-size: 3rem;
+  transition: 150ms;
+}
+
+.subtitulos {
+  color: var(--texto1);
+  font-size: 2.5rem;
+  font-family: "Russo One", serif;
+  text-align: center;
+}
+
+.parrafos {
+  opacity: 0;
+  animation: transicionTituloPlanes 1s ease-in 2s;
+  animation-fill-mode: forwards;
+  color: var(--texto1);
+  font-family: "Poppins", serif;
+  font-size: 1.3rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+b {
+  animation: transicionTituloPlanes 1s ease-in 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  color: var(--titulos);
+  font-weight: 900;
+  font-size: 1.7rem;
+}
+ul b {
+  animation: transicionTituloPlanes 1.2s ease-in 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  color: var(--titulos2);
+  font-weight: 900;
+  font-size: 1.7rem;
+}
+
+/*LISTA */
+
+#lista {
+  display: flex;
+  color: var(--texto1);
+  gap: 40px;
+  font-size: 2.5rem;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  list-style: none;
+}
+
+#lista :nth-of-type(1) {
+  opacity: 0;
+
+  animation: transicionLista1 0.8s linear 1.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+#lista :nth-of-type(2) {
+  opacity: 0;
+
+  animation: transicionLista1 0.8s linear 1.4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#lista :nth-of-type(3) {
+  opacity: 0;
+
+  animation: transicionLista1 0.8s linear 1.6s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#lista :nth-of-type(4) {
+  opacity: 0;
+
+  animation: transicionLista1 0.8s linear 1.8s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+/* KEYFRAMES */
+
+@keyframes transicionLogo {
+  0% {
+    scale: 1;
+    opacity: 0;
+  }
+
+  50% {
+    scale: 1.1;
+    opacity: 1;
+    filter: brightness(2000%) drop-shadow(0px 0px 5px var(--texto1));
+  }
+
+  100% {
+    filter: brightness(2000%) drop-shadow(0px 0px 5px #850000);
+    scale: 1.1;
+    opacity: 1;
+  }
+}
+
+@keyframes transicionLogoSombra {
+  0% {
+    filter: brightness(2000%) drop-shadow(0px 0px 5px #9e0000);
+    scale: 1.1;
+    opacity: 1;
+  }
+  25% {
+    filter: brightness(2000%) drop-shadow(0px 0px 10px #9e0000);
+    scale: 1.1;
+    opacity: 1;
+  }
+  50% {
+    filter: brightness(2000%) drop-shadow(0px 0px 4px #8f0000);
+    scale: 1.1;
+    opacity: 1;
+  }
+
+  75% {
+    filter: brightness(2000%) drop-shadow(0px 0px 10px #9e0000);
+    scale: 1.1;
+    opacity: 1;
+  }
+
+  100% {
+    filter: brightness(2000%) drop-shadow(0px 0px 5px #9e0000);
+    scale: 1.1;
+    opacity: 1;
+  }
+}
+
+@keyframes transicionTitulo {
+  from {
+    opacity: 0;
+    font-size: 3.2rem;
+  }
+  to {
+    opacity: 1;
+    font-size: 3.5;
+  }
+}
+@keyframes transicionTituloPlanes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes transicionLista1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bordeArriba {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bordeAbajo {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes colorTitulo {
+  from {
+  }
+  to {
+    color: var(--titulos);
+  }
+}
+@keyframes animacionTarjetas {
+  from {
+    transform: translateY(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes animacionTarjetas2 {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes colorTituloTarjetas {
+  from {
+  }
+  to {
+    color: var(--titulos);
+  }
+}
+@keyframes sombraTarjetas {
+  from {
+  }
+  to {
+    box-shadow: 8px 8px 15px var(--sombras);
+  }
+}
+
+/* PLANES */
+
+.explicacionPlanesFlex {
+  display: flex;
+}
+#tituloPlanesContainer {
+  position: relative;
+  bottom: 50px;
+  margin-bottom: -80px;
+}
+.tituloPlanes {
+  opacity: 0;
+  color: var(--texto1);
+  font-size: clamp(2rem, 15vw, 6rem);
+  animation: transicionTituloPlanes 1s ease-in 100ms,
+    colorTitulo 1s ease-in-out 1.5s;
+  animation-fill-mode: forwards;
+  font-family: "Russo One", serif;
+
+  text-align: center;
+  letter-spacing: 12px;
+}
+
+.tarjetasFlex {
+  opacity: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: var(--titulos);
+  clip-path: polygon(40% 0, 100% 0%, 60% 100%, 0% 100%);
+  animation: fondoPoligono 800ms ease-in 800ms,
+    openingTarjetas 800ms ease-in-out 3s;
+  animation-fill-mode: forwards;
+  padding-bottom: 30px;
+}
+
+@keyframes fondoPoligono {
+  from {
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes openingTarjetas {
+  from {
+  }
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    background-color: var(--fondo);
+    opacity: 1;
+  }
+}
+.tarjetas {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  color: var(--texto1);
+  border: 4px solid var(--texto1);
+  width: 450px;
+  height: 500px;
+  scale: 1;
+  background-color: var(--fondoTarjetas);
+  transition: border 200ms ease-in, scale 100ms ease-in;
+}
+.tarjetas:hover {
+  border: 4px solid var(--titulos);
+  filter: drop-shadow(1px 1px 10px var(--titulos2)) !important;
+  scale: 1.05;
+  transition: border 200ms ease-in, scale 100ms ease-in;
+}
+.hrListas {
+  position: relative;
+  width: 90%;
+  border: 3px solid var(--fondoTarjetas2);
+  border-radius: 3px;
+  margin: 30px 0px 20px 0px;
+  transition: border 500ms;
+}
+
+.tarjetas:hover .hrListas {
+  border-color: var(--titulos);
+}
+
+.tarjetas > .botonContainer {
+  margin: auto auto 15px auto;
+}
+
+.tarjetas:nth-of-type(1) {
+  animation: animacionTarjetas 600ms ease-in-out 1.5s,
+    sombraTarjetas 1s ease-in 4.5s;
+  animation-fill-mode: forwards;
+}
+
+.tarjetas:nth-of-type(2) {
+  animation: animacionTarjetas2 600ms ease-in-out 1.8s,
+    sombraTarjetas 1s ease-in 4.5s;
+  animation-fill-mode: forwards;
+}
+
+.tarjetas:nth-of-type(3) {
+  animation: animacionTarjetas 600ms ease-in-out 2.2s,
+    sombraTarjetas 1s ease-in 4.5s;
+  animation-fill-mode: forwards;
+}
+
+.tarjetaTitulo {
+  animation: colorTituloTarjetas 1s linear 3s;
+  animation-fill-mode: forwards;
+  border-bottom: 7px solid var(--titulos);
+  border-bottom-right-radius: 20px;
+
+  text-align: center;
+  background-color: var(--fondoTarjetas2);
+  font-family: "Russo One", serif;
+  font-size: 2rem;
+  letter-spacing: 10px;
+  margin: 0;
+  padding: 10px 0px 10px 0px;
+}
+
+#listaGeneral {
+  display: flex;
+  color: var(--texto1);
+
+  gap: 40px;
+  font-size: 2.5rem;
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+  list-style: none;
+  justify-content: center;
+}
+
+#listaGeneral :nth-of-type(1) {
+  opacity: 0;
+
+  animation: transicionLista1 0.8s linear 1.2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+#listaGeneral :nth-of-type(2) {
+  opacity: 0;
+
+  animation: transicionLista1 0.8s linear 1.4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#listaGeneral :nth-of-type(3) {
+  opacity: 0;
+
+  animation: transicionLista1 0.8s linear 1.6s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+#listaGeneral :nth-of-type(4) {
+  opacity: 0;
+
+  animation: transicionLista1 0.8s linear 1.8s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+#menuPlanes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1%;
+}
+
+.listaTarjeta {
+  color: var(--texto2);
+  font-family: "Poppins", serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  list-style: url("/img/icono-24.png");
+}
+
+.botonTarjeta {
+  color: var(--texto1);
+  font-size: 1.6rem;
+  font-family: "Russo One", serif;
+  letter-spacing: 2px;
+
+  filter: drop-shadow(1px 1px 4px rgb(116, 116, 116));
+  padding: 14px 50px;
+  border: 1px solid var(--titulos);
+
+  background: var(--titulos);
+  transition: 100ms ease-in-out;
+}
+.botonTarjeta:hover {
+  transition: 100ms linear;
+  color: #ffffff;
+  background: var(--titulos2);
+  filter: drop-shadow(2px 2px 7px rgb(121, 121, 121));
+  cursor: pointer;
+}
+
+.botonTarjeta:active {
+  background: rgb(149, 1, 31);
+  font-size: 1.5rem;
+  transition: 50ms linear;
+  filter: drop-shadow(4px 4px 10px rgb(121, 121, 121));
+}
+
+/* QUIEN SOY */
+.tituloQS {
+  opacity: 0;
+  color: var(--texto1);
+  font-size: clamp(2rem, 15vw, 6.5rem);
+  animation: transicionTituloPlanes 1.2s ease-in 300ms,
+    colorTitulo 1s ease-in-out 3.2s;
+
+  animation-fill-mode: forwards;
+  font-family: "Russo One", serif;
+  text-align: center;
+  letter-spacing: 12px;
+}
+
+#fotoPrincipal {
+  opacity: 0;
+  width: max-content;
+  height: 350px;
+  object-fit: contain;
+  transform: scale(1.7, 1.7) translateX(250px) translateY(50px);
+  animation: fondoPoligono 1s ease-in-out 1.5s,
+    fotoPrincipalAnimacion 1s ease-in-out 3s;
+  animation-fill-mode: forwards;
+}
+
+#fotoSecundaria {
+  padding-left: 10px;
+  border-radius: 50px;
+  height: 400px;
+  object-fit: contain;
+  animation: scrollImagen linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 45%;
+  animation-fill-mode: forwards;
+  filter: drop-shadow(4px 4px 8px var(--sombras));
+}
+@keyframes fotoPrincipalAnimacion {
+  from {
+  }
+  to {
+    transform: scale(1, 1);
+    border-radius: 50px;
+    box-shadow: 4px 4px 8px var(--sombras);
+  }
+}
+@keyframes scroll {
+  from {
+    opacity: 0;
+    scale: 0.5;
+    color: white;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    color: var(--titulos);
+  }
+}
+@keyframes scrollInverso {
+  from {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes scrollTexto {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes scrollImagen {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.tituloQSscroll {
+  color: var(--titulos);
+  font-size: 6rem;
+  font-family: "Russo One", serif;
+  text-align: center;
+  letter-spacing: 12px;
+}
+
+.delay {
+  color: red;
+}
+#parrafoGrid2 {
+  animation: scroll linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  animation-fill-mode: forwards;
+}
+.parrafosGrid {
+  opacity: 0;
+  color: var(--texto1);
+  font-family: "Poppins", serif;
+  width: 50dvw;
+  font-size: 1.7rem;
+  text-align: left;
+  letter-spacing: 2px;
+  border-left: 4px solid var(--titulos);
+  border-radius: 20px;
+  padding-left: 10px;
+  animation: transicionTituloPlanes 800ms ease-in 3.8s;
+  animation-fill-mode: forwards;
+}
+.linkParrafos {
+  color: var(--texto1);
+  font-style: italic;
+  text-decoration: none;
+
+  background-image: linear-gradient(
+    to top,
+    var(--titulos) 0.15em,
+    transparent 0.15em
+  );
+}
+
+.parrafosGrid::first-letter {
+  color: var(--titulos);
+  font-size: 6rem;
+  float: left;
+  line-height: 80px;
+}
+
+.parrafosGrid3 {
+  color: var(--texto1);
+  font-family: "Poppins", serif;
+  font-size: 1.6rem;
+  text-align: left;
+  letter-spacing: 2px;
+  border-right: 4px solid var(--titulos);
+  border-radius: 20px;
+  padding-right: 10px;
+  animation: scrollTexto linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 45%;
+  animation-fill-mode: forwards;
+}
+.parrafosGrid3::first-letter {
+  color: var(--titulos);
+  font-size: 6rem;
+  float: left;
+  line-height: 70px;
+}
+#gridContainerQS1 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 60dvw;
+  height: auto;
+  margin-bottom: 150px;
+}
+
+#gridContainerQS2 {
+  display: flex;
+  flex-direction: row;
+  width: 60dvw;
+  height: auto;
+  margin-bottom: 100px;
+}
+
+#imagenGrid1 {
+  /* background-color: rgba(88, 91, 47, 0.5); */
+  align-self: center;
+}
+
+#imagenGrid2 {
+  align-self: center;
+}
+
+#QSFlexContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: flex-start;
+  margin: 0 auto;
+  max-width: 90vw;
+  min-height: 100vh;
+  margin-bottom: 200px;
+}
+.tituloRS {
+  opacity: 0;
+  color: var(--titulos);
+  font-size: 6rem;
+  animation: scroll linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  animation-fill-mode: forwards;
+  font-family: "Russo One", serif;
+  text-align: center;
+  letter-spacing: 12px;
+}
+/* TARJETAS DE REDES SOCIALES */
+.redesSocialesContainer {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 70vh;
+  animation: scroll linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
+.instaCard,
+.ytCard,
+.tiktokCard {
+  /* border: 5px solid white; */
+  border-radius: 5%;
+  padding: 10px;
+  width: 80px;
+  height: 80px;
+  /* transition: width 500ms ease-in-out 100ms, height 300ms ease-in 500ms; */
+}
+.instaCard {
+  border: 2px solid transparent;
+
+  transition: border 350ms ease 800ms, width 300ms ease-in-out 550ms,
+    height 250ms ease-in 100ms;
+}
+.instaCard:hover {
+  border: 5px solid white;
+
+  width: auto;
+  height: 700px;
+  animation: backgroundGradiente 200ms linear 800ms;
+  animation-fill-mode: forwards;
+  transition: border 150ms ease 900ms, width 500ms ease-in-out 100ms,
+    height 250ms ease-in 800ms;
+}
+@keyframes backgroundGradiente {
+  0% {
+    background: linear-gradient(to right, transparent, transparent);
+  }
+  25% {
+    background: linear-gradient(to right, #833ab468, #fd1d1d41, #fcb04545);
+  }
+  40% {
+    background: linear-gradient(to right, #833ab459, #fd1d1d4e, #fcb0454f);
+  }
+  50% {
+    background: linear-gradient(to right, #833ab488, #fd1d1d64, #fcb0456c);
+  }
+  75% {
+    background: linear-gradient(to right, #833ab49e, #fd1d1d9b, #fcb04596);
+  }
+  85% {
+    background: linear-gradient(to right, #833ab4c1, #fd1d1dbe, #fcb045b9);
+  }
+  100% {
+    background: linear-gradient(to right, #8945b6, #fb3737, #fdb95a);
+  }
+}
+.instaCard:hover .tituloRSCards {
+  text-shadow: 2px 2px 1px black;
+  animation: transicionTituloPlanes 800ms ease 300ms;
+  animation-fill-mode: forwards;
+}
+.instaCard:hover .topCardFlex {
+  border-bottom: 4px solid white;
+  transition: 500ms ease;
+}
+.instaCard:hover .animacionContainer {
+  pointer-events: all;
+  animation: transicionTituloPlanes 700ms ease 1.2s;
+  animation-fill-mode: forwards;
+}
+.instaCard:hover #icoIG {
+  font-size: 3.5rem;
+  transition: 500ms ease-in;
+}
+.instaCard i {
+  color: white;
+  font-size: 8.2rem;
+  height: max-content;
+  padding: 2px;
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  border-radius: 30%;
+  transition: font-size 350ms ease 200ms;
+}
+#fotoPerfilIG {
+  height: 25dvh;
+  pointer-events: none;
+}
+
+.animacionContainer {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.topCardFlex {
+  display: flex;
+  gap: 30px;
+}
+.bottomCardFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  gap: 120px;
+}
+#botonVisitar {
+  font-family: "Poppins", serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+  padding: 10px 90px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: #63b8ee;
+  background: linear-gradient(to top, #63b8ee, #468ccf);
+}
+#botonVisitar:hover {
+  cursor: pointer;
+}
+#botonVisitar:active {
+  background: #559dca;
+  font-size: 1.5rem;
+  transition: font-size 150ms ease;
+}
+
+.tituloRSCardsContainer {
+  position: relative;
+  bottom: 10px;
+  text-align: center;
+  pointer-events: none;
+}
+.tituloRSCards {
+  font-family: "Poppins", serif;
+  color: white;
+  text-align: center;
+  opacity: 0;
+}
+.ytCard {
+  transition: background-color 300ms ease 550ms, border 150ms ease 900ms,
+    width 300ms ease-in-out 550ms, height 250ms ease-in 100ms;
+}
+.ytCard:hover {
+  border: 5px solid white;
+  background-color: rgb(235, 235, 235);
+  width: auto;
+  height: 700px;
+  transition: background-color 300ms ease 750ms, border 150ms ease 900ms,
+    width 500ms ease-in-out 100ms, height 250ms ease-in 800ms;
+}
+
+.ytCard i {
+  color: red;
+  font-size: 8rem;
+  padding: 2px;
+  transition: font-size 350ms ease 200ms;
+}
+
+.ytCard:hover .tituloRSCards {
+  text-shadow: 2px 2px 1px black;
+  animation: transicionTituloPlanes 800ms ease 300ms;
+  animation-fill-mode: forwards;
+}
+.ytCard:hover .topCardFlex {
+  border-bottom: 4px solid white;
+  transition: 500ms ease;
+}
+.ytCard:hover .animacionContainer {
+  pointer-events: all;
+  animation: transicionTituloPlanes 700ms ease 1.2s;
+  animation-fill-mode: forwards;
+}
+.ytCard:hover #icoYT {
+  font-size: 3.5rem;
+  transition: 500ms ease-in;
+}
+.ytCard i {
+  color: red;
+  font-size: 8.5rem;
+  height: max-content;
+  padding: 2px;
+  filter: drop-shadow(1px 1px 1px var(--fondo));
+  transition: font-size 350ms ease 200ms;
+}
+#fotoPerfilYT {
+  height: 24dvh;
+  border: 5px solid black;
+  padding: 10px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+#botonVisitarYT {
+  font-family: "Poppins", serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+  padding: 10px 90px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  background: black;
+}
+#botonVisitarYT:hover {
+  cursor: pointer;
+}
+#botonVisitarYT:active {
+  font-size: 1.5rem;
+  transition: font-size 150ms ease;
+}
+
+.tiktokCard {
+  border: 2px solid transparent;
+  transition: border 350ms ease 800ms, width 300ms ease-in-out 550ms,
+    height 250ms ease-in 100ms;
+}
+
+.tiktokCard:hover {
+  border: 5px solid white;
+  background-color: rgb(30, 30, 30);
+  width: auto;
+  height: 700px;
+  transition: width 500ms ease-in-out 100ms, height 250ms ease-in 800ms,
+    background-color 900ms ease 1s;
+}
+
+.tiktokCard:hover .tituloRSCards {
+  text-shadow: 2px 2px 1px black;
+  animation: transicionTituloPlanes 800ms ease 300ms;
+  animation-fill-mode: forwards;
+}
+.tiktokCard:hover .topCardFlex {
+  border-bottom: 4px solid white;
+  transition: 500ms ease;
+}
+.tiktokCard:hover .animacionContainer {
+  pointer-events: all;
+  animation: transicionTituloPlanes 700ms ease 1.2s;
+  animation-fill-mode: forwards;
+}
+.tiktokCard:hover #icoTT {
+  filter: drop-shadow(2px 3px 1px #00f2ea) drop-shadow(-2px -3px 1px #ff0050);
+  font-size: 3.5rem;
+  transition: 500ms ease-in, filter 300ms ease;
+}
+
+.tiktokCard i {
+  color: white;
+  font-size: 8.5rem;
+  height: max-content;
+  padding: 2px;
+
+  transition: font-size 350ms ease 200ms;
+}
+#fotoPerfilTT {
+  height: 24dvh;
+  border: 5px solid #ff0050;
+  border-radius: 50%;
+  pointer-events: none;
+  padding: 10px;
+}
+#icoTT {
+  filter: drop-shadow(5px 6px 1px #00f2ea) drop-shadow(-5px -6px 1px #ff0050);
+}
+
+#botonVisitarTT {
+  font-family: "Poppins", serif;
+  color: #ffffff;
+  font-size: 1.8rem;
+  padding: 10px 90px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: #ff0050;
+}
+#botonVisitarTT:hover {
+  cursor: pointer;
+}
+
+#botonVisitarTT:active {
+  background: #d30244;
+  font-size: 1.5rem;
+  transition: font-size 150ms ease;
+}
+
+/* CONTACTO */
+.contactoFlexContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.tituloContacto {
+  font-size: 6rem;
+  color: var(--titulos);
+  font-family: "Russo One", serif;
+  text-align: center;
+  letter-spacing: 12px;
+}
+
+.formularioContainer {
+  width: 100%;
+  height: 120%;
+  display: flex;
+  justify-content: center;
+}
+
+#formularioContacto {
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  border-top: 4px solid var(--titulos);
+  border-bottom: 4px solid var(--titulos);
+  padding: 0px 30px 0 30px;
+  border-radius: 20px;
+}
+#formularioContacto::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-image: url(img/logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(5px) opacity(50%);
+  width: 100%;
+  height: 100%;
+}
+
+.labelFormulario {
+  display: block;
+  font-family: "Poppins", serif;
+  font-size: 1.8rem;
+  color: var(--texto1);
+  margin: 30px 0px 10px 0px;
+  text-align: center;
+}
+#inputNombre,
+#inputApellido,
+#inputEdad,
+#inputAltura,
+#inputPeso,
+#inputDatos {
+  font-size: 1.6rem;
+  border-radius: 10px;
+  border: 5px whitesmoke solid;
+  font-weight: 500;
+  text-align: center;
+}
+
+.labelFormularioRadio {
+  font-family: "Poppins", serif;
+  font-size: 1.8rem;
+  color: var(--texto1);
+  margin-right: auto;
+}
+
+.inputExperienciaRadio {
+  position: relative;
+  margin-right: 70%;
+  bottom: 30px;
+}
+.tituloFormulario {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.labelFormularioCheck {
+  font-family: "Poppins", serif;
+  font-size: 2rem;
+  color: var(--texto1);
+  margin-right: auto;
+}
+
+#inputSi,
+#inputNo,
+#inputOtro,
+#inputBajarPeso,
+#inputFuerza,
+#inputMusculatura {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.inputExperienciaCheck {
+  margin-left: auto;
+  position: relative;
+  bottom: 30px;
+}
+#inputBotonConsulta {
+  margin: 30px auto 30px;
+}
+
+.preguntasRadio {
+  color: var(--texto1);
+}
+
+/* Email enviado */
+
+.emailContainer {
+  height: 80vh;
+}
+.parrafoEmail {
+  color: var(--texto1);
+  font-family: "Poppins", serif;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+@media only screen and (max-width: 600px) {
+  /* INDEX */
+  html {
+    overflow-x: auto;
+  }
+
+  .htmlPlanes {
+    overflow-y: auto;
+  }
+  .buttonContainer {
+    display: none;
+  }
+
+  #logo {
+    margin-top: 2vh;
+    animation: transicionLogo 2s ease-in-out 0.3s normal forwards,
+      transicionLogoSombra 15s linear 7s infinite forwards;
+  }
+  .tituloIndex {
+    margin: 0 auto;
+    width: 80%;
+
+    font-weight: 900;
+    transition: none;
+    animation: transicionTitulo 0.8s linear 0.8s, colorTitulo 2.5s linear 2s;
+    animation-fill-mode: forwards;
+    margin: 50px auto 1px;
+    letter-spacing: 5px;
+  }
+
+  .tituloIndex::before,
+  .tituloIndex::after {
+    display: none;
+  }
+
+  .textoDIV {
+    text-align: center;
+    word-wrap: unset;
+  }
+
+  #lista {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10vw;
+    font-size: 2.5rem;
+  }
+  #logo {
+    max-width: 90%;
+  }
+  #flexLanding {
+    margin-top: -5px;
+  }
+
+  /* PLANES */
+  .tituloPlanes {
+    letter-spacing: 5px;
+  }
+  .tarjetaTitulo {
+    letter-spacing: 5px;
+  }
+
+  #tituloPlanesContainer {
+    margin-top: 5vh;
+  }
+
+  .parrafos {
+    font-size: 2rem;
+    text-align: left;
+    letter-spacing: 1px;
+    line-height: 40px;
+    padding: 35px;
+  }
+  b {
+    font-size: 1.5rem;
+  }
+  .boldPlanes {
+    font-size: 2rem;
+  }
+
+  #explicacionPlanesFlex {
+    order: 1;
+    border-top: 5px solid var(--titulos);
+    border-bottom: 5px solid var(--titulos);
+    border-radius: 20px;
+  }
+  #contenedorFlex {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  #listaGeneral {
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10vw;
+    font-size: 2.5rem;
+  }
+
+  .tarjetasFlex {
+    clip-path: polygon(0 0, 100% 0, 100% 1%, 0 1%);
+    animation: fondoPoligono 1s ease-in 200ms,
+      openingTarjetas 2s ease-in-out 1.6s;
+
+    animation-fill-mode: forwards;
+    margin-bottom: 10vh;
+  }
+
+  .tarjetas:nth-of-type(1),
+  .tarjetas:nth-of-type(2),
+  .tarjetas:nth-of-type(3) {
+    opacity: 1;
+    animation: none;
+    border-radius: 10px;
+  }
+
+  .tarjetas {
+    height: auto;
+  }
+  .botonTarjeta {
+    padding: 2vh 20vw;
+    letter-spacing: 5px;
+    font-size: 1.8rem;
+  }
+
+  #menuPlanes {
+    align-items: center;
+    order: 2;
+  }
+
+  /* QUIEN SOY */
+  .tituloQS {
+    font-weight: 800;
+    line-height: 60px;
+  }
+
+  .tituloQSscroll {
+    font-size: 4.5rem;
+    letter-spacing: 4px;
+    font-weight: 800;
+    line-height: 60px;
+  }
+  #fotoPrincipal {
+    transform: scale(1.4, 1.4) translateX(0px) translateY(50px);
+  }
+  #QSFlexContainer {
+    max-width: 100%;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .parrafosGrid {
+    width: 80vw;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: left;
+    letter-spacing: 2px;
+    line-height: 35px;
+    padding: 30px 0 30px 0;
+    border-left: none;
+    border-top: 4px solid var(--titulos);
+    border-bottom: 4px solid var(--titulos);
+  }
+  #parrafoGrid1 {
+    position: relative;
+    right: 15%;
+    width: 80vw;
+  }
+  #parrafoGrid2 {
+    width: 80vw;
+    animation: scroll linear;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+    animation-fill-mode: forwards;
+  }
+  .parrafosGrid3 {
+    position: relative;
+    right: 13%;
+    width: 80vw;
+    line-height: 35px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 30px 0 30px 0;
+    border-right: none;
+    border-top: 4px solid var(--titulos);
+    border-bottom: 4px solid var(--titulos);
+    animation: scrollTexto linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
+    animation-fill-mode: forwards;
+  }
+  #fotoSecundaria {
+    display: none;
+  }
+
+  #gridContainerQS1 {
+    flex-direction: column;
+  }
+  .tituloRS {
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+  }
+  .redesSocialesContainer {
+    flex-direction: column;
+
+    gap: 200px;
+    align-items: center;
+    margin-bottom: 200px;
+  }
+
+  .tiktokCard,
+  .instaCard,
+  .ytCard {
+    transition: border 250ms ease 200ms, width 300ms ease-in-out 550ms,
+      height 250ms ease-in 100ms;
+    margin-right: 100px;
+  }
+  .tiktokCard:hover,
+  .instaCard:hover,
+  .ytCard:hover {
+    margin-left: 100px;
+  }
+
+  .topCardFlex {
+    gap: 2px;
+  }
+
+  /* CONTACTO */
+
+  .tituloContacto {
+    margin-top: 5vh;
+    letter-spacing: 5px;
+    padding: 10px;
+    font-size: 4rem;
+  }
+
+  .labelFormulario {
+    font-size: 2.3rem;
+    margin-top: 40px;
+  }
+  .labelFormularioRadio {
+    font-size: 2rem;
+  }
+  .labelFormularioCheck {
+    font-size: 2rem;
+  }
+
+  #inputNombre,
+  #inputApellido,
+  #inputEdad,
+  #inputAltura,
+  #inputPeso,
+  #inputDatos {
+    font-size: 1.7rem;
+  }
+  #inputSi,
+  #inputNo {
+    margin-left: 30px;
+  }
+  .tituloFormulario {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  #menuContacto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  #formularioContacto {
+    padding: 0px 5px 0px 5px;
+  }
+  /* Email enviado */
+
+  .emailContainer {
+    height: 60vh;
+  }
+  .parrafoEmail {
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .instaCard:hover,
+  .tiktokCard:hover {
+    width: 25dvw;
+  }
+  .ytCard:hover {
+    width: 26dvw;
+  }
+  .instaCard,
+  .tiktokCard,
+  .ytCard {
+    height: 17dvh;
+  }
+
+  #tituloPlanesContainer {
+    margin-bottom: -120px;
+  }
+  .tarjetasFlex {
+    margin-bottom: -50px;
+  }
+}
