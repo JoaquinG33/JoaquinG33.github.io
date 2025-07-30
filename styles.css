@@ -1,3 +1,6 @@
+/* Joaquín Guillén.  2025.  */
+
+
 :root {
   /* DARK */
 
@@ -10,17 +13,7 @@
   --texto1: rgb(255, 255, 255);
   --texto2: #2f2f2f;
 }
-.lightMode {
-  --fondo: #f7f7f7;
-  --sombras: rgb(73, 73, 73);
-  --fondoTarjetas: #ffffff;
-  --fondoTarjetas2: #000000;
-  --fondoFormulario: #efefef;
-  --titulos: #df223f;
-  --titulos2: #cd0000;
-  --texto1: #000000;
-  transition: 120ms ease-in;
-}
+
 @view-transition {
   navigation: auto;
 }
@@ -99,10 +92,7 @@ html {
 .tituloIndex {
   opacity: 0;
   color: var(--texto1);
-  /* border-left: 4px solid var(--texto1);
-  border-right: 4px solid var(--texto1);
-  border-radius: 10px; */
-  padding: 0px 5px 0 5px;
+   padding: 0px 5px 0 5px;
   font-size: clamp(2rem, 15vw, 3.5rem);
 
   animation: transicionTitulo 1s linear 0.8s, colorTitulo 1.5s linear 1s;
@@ -758,7 +748,7 @@ ul b {
 }
 
 #imagenGrid1 {
-  /* background-color: rgba(88, 91, 47, 0.5); */
+ 
   align-self: center;
 }
 
@@ -800,12 +790,12 @@ ul b {
 .instaCard,
 .ytCard,
 .tiktokCard {
-  /* border: 5px solid white; */
+ 
   border-radius: 5%;
   padding: 10px;
   width: 80px;
   height: 80px;
-  /* transition: width 500ms ease-in-out 100ms, height 300ms ease-in 500ms; */
+  
 }
 .instaCard {
   border: 2px solid transparent;
