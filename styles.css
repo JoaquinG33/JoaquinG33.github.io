@@ -1308,7 +1308,7 @@ ul b {
 
   .tarjetasFlex {
     clip-path: polygon(0 0, 100% 0, 100% 1%, 0 1%);
-    animation: fondoPoligono 1s ease-in 200ms,
+    animation: fondoPoligono 1s  200ms,
       openingTarjetas 2s ease-in-out 1.6s;
 
     animation-fill-mode: forwards;
