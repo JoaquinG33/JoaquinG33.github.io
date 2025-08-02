@@ -1329,9 +1329,11 @@ ul b {
   /* QUIEN SOY */
 
   .tituloQS {
-    
+    text-align: center;
+    text-align-last: center;
+    letter-spacing: 5px;
     font-weight: 800;
-    line-height: 60px;
+    line-height: 65px;
   }
 
   .tituloQSscroll {
