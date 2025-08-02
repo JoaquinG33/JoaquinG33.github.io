@@ -159,9 +159,11 @@ a:hover:not(.linkParrafos) {
   animation-fill-mode: forwards;
   color: var(--texto1);
   font-family: "Poppins", serif;
-  font-size: 1.3rem;
-  text-align: center;
-  letter-spacing: 2px;
+  font-size: 1.6rem;
+  text-align: justify;
+  line-height: 30px;
+  letter-spacing: 1px;
+  
 }
 b {
   animation: transicionTituloPlanes 1s ease-in 2s;
@@ -368,7 +370,7 @@ ul b {
 #tituloPlanesContainer {
   position: relative;
   bottom: 50px;
-  margin-bottom: -80px;
+  padding-bottom: 20px;
 }
 .tituloPlanes {
   opacity: 0;
@@ -396,6 +398,11 @@ ul b {
     openingTarjetas 800ms ease-in-out 3s;
   animation-fill-mode: forwards;
   padding-bottom: 30px;
+}
+.parrafosDiv{
+  margin: auto;
+  width: 60%;
+
 }
 
 @keyframes fondoPoligono {
@@ -1251,13 +1258,7 @@ ul b {
   }
   
   #flexLanding {
-    /* background-image: url(/img/logo.png);
-    background-position: center;
-    background-repeat: no-repeat;
     
-    background-clip:padding-box;
-    background-blend-mode:screen; */
-
     margin-top: -5px;
   }
 
@@ -1268,6 +1269,11 @@ ul b {
   .tarjetaTitulo {
     letter-spacing: 5px;
   }
+  .parrafosDiv{
+  margin: auto;
+  width: 90%;
+  
+}
 
   #tituloPlanesContainer {
     margin-top: 5vh;
