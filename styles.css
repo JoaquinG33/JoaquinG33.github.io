@@ -386,7 +386,8 @@ ul b {
 .tarjetasFlex {
   opacity: 0;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 60px;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: var(--titulos);
@@ -1324,9 +1325,11 @@ ul b {
 
   .tarjetas {
     height: auto;
+    width: 95%;
   }
   .botonTarjeta {
-    padding: 2vh 20vw;
+    
+   
     letter-spacing: 5px;
     font-size: 1.8rem;
   }
@@ -1422,6 +1425,9 @@ ul b {
     margin-top: 0;
     letter-spacing: 5px;
   }
+
+
+  /* TARJETAS */
   .redesSocialesContainer {
    
     flex-direction: column;
@@ -1431,25 +1437,165 @@ ul b {
     gap: 200px;
     align-items: center;
     margin-bottom: 100px;
+    animation: none;
   }
+.animacionContainer{
+  opacity: 1;
 
+}
   .tiktokCard,
   .instaCard,
   .ytCard {
+     
+  padding: 10px;
+  width: 90%;
+  height: 600px;
+    /* transition: border 250ms ease 200ms, width 300ms ease-in-out 550ms,
+      height 250ms ease-in 100ms; */
     
-    transition: border 250ms ease 200ms, width 300ms ease-in-out 550ms,
-      height 250ms ease-in 100ms;
-    margin-right: 100px;
+   
   }
-  .tiktokCard:hover,
-  .instaCard:hover,
-  .ytCard:hover {
-    margin-left: 100px;
+  
+  /* INSTAGRAM */
+  .instaCard{
+    
+    pointer-events: none;
+    border: 5px solid white;
+    background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   }
+  
 
   .topCardFlex {
-    gap: 2px;
+    opacity: 1;
+    animation: none;
+    gap: 5px;
   }
+  .instaCard .tituloRSCards {
+  
+  text-shadow: 2px 2px 1px black;
+  animation: none;
+  
+}
+.instaCard .topCardFlex {
+  border-bottom: 4px solid white;
+  transition: 500ms ease;
+}
+.instaCard .animacionContainer {
+  pointer-events: none;
+  animation: transicionTituloPlanes 700ms ease 1.2s;
+  animation-fill-mode: forwards;
+}
+.instaCard #icoIG {
+  font-size: 3.5rem;
+  transition: 500ms ease-in;
+}
+.instaCard i {
+   font-size: 3.5rem;
+  pointer-events: none;
+  
+  
+}
+#fotoPerfilIG {
+  height: 25dvh;
+  pointer-events: none;
+}
+
+.tituloRSCards{
+  margin-top: 20px;
+  font-size: 1.6rem;
+  opacity: 1;
+}
+/* YOUTUBE */
+.ytCard{
+    border: 5px solid white;
+  background-color: rgb(235, 235, 235);
+    pointer-events: none;
+    
+   
+  }
+  
+
+  
+  .ytCard .tituloRSCards {
+  
+  text-shadow: 2px 2px 1px black;
+  animation: none;
+  
+}
+.ytCard .topCardFlex {
+  border-bottom: 4px solid white;
+  transition: 500ms ease;
+}
+.ytCard .animacionContainer {
+  pointer-events: none;
+  animation: transicionTituloPlanes 700ms ease 1.2s;
+  animation-fill-mode: forwards;
+}
+.ytCard #icoYT {
+  font-size: 3.5rem;
+  transition: 500ms ease-in;
+}
+.ytCard i {
+   font-size: 3.5rem;
+  pointer-events: none;
+  
+  
+}
+#fotoPerfilYT {
+  height: 25dvh;
+  pointer-events: none;
+}
+
+/* TIKTOK */
+.tiktokCard{
+  border: 5px solid white;
+  background-color: rgb(30, 30, 30);
+    pointer-events: none;
+    
+   
+  }
+  
+
+  
+  .tiktokCard .tituloRSCards {
+  
+  text-shadow: 2px 2px 1px black;
+  animation: none;
+  
+}
+.tiktokCard .topCardFlex {
+  border-bottom: 4px solid white;
+  transition: 500ms ease;
+}
+.tiktokCard .animacionContainer {
+  pointer-events: none;
+  animation: transicionTituloPlanes 700ms ease 1.2s;
+  animation-fill-mode: forwards;
+}
+.tiktokCard #icoTT {
+  font-size: 3.5rem;
+  transition: 500ms ease-in;
+}
+.tiktokCard i {
+   font-size: 3.5rem;
+  pointer-events: none;
+  
+  
+}
+#fotoPerfilTT {
+  height: 25dvh;
+  pointer-events: none;
+}
+
+
 
   /* CONTACTO */
 
