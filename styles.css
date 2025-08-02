@@ -662,7 +662,7 @@ ul b {
 }
 .tituloQSscroll {
   color: var(--titulos);
-  font-size: 6rem;
+  font-size: clamp(2rem, 15vw, 6.5rem);
   font-family: "Russo One", serif;
   text-align: center;
   letter-spacing: 12px;
@@ -672,12 +672,18 @@ ul b {
   color: red;
 }
 #parrafoGrid2 {
+  margin: auto;
+  overflow-x: hidden;
+  width: 100%;
   animation: scroll linear;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
   animation-fill-mode: forwards;
 }
 .parrafosGrid {
+  margin: auto;
+  overflow-x: hidden;
+  width: 100%;
   opacity: 0;
   color: var(--texto1);
   font-family: "Poppins", serif;
@@ -769,7 +775,7 @@ ul b {
 .tituloRS {
   opacity: 0;
   color: var(--titulos);
-  font-size: 6rem;
+  font-size: clamp(2rem, 15vw, 6.5rem);
   animation: scroll linear;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
@@ -782,6 +788,7 @@ ul b {
 .redesSocialesContainer {
   display: flex;
   justify-content: space-evenly;
+ 
   min-height: 70vh;
   animation: scroll linear;
   animation-timeline: view();
@@ -1320,6 +1327,7 @@ ul b {
   }
 
   /* QUIEN SOY */
+
   .tituloQS {
     font-weight: 800;
     line-height: 60px;
@@ -1338,10 +1346,11 @@ ul b {
     max-width: 100%;
     align-items: center;
     padding: 10px;
+    
   }
 
   .parrafosGrid {
-    width: 80vw;
+    width: 90%;
     font-size: 1.5rem;
     font-weight: 500;
     text-align: left;
@@ -1353,21 +1362,27 @@ ul b {
     border-bottom: 4px solid var(--titulos);
   }
   #parrafoGrid1 {
-    position: relative;
-    right: 15%;
-    width: 80vw;
+    margin: 0 auto;
+   width: 100%;
   }
   #parrafoGrid2 {
-    width: 80vw;
+    width: 100%;
     animation: scroll linear;
     animation-timeline: view();
     animation-range: entry 20% cover 30%;
     animation-fill-mode: forwards;
   }
+
+  #parrafoGrid3{
+    width: 100%;
+  }
+
+  #gridContainerQS2{
+    width: 100%;
+  }
   .parrafosGrid3 {
-    position: relative;
-    right: 13%;
-    width: 80vw;
+    margin: 0 auto;
+    width: 90%;
     line-height: 35px;
     font-size: 1.5rem;
     font-weight: 500;
@@ -1380,11 +1395,12 @@ ul b {
     animation-range: entry 0% cover 15%;
     animation-fill-mode: forwards;
   }
-  #fotoSecundaria {
+  #imagenGrid2, #fotoSecundaria {
     display: none;
   }
 
   #gridContainerQS1 {
+    width: 100%;
     flex-direction: column;
   }
   .tituloRS {
@@ -1393,16 +1409,20 @@ ul b {
     letter-spacing: 5px;
   }
   .redesSocialesContainer {
+   
     flex-direction: column;
-
+     margin: auto;
+  overflow-x: hidden;
+  width: 100%;
     gap: 200px;
     align-items: center;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
   }
 
   .tiktokCard,
   .instaCard,
   .ytCard {
+    
     transition: border 250ms ease 200ms, width 300ms ease-in-out 550ms,
       height 250ms ease-in 100ms;
     margin-right: 100px;
