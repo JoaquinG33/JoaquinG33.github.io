@@ -235,11 +235,11 @@ ul b {
   50% {
     scale: 1.1;
     opacity: 1;
-    filter: brightness(2000%) drop-shadow(0px 0px 5px var(--texto1));
+    filter: brightness(100%) drop-shadow(0px 0px 5px var(--texto1));
   }
 
   100% {
-    filter: brightness(2000%) drop-shadow(0px 0px 5px #850000);
+    filter: brightness(100%) drop-shadow(0px 0px 5px #850000);
     scale: 1.1;
     opacity: 1;
   }
@@ -247,29 +247,29 @@ ul b {
 
 @keyframes transicionLogoSombra {
   0% {
-    filter: brightness(2000%) drop-shadow(0px 0px 5px #9e0000);
+    filter: brightness(100%) drop-shadow(0px 0px 5px #9e0000);
     scale: 1.1;
     opacity: 1;
   }
   25% {
-    filter: brightness(2000%) drop-shadow(0px 0px 10px #9e0000);
+    filter: brightness(100%) drop-shadow(0px 0px 10px #9e0000);
     scale: 1.1;
     opacity: 1;
   }
   50% {
-    filter: brightness(2000%) drop-shadow(0px 0px 4px #8f0000);
+    filter: brightness(100%) drop-shadow(0px 0px 4px #8f0000);
     scale: 1.1;
     opacity: 1;
   }
 
   75% {
-    filter: brightness(2000%) drop-shadow(0px 0px 10px #9e0000);
+    filter: brightness(100%) drop-shadow(0px 0px 10px #9e0000);
     scale: 1.1;
     opacity: 1;
   }
 
   100% {
-    filter: brightness(2000%) drop-shadow(0px 0px 5px #9e0000);
+    filter: brightness(100%) drop-shadow(0px 0px 5px #9e0000);
     scale: 1.1;
     opacity: 1;
   }
