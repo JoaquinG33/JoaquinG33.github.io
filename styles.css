@@ -1211,7 +1211,10 @@ ul b {
   }
 
   #logo {
+    /* opacity: 0;
+    animation: none; */
     margin:20px auto;
+    max-width: 60%;
     animation: transicionLogo 2s ease-in-out 0.3s normal forwards,
       transicionLogoSombra 15s linear 7s infinite forwards;
   }
@@ -1219,6 +1222,7 @@ ul b {
     margin: 0 auto;
     width: 90%;
     margin: auto;
+    
     font-weight: 800;
     transition: none;
     animation: transicionTitulo 0.8s linear 0.8s, colorTitulo 2.5s linear 2s;
@@ -1244,10 +1248,15 @@ ul b {
     margin-right: 10vw;
     font-size: 2.5rem;
   }
-  #logo {
-    max-width: 60%;
-  }
+  
   #flexLanding {
+    /* background-image: url(/img/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    background-clip:padding-box;
+    background-blend-mode:screen; */
+
     margin-top: -5px;
   }
 
