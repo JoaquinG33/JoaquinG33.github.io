@@ -1443,6 +1443,9 @@ ul b {
   opacity: 1;
 
 }
+#botonVisitarTT, #botonVisitar, #botonVisitarYT{
+  pointer-events: all;
+}
   .tiktokCard,
   .instaCard,
   .ytCard {
@@ -1457,7 +1460,7 @@ ul b {
   }
   
   /* INSTAGRAM */
-  .instaCard{
+  .instaCard:not(#botonVisitar){
     
     pointer-events: none;
     border: 5px solid white;
@@ -1510,7 +1513,7 @@ ul b {
 
 .tituloRSCards{
   margin-top: 20px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   opacity: 1;
 }
 /* YOUTUBE */
