@@ -1387,7 +1387,7 @@ ul b {
     line-height: 35px;
     font-size: 1.5rem;
     font-weight: 500;
-    padding: 0 0 30px 0;
+    padding: 30px 0 30px 0;
     border-right: none;
     border-top: 4px solid var(--titulos);
     border-bottom: 4px solid var(--titulos);
@@ -1442,10 +1442,11 @@ ul b {
   /* CONTACTO */
 
   .tituloContacto {
-    margin-top: 5vh;
+    margin: 20px auto;
+    
     letter-spacing: 5px;
     padding: 10px;
-    font-size: 4rem;
+    font-size: 4.5rem;
   }
 
   .labelFormulario {
@@ -1465,7 +1466,7 @@ ul b {
   #inputAltura,
   #inputPeso,
   #inputDatos {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
   #inputSi,
   #inputNo {
@@ -1483,6 +1484,10 @@ ul b {
     flex-wrap: wrap;
   }
   #formularioContacto {
+    border-top: 6px solid var(--titulos);
+  border-bottom: 6px solid var(--titulos);
+ 
+    width: 90%;
     padding: 0px 5px 0px 5px;
   }
   /* Email enviado */
