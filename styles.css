@@ -1211,20 +1211,21 @@ ul b {
   }
 
   #logo {
-    margin-top: 2vh;
+    margin:20px auto;
     animation: transicionLogo 2s ease-in-out 0.3s normal forwards,
       transicionLogoSombra 15s linear 7s infinite forwards;
   }
   .tituloIndex {
     margin: 0 auto;
-    width: 80%;
-
-    font-weight: 900;
+    width: 90%;
+    margin: auto;
+    font-weight: 800;
     transition: none;
     animation: transicionTitulo 0.8s linear 0.8s, colorTitulo 2.5s linear 2s;
     animation-fill-mode: forwards;
     margin: 50px auto 1px;
     letter-spacing: 5px;
+    line-height: 60px;
   }
 
   .tituloIndex::before,
@@ -1244,7 +1245,7 @@ ul b {
     font-size: 2.5rem;
   }
   #logo {
-    max-width: 90%;
+    max-width: 60%;
   }
   #flexLanding {
     margin-top: -5px;
