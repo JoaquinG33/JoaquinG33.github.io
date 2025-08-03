@@ -4,7 +4,7 @@
   /* DARK */
 
   --fondo: rgb(15, 15, 15);
-  --fondoTarjetas: #ededed;
+  --fondoTarjetas: #ffffff;
   --fondoTarjetas2: #1e1e1e;
   --fondoFormulario: #2d2d2d79;
   --titulos: #df223f;
@@ -419,19 +419,15 @@ a:hover:not(.linkParrafos) {
   flex-direction: column;
   margin-top: 50px;
   color: var(--texto1);
-  border: 4px solid var(--texto1);
+  border:none;
+  border-radius: 5px;
   width: 450px;
   height: 500px;
   scale: 1;
   background-color: var(--fondoTarjetas);
-  transition: border 200ms ease-in, scale 100ms ease-in;
+  transition: scale 100ms ease-in;
 }
-.tarjetas:hover {
-  border: 4px solid var(--titulos);
-  filter: drop-shadow(1px 1px 10px var(--titulos2)) !important;
-  scale: 1.05;
-  transition: border 200ms ease-in, scale 100ms ease-in;
-}
+
 .hrListas {
   position: relative;
   width: 90%;
@@ -472,7 +468,7 @@ a:hover:not(.linkParrafos) {
   animation-fill-mode: forwards;
   border-bottom: 7px solid var(--titulos);
   border-bottom-right-radius: 20px;
-
+  
   text-align: center;
   background-color: var(--fondoTarjetas2);
   font-family: "Russo One", serif;
@@ -547,27 +543,25 @@ a:hover:not(.linkParrafos) {
   font-size: 1.6rem;
   font-family: "Russo One", serif;
   letter-spacing: 2px;
-
-  filter: drop-shadow(1px 1px 4px rgb(116, 116, 116));
-  padding: 14px 50px;
-  border: 1px solid var(--titulos);
-
+   padding: 14px 50px;
+  border: none;
+  border-radius: 5px;
   background: var(--titulos);
   transition: 100ms ease-in-out;
 }
 .botonTarjeta:hover {
   transition: 100ms linear;
   color: #ffffff;
-  background: var(--titulos2);
-  filter: drop-shadow(2px 2px 7px rgb(121, 121, 121));
+  background: #ff2848;
+  
   cursor: pointer;
 }
 
 .botonTarjeta:active {
-  background: rgb(149, 1, 31);
+  background: var(--titulos2);
   font-size: 1.5rem;
   transition: 50ms linear;
-  filter: drop-shadow(4px 4px 10px rgb(121, 121, 121));
+  
 }
 
 /* QUIEN SOY */
