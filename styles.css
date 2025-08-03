@@ -71,9 +71,7 @@ html {
   overflow-x: hidden;
 }
 
-.htmlPlanes {
-  overflow-y: hidden;
-}
+
 #logo {
   opacity: 0;
   max-width: 40%;
@@ -133,8 +131,8 @@ a:not(.linkParrafos) {
   color: var(--texto1);
   text-decoration: none;
   border-bottom: 4px solid var(--texto1);
-  padding: 1px;
-  border-radius: 10px;
+  padding: 5px;
+ 
   transition: 150ms;
 }
 a:hover:not(.linkParrafos) {
@@ -579,7 +577,7 @@ a:hover:not(.linkParrafos) {
   font-size: clamp(4.5rem, 15vw, 6.5rem);
   animation: transicionTituloPlanes 500ms ease-in 300ms,
     colorTitulo 600ms ease-in-out 2s;
-
+  
   animation-fill-mode: forwards;
   font-family: "Russo One", serif;
   text-align: center;
@@ -810,7 +808,7 @@ a:hover:not(.linkParrafos) {
 .instaCard {
   border: 2px solid transparent;
 
-  transition: border 350ms ease 800ms, width 300ms ease-in-out 550ms,
+  transition: border 350ms ease 500ms, width 300ms ease-in-out 550ms,
     height 250ms ease-in 100ms;
 }
 .instaCard:hover {
@@ -820,7 +818,7 @@ a:hover:not(.linkParrafos) {
   height: 700px;
   animation: backgroundGradiente 200ms linear 800ms;
   animation-fill-mode: forwards;
-  transition: border 150ms ease 900ms, width 500ms ease-in-out 100ms,
+  transition: border 150ms ease 900ms, width 300ms ease-in-out 100ms,
     height 250ms ease-in 800ms;
 }
 @keyframes backgroundGradiente {
@@ -929,6 +927,7 @@ a:hover:not(.linkParrafos) {
 }
 .tituloRSCards {
   font-family: "Poppins", serif;
+  font-weight: 400;
   color: white;
   text-align: center;
   opacity: 0;
@@ -1006,7 +1005,7 @@ a:hover:not(.linkParrafos) {
 
 .tiktokCard {
   border: 2px solid transparent;
-  transition: border 350ms ease 800ms, width 300ms ease-in-out 550ms,
+  transition: border 150ms ease 600ms, width 300ms ease-in-out 550ms,
     height 250ms ease-in 100ms;
 }
 
@@ -1015,7 +1014,7 @@ a:hover:not(.linkParrafos) {
   background-color: rgb(30, 30, 30);
   width: auto;
   height: 700px;
-  transition: width 500ms ease-in-out 100ms, height 250ms ease-in 800ms,
+  transition: border 500ms ease 100ms, 500ms ease-in-out 100ms, height 250ms ease-in 800ms,
     background-color 900ms ease 1s;
 }
 
@@ -1088,7 +1087,7 @@ a:hover:not(.linkParrafos) {
   color: var(--titulos);
   font-family: "Russo One", serif;
   text-align: center;
-  letter-spacing: 12px;
+  letter-spacing: 5px;
 }
 
 .formularioContainer {
@@ -1156,7 +1155,7 @@ a:hover:not(.linkParrafos) {
 }
 .tituloFormulario {
   font-size: 2.4rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 .labelFormularioCheck {
   font-family: "Poppins", serif;
@@ -1194,6 +1193,7 @@ a:hover:not(.linkParrafos) {
 .parrafoEmail {
   color: var(--texto1);
   font-family: "Poppins", serif;
+  font-weight: 300;
   font-size: 2rem;
   line-height: 35px;
   text-align: center;
@@ -1367,7 +1367,7 @@ a:hover:not(.linkParrafos) {
   /* QUIEN SOY */
 
   .tituloQS {
-    
+    margin: 15px auto 15px auto;
     text-align: center;
     text-align-last: center;
     letter-spacing: 0;
@@ -1597,21 +1597,21 @@ a:hover:not(.linkParrafos) {
 
   .tituloContacto {
     margin: 20px auto;
-
+    font-weight: 400;
     letter-spacing: 2px;
     padding: 5px;
     font-size: 4.5rem;
   }
 
   .labelFormulario {
-    font-size: 2.3rem;
+    font-size: 1.7rem;
     margin-top: 40px;
   }
   .labelFormularioRadio {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .labelFormularioCheck {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   #inputNombre,
@@ -1629,7 +1629,7 @@ a:hover:not(.linkParrafos) {
   .tituloFormulario {
     font-size: 3rem;
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: 500;
   }
   #menuContacto {
     display: flex;
