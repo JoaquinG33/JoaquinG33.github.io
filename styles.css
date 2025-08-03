@@ -160,25 +160,20 @@ a:hover:not(.linkParrafos) {
   font-family: "Poppins", serif;
   font-size: 1.6rem;
   text-align: justify;
+  font-weight: 300;
   line-height: 30px;
   letter-spacing: 1px;
 }
-b {
-  animation: transicionTituloPlanes 1s ease-in 2s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-  color: var(--titulos);
-  font-weight: 900;
-  font-size: 1.7rem;
-}
-ul b {
+.boldPlanes{
   animation: transicionTituloPlanes 1.2s ease-in 2s;
   animation-fill-mode: forwards;
   opacity: 0;
-  color: var(--titulos2);
-  font-weight: 900;
+  color: var(--titulos);
+  font-weight: 700;
   font-size: 1.7rem;
 }
+
+
 
 /*LISTA */
 
@@ -186,6 +181,7 @@ ul b {
   display: flex;
   color: var(--texto1);
   gap: 40px;
+  
   font-size: 2.5rem;
   font-family: "Poppins", serif;
   font-weight: 400;
@@ -483,7 +479,7 @@ ul b {
   background-color: var(--fondoTarjetas2);
   font-family: "Russo One", serif;
   font-size: 2rem;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
   margin: 0;
   padding: 10px 0px 10px 0px;
 }
@@ -543,7 +539,7 @@ ul b {
   color: var(--texto2);
   font-family: "Poppins", serif;
   font-size: 1.3rem;
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: 2px;
   list-style: url("/img/icono-24.png");
 }
@@ -587,7 +583,7 @@ ul b {
   animation-fill-mode: forwards;
   font-family: "Russo One", serif;
   text-align: center;
-  letter-spacing: 12px;
+  letter-spacing: 5px;
 }
 
 #fotoPrincipal {
@@ -670,7 +666,7 @@ ul b {
   font-size: clamp(4.5rem, 15vw, 6.5rem);
   font-family: "Russo One", serif;
   text-align: center;
-  letter-spacing: 12px;
+  letter-spacing: 5px;
 }
 
 .delay {
@@ -695,7 +691,7 @@ ul b {
   font-family: "Poppins", serif;
   width: 50dvw;
   font-size: 1.7rem;
-  font-weight: 500;
+  font-weight: 300;
   
   text-align: left;
   letter-spacing: 1px;
@@ -729,7 +725,7 @@ ul b {
   font-family: "Poppins", serif;
   font-size: 1.7rem;
   text-align: left;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 35px;
   letter-spacing: 1px;
   border-right: 4px solid var(--titulos);
@@ -791,7 +787,7 @@ ul b {
   animation-fill-mode: forwards;
   font-family: "Russo One", serif;
   text-align: center;
-  letter-spacing: 12px;
+  letter-spacing: 5px;
 }
 /* TARJETAS DE REDES SOCIALES */
 .redesSocialesContainer {
@@ -1248,15 +1244,15 @@ ul b {
   }
   .tituloIndex {
     margin: 0 auto;
-    width: 90%;
+    width: 85%;
     margin: auto;
 
-    font-weight: 800;
+    font-weight: 400;
     transition: none;
     animation: transicionTitulo 0.8s linear 0.8s, colorTitulo 2.5s linear 2s;
     animation-fill-mode: forwards;
     margin: 50px auto 1px;
-    letter-spacing: 5px;
+    letter-spacing: 0;
     line-height: 60px;
   }
 
@@ -1283,7 +1279,14 @@ ul b {
 
   /* PLANES */
   .tituloPlanes {
-    letter-spacing: 5px;
+    letter-spacing: 3px;
+    font-weight: 400;
+  }
+  li{
+    font-weight: 500;
+  }
+  b{
+    font-weight: 300;
   }
   .tarjetaTitulo {
     letter-spacing: 5px;
@@ -1300,17 +1303,16 @@ ul b {
 
   .parrafos {
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 400;
     text-align: left;
     letter-spacing: 1px;
     line-height: 30px;
     padding: 15px;
   }
-  b {
-    font-size: 1.5rem;
-  }
+  
   .boldPlanes {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
   }
 
   #explicacionPlanesFlex {
@@ -1368,14 +1370,14 @@ ul b {
     
     text-align: center;
     text-align-last: center;
-    letter-spacing: 5px;
-    font-weight: 800;
+    letter-spacing: 0;
+    font-weight: 400;
     line-height: 65px;
   }
 
   .tituloQSscroll {
-    letter-spacing: 4px;
-    font-weight: 800;
+    letter-spacing: 0;
+    font-weight: 400;
     line-height: 60px;
   }
   #fotoPrincipal {
@@ -1391,7 +1393,7 @@ ul b {
   .parrafosGrid {
     width: 90%;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 400;
     text-align: left;
     letter-spacing: 1px;
     line-height: 28px;
@@ -1426,7 +1428,7 @@ ul b {
     width: 90%;
     line-height: 28px;
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 400;
     padding: 30px 0 30px 0;
     border-right: none;
     border-top: 4px solid var(--titulos);
@@ -1447,9 +1449,9 @@ ul b {
   }
   .tituloRS {
     font-size: 4.5rem;
-    font-weight: 800;
+    font-weight: 400;
     
-    letter-spacing: 5px;
+    letter-spacing: 0;
   }
 
   /* TARJETAS */
@@ -1648,7 +1650,7 @@ ul b {
   }
   .parrafoEmail{
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 400;
     text-align: left;
   }
   /* Email enviado */
