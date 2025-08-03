@@ -1642,8 +1642,13 @@ ul b {
     padding: 0px 5px 0px 5px;
   }
   .parrafoEmailDiv {
-    width: 90%;
+    width: 85%;
     margin: auto;
+  }
+  .parrafoEmail{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
   }
   /* Email enviado */
 
