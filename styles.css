@@ -676,7 +676,7 @@ a:hover:not(.linkParrafos) {
 }
 .parrafosGrid {
   margin: auto;
-  line-height: 35px;
+  line-height: 32px;
   width: 100%;
   opacity: 0;
   color: var(--texto1);
@@ -709,7 +709,8 @@ a:hover:not(.linkParrafos) {
   color: var(--titulos);
   font-size: 6rem;
   float: left;
-  line-height: 80px;
+  line-height: 30px;
+  padding: 20px 2px 10px 10px;
 }
 
 .parrafosGrid3 {
@@ -718,7 +719,7 @@ a:hover:not(.linkParrafos) {
   font-size: 1.7rem;
   text-align: left;
   font-weight: 300;
-  line-height: 35px;
+  line-height: 32px;
   letter-spacing: 1px;
   border-right: 4px solid var(--titulos);
   border-radius: 20px;
@@ -732,7 +733,8 @@ a:hover:not(.linkParrafos) {
   color: var(--titulos);
   font-size: 6rem;
   float: left;
-  line-height: 70px;
+  line-height: 30px;
+  padding: 20px 2px 10px 10px;
 }
 #gridContainerQS1 {
   display: flex;
@@ -1390,7 +1392,7 @@ a:hover:not(.linkParrafos) {
     font-weight: 400;
     text-align: left;
     letter-spacing: 1px;
-    line-height: 28px;
+    line-height: 25px;
     padding: 30px 0 30px 0;
     border-left: none;
     border-top: 4px solid var(--titulos);
@@ -1420,7 +1422,7 @@ a:hover:not(.linkParrafos) {
   .parrafosGrid3 {
     margin: 0 auto;
     width: 90%;
-    line-height: 28px;
+    line-height: 25px;
     font-size: 1.2rem;
     font-weight: 400;
     padding: 30px 0 30px 0;
