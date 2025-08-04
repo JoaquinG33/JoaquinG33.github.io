@@ -31,35 +31,7 @@ body {
   background-color: var(--fondo);
   margin: 0;
 }
-.darkModeSwitchContainer {
-  display: flex;
-  justify-self: end;
-  margin-bottom: -50px;
-}
-.buttonContainer {
-  width: fit-content;
-  padding: 10px;
-}
-#modeSwitch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--fondoTarjetas);
-  padding: 0;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-}
 
-#modeSwitch svg:first-child {
-  display: none;
-}
-.lightMode #modeSwitch svg:last-child {
-  display: none;
-}
-.lightMode #modeSwitch svg:first-child {
-  display: block;
-}
 
 #flexLanding {
   display: flex;
@@ -74,7 +46,7 @@ html {
 
 #logo {
   opacity: 0;
-  max-width: 40%;
+  width: 20%;
   animation: transicionLogo 2s ease-in-out 0.3s normal forwards,
     transicionLogoSombra 15s linear 7s infinite forwards;
   pointer-events: none;
@@ -90,7 +62,7 @@ html {
   opacity: 0;
   color: var(--texto1);
   padding: 0px 5px 0 5px;
-  font-size: clamp(4.5rem, 15vw, 3.5rem);
+  font-size: clamp(3.5rem, 15vw, 3.5rem);
 
   animation: transicionTitulo 1s linear 0.8s, colorTitulo 1.5s linear 1s;
   animation-timing-function: ease-in-out;
@@ -156,11 +128,13 @@ a:hover:not(.linkParrafos) {
   animation-fill-mode: forwards;
   color: var(--texto1);
   font-family: "Poppins", serif;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   text-align: justify;
   font-weight: 300;
-  line-height: 30px;
+  line-height: 27px;
   letter-spacing: 1px;
+  margin: auto;
+  width: 50%;
 }
 .boldPlanes{
   animation: transicionTituloPlanes 1.2s ease-in 2s;
@@ -357,7 +331,9 @@ a:hover:not(.linkParrafos) {
 /* PLANES */
 
 .explicacionPlanesFlex {
+  
   display: flex;
+
 }
 #tituloPlanesContainer {
   position: relative;
@@ -372,7 +348,7 @@ a:hover:not(.linkParrafos) {
     colorTitulo 1s ease-in-out 1.5s;
   animation-fill-mode: forwards;
   font-family: "Russo One", serif;
-
+  
   text-align: center;
   letter-spacing: 12px;
 }
@@ -381,7 +357,7 @@ a:hover:not(.linkParrafos) {
   opacity: 0;
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 40px;
   flex-direction: row;
   flex-wrap: wrap;
   background-color: var(--titulos);
@@ -390,6 +366,7 @@ a:hover:not(.linkParrafos) {
     openingTarjetas 800ms ease-in-out 3s;
   animation-fill-mode: forwards;
   padding-bottom: 30px;
+  
 }
 .parrafosDiv {
   margin: auto;
@@ -414,6 +391,7 @@ a:hover:not(.linkParrafos) {
   }
 }
 .tarjetas {
+  
   opacity: 0;
   display: flex;
   flex-direction: column;
@@ -581,7 +559,7 @@ a:hover:not(.linkParrafos) {
 #fotoPrincipal {
   opacity: 0;
   width: max-content;
-  height: 350px;
+  height: 300px;
   object-fit: contain;
   transform: scale(1.7, 1.7) translateX(250px) translateY(50px);
   animation: fondoPoligono 500ms ease-in-out 1.5s,
@@ -592,7 +570,7 @@ a:hover:not(.linkParrafos) {
 #fotoSecundaria {
   padding-left: 10px;
   border-radius: 50px;
-  height: 400px;
+  height: 300px;
   object-fit: contain;
   animation: scrollImagen linear;
   animation-timeline: view();
@@ -676,13 +654,14 @@ a:hover:not(.linkParrafos) {
 }
 .parrafosGrid {
   margin: auto;
-  line-height: 32px;
+  line-height: 27px;
   width: 100%;
+  
   opacity: 0;
   color: var(--texto1);
   font-family: "Poppins", serif;
-  width: 50dvw;
-  font-size: 1.7rem;
+  
+  font-size: 1.4rem;
   font-weight: 300;
   
   text-align: left;
@@ -716,10 +695,10 @@ a:hover:not(.linkParrafos) {
 .parrafosGrid3 {
   color: var(--texto1);
   font-family: "Poppins", serif;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   text-align: left;
   font-weight: 300;
-  line-height: 32px;
+  line-height: 27px;
   letter-spacing: 1px;
   border-right: 4px solid var(--titulos);
   border-radius: 20px;
@@ -740,7 +719,8 @@ a:hover:not(.linkParrafos) {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  width: 60dvw;
+  width: 80%;
+  
   height: auto;
   margin-bottom: 150px;
 }
@@ -748,7 +728,7 @@ a:hover:not(.linkParrafos) {
 #gridContainerQS2 {
   display: flex;
   flex-direction: row;
-  width: 60dvw;
+  width: 80%;
   height: auto;
   margin-bottom: 100px;
 }
@@ -786,8 +766,9 @@ a:hover:not(.linkParrafos) {
 /* TARJETAS DE REDES SOCIALES */
 .redesSocialesContainer {
   display: flex;
-  justify-content: space-evenly;
-
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
   min-height: 70vh;
   animation: scroll linear;
   animation-timeline: view();
@@ -798,23 +779,25 @@ a:hover:not(.linkParrafos) {
 .tiktokCard {
   border-radius: 5%;
   padding: 10px;
+  min-width: 80px;
   width: 80px;
   height: 80px;
 }
 .instaCard {
   border: 2px solid transparent;
 
-  transition: border 350ms ease 500ms, width 300ms ease-in-out 550ms,
+  transition: width 300ms ease-in-out 550ms, border 250ms ease 500ms, min-width 300ms ease-in-out 550ms,
     height 250ms ease-in 100ms;
 }
 .instaCard:hover {
   border: 5px solid white;
 
-  width: auto;
-  height: 700px;
+  min-width: 420px;
+  
+  height: 660px;
   animation: backgroundGradiente 200ms linear 800ms;
   animation-fill-mode: forwards;
-  transition: border 150ms ease 900ms, width 300ms ease-in-out 100ms,
+  transition: width 300ms ease-in-out 550ms, border 150ms ease 900ms, min-width 300ms ease-in-out 100ms,
     height 250ms ease-in 800ms;
 }
 @keyframes backgroundGradiente {
@@ -860,7 +843,7 @@ a:hover:not(.linkParrafos) {
 }
 .instaCard i {
   color: white;
-  font-size: 8.2rem;
+  font-size: 7.2rem;
   height: max-content;
   padding: 2px;
   background: #d6249f;
@@ -930,15 +913,15 @@ a:hover:not(.linkParrafos) {
 }
 .ytCard {
   transition: background-color 300ms ease 550ms, border 150ms ease 900ms,
-    width 300ms ease-in-out 550ms, height 250ms ease-in 100ms;
+    min-width 300ms ease-in-out 550ms, width 300ms ease-in-out 550ms, height 250ms ease-in 100ms;
 }
 .ytCard:hover {
   border: 5px solid white;
   background-color: rgb(235, 235, 235);
-  width: auto;
-  height: 700px;
-  transition: background-color 300ms ease 750ms, border 150ms ease 900ms,
-    width 500ms ease-in-out 100ms, height 250ms ease-in 800ms;
+ min-width: 420px;
+   height: 660px;
+  transition: width 300ms ease-in-out 550ms, background-color 300ms ease 750ms, border 150ms ease 900ms,
+    min-width 500ms ease-in-out 100ms, height 250ms ease-in 800ms;
 }
 
 .ytCard i {
@@ -1001,16 +984,17 @@ a:hover:not(.linkParrafos) {
 
 .tiktokCard {
   border: 2px solid transparent;
-  transition: border 150ms ease 600ms, width 300ms ease-in-out 550ms,
+  transition: min-width 300ms ease-in-out 550ms, border 150ms ease 600ms, width 300ms ease-in-out 550ms,
     height 250ms ease-in 100ms;
 }
 
 .tiktokCard:hover {
   border: 5px solid white;
   background-color: rgb(30, 30, 30);
-  width: auto;
-  height: 700px;
-  transition: border 500ms ease 100ms, 500ms ease-in-out 100ms, height 250ms ease-in 800ms,
+  min-width: 420px;
+  
+  height: 660px;
+  transition: min-width 300ms ease-in-out 550ms, border 500ms ease 100ms, 500ms ease-in-out 100ms, height 250ms ease-in 800ms,
     background-color 900ms ease 1s;
 }
 
@@ -1183,16 +1167,16 @@ a:hover:not(.linkParrafos) {
   color: var(--texto1);
 }
 .parrafoEmailDiv {
-  width: 50%;
+  width: 35%;
   margin: auto;
 }
 .parrafoEmail {
   color: var(--texto1);
   font-family: "Poppins", serif;
   font-weight: 300;
-  font-size: 2rem;
-  line-height: 35px;
-  text-align: center;
+  font-size: 1.3rem;
+  line-height: 27px;
+  text-align: left;
   letter-spacing: 1px;
 }
 
@@ -1217,6 +1201,8 @@ a:hover:not(.linkParrafos) {
   text-align: center;
   letter-spacing: 1px;
 }
+
+/* Celulares */
 @media only screen and (max-width: 600px) {
   /* INDEX */
   html {
@@ -1234,7 +1220,7 @@ a:hover:not(.linkParrafos) {
     /* opacity: 0;
     animation: none; */
     margin: 20px auto;
-    max-width: 60%;
+    width: 60%;
     animation: transicionLogo 2s ease-in-out 0.3s normal forwards,
       transicionLogoSombra 15s linear 7s infinite forwards;
   }
@@ -1300,6 +1286,7 @@ a:hover:not(.linkParrafos) {
   .parrafos {
     font-size: 1.2rem;
     font-weight: 400;
+    width: 90%;
     text-align: left;
     letter-spacing: 1px;
     line-height: 30px;
@@ -1663,6 +1650,16 @@ a:hover:not(.linkParrafos) {
     letter-spacing: 1px;
   }
 }
+
+/* Notebooks */
+/* @media only screen and (max-width: 1024px) {
+  
+  .tituloIndex{
+    border: 2px solid red;
+  }
+}  */
+
+/* Pantallas grandes */
 @media only screen and (min-width: 1200px) {
   .instaCard:hover,
   .tiktokCard:hover {
