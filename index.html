@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <rel="stylesheet" href="styles.css">
-    <title>Marcos Núñez fotografía</title>
-     </head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcos Núñez Fotografía</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
   <body>
-    <main></main>
+    <main>
+      <div class="iconos" id="iconosId">
+        <div class="menuDesplegableDiv" id="menuId">
+          <div class="menuDesplegableDivClick"></div>
+          <div class="bar1 desplegar"></div>
+          <div class="bar2 desplegar"></div>
+          <div class="bar3 desplegar"></div>
+          <div class="iconosMenuContainer">
+            <img
+              class="iconosMenu"
+              src="https://img.icons8.com/sf-regular-filled/48/noodles.png"
+              alt="icono-comida"
+              id="icoComida"
+            />
+            <img
+              class="iconosMenu"
+              src="https://img.icons8.com/sf-regular-filled/48/groups--v1.png"
+              alt="icono-gente"
+              id="icoGente"
+            />
+            <img
+              class="iconosMenu"
+              src="https://img.icons8.com/forma-light-filled/24/coniferous-tree.png"
+              alt="icono-arbol"
+              id="icoNaturaleza"
+            />
+            <img
+             class="iconosMenu"
+              src="https://img.icons8.com/fluency-systems-filled/48/city-buildings.png"
+              alt="icono-ciudad"
+              id="icoCiudad"
+            />
+
+          </div>
+        </div>
+
+        <!-- <div class="botonesDiv">
+          <button id="btnNaturaleza" class="boton">N</button>
+          <button id="btnCiudad" class="boton">C</button>
+          <button id="btnGente" class="boton">G</button>
+        </div> -->
+        <div class="tituloDiv">
+          <h1 class="titulo" id="tituloId">Marcos Núñez Fotografia</h1>
+        </div>
+        <div class="botonContactoDiv">
+          <a href="#prueba">
+            <img
+              src="https://img.icons8.com/fluency-systems-filled/48/user.png"
+              class="iconoContacto"
+              alt="user"
+          /></a>
+        </div>
+      </div>
+      <div class="flexContainerGlobal" id="containerId">
+        <div class="containerGaleria" id="galeriaId">
+          <div class="col">
+            <img class="ciudad foto global" src="/img/1.webp" loading="lazy" />
+            <img class="ciudad foto global" src="/img/12.webp" loading="lazy" />
+            <img class="comida foto global" src="/img/9.webp" loading="lazy" />
+            <img
+              class="naturaleza foto global"
+              src="/img/14.webp"
+              loading="lazy"
+            />
+            <img class="comida foto global" src="/img/8.webp" loading="lazy" />
+          </div>
+          <div class="col">
+            <img
+              class="naturaleza foto global"
+              src="/img/13.webp"
+              loading="lazy"
+            />
+            <img class="gente foto global" src="/img/11.webp" loading="lazy" />
+            <img class="comida foto global" src="/img/7.webp" loading="lazy" />
+            <img class="comida foto global" src="/img/10.webp" loading="lazy" />
+            <img class="ciudad foto global" src="/img/3.webp" loading="lazy" />
+          </div>
+          <div class="col">
+            <img
+              class="naturaleza foto global"
+              src="/img/5.webp"
+              loading="lazy"
+            />
+            <img class="ciudad foto global" src="/img/3.webp" loading="lazy" />
+            <img class="comida foto global" src="/img/6.webp" loading="lazy" />
+            <img
+              class="naturaleza foto global"
+              src="/img/14.webp"
+              loading="lazy"
+            />
+            <img class="ciudad foto global" src="/img/4.webp" loading="lazy" />
+          </div>
+        </div>
+      </div>
+      <div class="botonContainer">
+        <button id="btnVerTodo">ver más</button>
+      </div>
+      <div id="prueba">
+        <h2 class="headerPresentacion">Presentación</h2>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>
