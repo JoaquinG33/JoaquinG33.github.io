@@ -1,11 +1,16 @@
 :root {
-  --titulo: rgb(57, 57, 57);
+  
   --parrafo1: rgb(38, 38, 38);
   --naturalezaFondo: #cae8bd;
   --ciudadFondo: #eeeeee;
   --genteFondo: #ffddc8;
   --comidaFondo: #fff7d1;
- 
+
+
+  --titulo: black;
+  --colorFondo: #fffefc;
+  --fondoGaleria: #ffffff;
+  --colorBtn: rgb(0, 0, 0);
 }
 * {
   box-sizing: border-box;
@@ -14,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--colorFondo);
   /* background: #ffffff;
   background: radial-gradient(
     circle,
@@ -32,15 +38,15 @@ html {
 .bar1,
 .bar2,
 .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: var(--titulo);
+  width: 30px;
+  height: 4px;
+  background-color: var(--colorBtn);
   margin: 3px;
   transition: 0.4s;
 }
 
 .change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
+  transform: translate(0, 10px) rotate(-45deg);
 }
 
 .change .bar2 {
@@ -48,7 +54,7 @@ html {
 }
 
 .change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
+  transform: translate(0, -10px) rotate(45deg);
 }
 
 /* Galeria principal */
@@ -56,40 +62,34 @@ html {
 .titulo {
   font-size: 2.5rem;
   text-align: center;
-  font-family: "Times New Roman", Times, serif;
   transition: all 400ms;
   text-wrap: nowrap;
   color: var(--titulo);
-  letter-spacing: 0;
+  letter-spacing: -1px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  
 }
 .tituloDiv {
- display: flex;
- justify-content: center;
- align-content: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
   width: 33%;
   /* border: 2px solid red; */
 }
 .iconos {
- 
   position: sticky;
-  
+
   top: 0;
   width: 80%;
   margin: auto;
   z-index: 1;
   display: flex;
   justify-content: space-between;
-  
   background-color: rgb(255, 255, 255);
-  /* border: 2px solid green; */
-   /* background: #ffffff;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(245, 249, 255, 1) 53%,
-    rgba(255, 255, 255, 1) 83%,
-    rgba(255, 250, 255, 1) 100%
-  ); */
+
+  background-color: var(--colorFondo);
 }
 
 .boton {
@@ -101,19 +101,19 @@ html {
 .botonContactoDiv {
   display: flex;
   justify-content: flex-end;
-  align-content:center;
+  align-content: center;
   width: 33%;
   /* border: 2px solid red; */
 }
-.botonContactoDiv a{
+.botonContactoDiv a {
   margin: auto 0 auto 0;
-  
 }
-.iconoContacto{
+.iconoContacto {
+ 
   margin: auto 0 auto 0;
   height: 32px;
   width: 32px;
-  background: rgb(237, 237, 237);
+  
   border-radius: 100%;
 }
 .menuDesplegableDiv {
@@ -132,54 +132,60 @@ html {
   /* border: 2px solid red; */
 }
 
-
 /* ICONOS */
-.iconosMenuContainer{
-  /* display: none; */
+.iconosMenuContainer {
   opacity: 0;
   position: absolute;
   display: flex;
-  
+
   gap: 1px;
   transition: all 350ms ease;
 }
 
 @keyframes animIconos {
-  from{
-    
-  }to{
+  from {
+  }
+  to {
     opacity: 1;
     translate: 50px 0;
     gap: 20px;
   }
-  
 }
-.animacionMenu{
+.animacionMenu {
   animation: animIconos 250ms ease-in 100ms;
-  animation-fill-mode:forwards;
+  animation-fill-mode: forwards;
 }
-.iconosMenu{
+.iconosMenu {
   width: 30px;
   height: 30px;
+  
   border-radius: 50%;
-  transition: background-color 350ms ease-out;
+  transition: background-color 350ms ease-out, translate 150ms ease-out;
 }
-#icoNaturaleza:hover{
-  background-color: var(--naturalezaFondo);
-  transition: background-color 150ms ease-in;
-}
-#icoCiudad:hover{
-  background-color: var(--ciudadFondo);
-  transition: background-color 150ms ease-in;
-}
-#icoGente:hover{
-  background-color: var(--genteFondo);
-  transition: background-color 150ms ease-in;
+#icoNautraleza, #icoCiudad, #icoGente, #icoComida{
+  
 }
 
-#icoComida:hover{
+#icoNaturaleza:hover {
+  translate: 0 -2px;
+  background-color: var(--naturalezaFondo);
+  transition: background-color 150ms ease-in, translate 150ms ease-in;
+}
+#icoCiudad:hover {
+  translate: 0 -2px;
+  background-color: var(--ciudadFondo);
+  transition: background-color 150ms ease-in, translate 150ms ease-in;
+}
+#icoGente:hover {
+  translate: 0 -2px;
+  background-color: var(--genteFondo);
+  transition: background-color 150ms ease-in, translate 150ms ease-in;
+}
+
+#icoComida:hover {
+  translate: 0 -2px;
   background-color: var(--comidaFondo);
-  transition: background-color 150ms ease-in;
+  transition: background-color 150ms ease-in, translate 150ms ease-in;
 }
 
 .flexContainerGlobal {
@@ -187,56 +193,39 @@ html {
   background-color: white;
   transition: all 400ms;
   margin-bottom: 20px;
-  /* background: #ffffff;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(245, 249, 255, 1) 53%,
-    rgba(255, 255, 255, 1) 83%,
-    rgba(255, 250, 255, 1) 100%
-  ); */
+  background-color: var(--colorFondo);
 }
-
-
-
 
 .containerGaleria {
-  background-color: white;
+  background-color: var(--fondoGaleria);
   display: flex;
   width: 80%;
-  margin:  auto;
+  margin: auto;
   justify-content: center;
   padding: 0 4px;
-  
+
   gap: 9px;
   transition: all 400ms;
-  /* background: #f5faff;
-  background: linear-gradient(
-    181deg,
-    rgba(245, 250, 255, 1) 18%,
-    rgba(255, 242, 255, 1) 100%
-  ); */
 }
-.botonContainer{
+.botonContainer {
   display: flex;
   justify-content: center;
   align-content: center;
-  
 }
-#btnVerTodo{
+#btnVerTodo {
   padding: 10px 30px 10px 30px;
   border: none;
   color: white;
   border-radius: 20px;
-  background-color: black;
+  background-color: var(--colorBtn);
   font-size: 1.2rem;
   transition: all 200ms;
 }
-#btnVerTodo:hover{
+#btnVerTodo:hover {
   background-color: rgb(65, 65, 65);
   transition: all 200ms;
 }
-#btnVerTodo:active{
+#btnVerTodo:active {
   transform: scale(0.95, 0.95);
   transition: all 200ms;
 }
@@ -244,7 +233,7 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* border-radius: 10px; */
+  border-radius: 10px;
   transition: all 400ms;
 }
 
@@ -256,8 +245,8 @@ html {
   gap: 9px;
 }
 
-.headerPresentacion{
-  font-family: 'Times New Roman', Times, serif;
+.headerPresentacion {
+  font-family: "Times New Roman", Times, serif;
   font-size: 2rem;
   text-align: center;
 }
