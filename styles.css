@@ -60,9 +60,9 @@ html {
 /* Galeria principal */
 
 .titulo {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   text-align: center;
-  transition: all 400ms;
+  
   text-wrap: nowrap;
   color: var(--titulo);
   letter-spacing: -1px;
@@ -151,9 +151,37 @@ html {
     gap: 20px;
   }
 }
+
+@keyframes animGaleria{
+  /* anim1 */
+  from{
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  to{
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  }
+  /* anim2 */
+
+  /* from{
+clip-path: polygon(100% 0, 0 0, 0 100%, 0 0);
+  }to{
+clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  } */
+
+   /* anim3 */
+
+
+
+}
+
+
 .animacionMenu {
   animation: animIconos 250ms ease-in 100ms;
   animation-fill-mode: forwards;
+  
+}
+.animacionGaleria{
+  animation: animGaleria 700ms ease-in-out 0ms;
 }
 .iconosMenu {
   width: 30px;
@@ -191,7 +219,7 @@ html {
 .flexContainerGlobal {
   display: flex;
   background-color: white;
-  transition: all 400ms;
+  
   margin-bottom: 20px;
   background-color: var(--colorFondo);
 }
@@ -205,7 +233,7 @@ html {
   padding: 0 4px;
 
   gap: 9px;
-  transition: all 400ms;
+  
 }
 .botonContainer {
   display: flex;
@@ -234,7 +262,7 @@ html {
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  transition: all 400ms;
+ 
 }
 
 .col {
