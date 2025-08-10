@@ -2,6 +2,7 @@ const botonNaturaleza = document.getElementById("icoNaturaleza");
 const botonCiudad = document.getElementById("icoCiudad");
 const botonGente = document.getElementById("icoGente");
 const botonComida = document.getElementById("icoComida");
+const botonTodas = document.getElementById("icoTodo");
 const fondoGaleria = document.getElementById("galeriaId");
 const fondoContainer = document.getElementById("containerId");
 const titulo = document.getElementById("tituloId");
@@ -22,6 +23,7 @@ botonNaturaleza.onclick = fotosNaturaleza;
 botonCiudad.onclick = fotosCiudad;
 botonGente.onclick = fotosGente;
 botonComida.onclick = fotosComida;
+botonTodas.onclick = todas;
 menuClick.onclick = desplegar;
 
 
@@ -31,30 +33,55 @@ if(menu.classList.toggle("change")){
   //PONERLE OPACITY 1 A LOS BOTONES ACA
     
     containerIconosMenu.classList.toggle("animacionMenu");
-   global.forEach((global) => {
-    global.style.opacity = "40%";
-  });
+    containerIconosMenu.classList.remove("animacionMenuInv");
+  //  global.forEach((global) => {
+  //   global.style.opacity = "40%";
+  // });
 }else{
-  
+  containerIconosMenu.classList.toggle("animacionMenuInv");
   containerIconosMenu.classList.remove("animacionMenu");
-       global.forEach((global) => {
-    global.style.opacity = "100%";
-    global.style.display = "block";
-  });
+  
+  //      global.forEach((global) => {
+  //   global.style.opacity = "100%";
+  //   global.style.display = "block";
+  // });
 }
 
  
 }
+//Intersection Observer para animaciones en scroll
 
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting){
+      
+      entry.target.classList.add("animacionGaleria");
+    }else{
+      // entry.target.classList.remove("animacionGaleria");
+    }
+  })
+}, {})
+ global.forEach(global => observer.observe(global));
+
+
+
+function todas(){
+  titulo.innerText = "Galería";
+    global.forEach((global) => {
+     
+     global.style.display = "block";
+   });
+}
 
 
 function fotosNaturaleza() {
    animacionGaleria();
+   titulo.innerText = "Naturaleza";
     imgNaturaleza.forEach((imgNaturaleza) => {
     imgNaturaleza.style.opacity = "100%";
     imgNaturaleza.style.display = "block";
   });
-
+  
   imgCiudad.forEach((imgCiudad) => {
     imgCiudad.style.display = "none";
   });
@@ -70,7 +97,7 @@ function fotosNaturaleza() {
 
 function fotosCiudad() {
  animacionGaleria();
- 
+ titulo.innerText = "Urbano";
   imgCiudad.forEach((imgCiudad) => {
     imgCiudad.style.opacity = "100%";
     imgCiudad.style.display = "block";
@@ -91,7 +118,7 @@ function fotosCiudad() {
 
 function fotosGente() {
   animacionGaleria();
-  
+  titulo.innerText = "Personas";
   imgGente.forEach((imgGente) => {
     imgGente.style.opacity = "100%"
     imgGente.style.display = "block";
@@ -112,7 +139,7 @@ function fotosGente() {
 
 function fotosComida(){
   animacionGaleria();
-  
+  titulo.innerText = "Culinario";
   imgComida.forEach((imgComida) => {
     imgComida.style.opacity = "100%"
     imgComida.style.display = "block";
@@ -137,7 +164,7 @@ function animacionGaleria(){
   function removerClase(){
     fondoContainer.classList.remove("animacionGaleria");
   }
- setTimeout(removerClase, 750);
+ setTimeout(removerClase, 500);
 }
 
 

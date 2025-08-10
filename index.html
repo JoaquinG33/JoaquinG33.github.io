@@ -6,13 +6,27 @@
     <title>Marcos Núñez Fotografía</title>
     <link rel="stylesheet" href="./styles.css" />
     <!-- FUENTES -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
+      <div class="heroContainer">
+        <img class="heroImagen" src="/img/Caravana_FA_-_Minas.webp" />
+        <div class="heroTituloContainer">
+          <h1 class="heroTitulo">El mejor fotógrafo del MUNDO</h1>
+        </div>
+      </div>
       <div class="iconos" id="iconosId">
         <div class="menuDesplegableDiv" id="menuId">
           <div class="menuDesplegableDivClick"></div>
@@ -20,7 +34,14 @@
           <div class="bar2 desplegar"></div>
           <div class="bar3 desplegar"></div>
           <div class="iconosMenuContainer">
-            <img
+            <ul>
+              <li class="iconosMenu" id="icoTodo">Todas</li>
+              <li class="iconosMenu" id="icoComida">Culinario</li>
+              <li class="iconosMenu" id="icoGente">Personas</li>
+              <li class="iconosMenu" id="icoNaturaleza">Naturaleza</li>
+              <li class="iconosMenu" id="icoCiudad">Urbano</li>
+            </ul>
+            <!-- <img
               class="iconosMenu"
               src="/img/icoComida.svg"
               alt="icono-comida"
@@ -44,8 +65,7 @@
               src="/img/icoGente.svg"
               alt="icono-gente"
               id="icoGente"
-            />
-
+            /> -->
           </div>
         </div>
 
@@ -55,7 +75,7 @@
           <button id="btnGente" class="boton">G</button>
         </div> -->
         <div class="tituloDiv">
-          <h1 class="titulo" id="tituloId">Marcos Núñez Fotografía</h1>
+          <h1 class="titulo" id="tituloId">Galería</h1>
         </div>
         <div class="botonContactoDiv">
           <a href="#prueba">
@@ -69,6 +89,7 @@
       <div class="flexContainerGlobal" id="containerId">
         <div class="containerGaleria" id="galeriaId">
           <div class="col">
+            <img class="ciudad foto global" src="/img/1.webp" loading="lazy" />
             <img class="ciudad foto global" src="/img/1.webp" loading="lazy" />
             <img class="ciudad foto global" src="/img/12.webp" loading="lazy" />
             <img class="comida foto global" src="/img/9.webp" loading="lazy" />
@@ -110,8 +131,10 @@
       <div class="botonContainer">
         <button id="btnVerTodo">ver más</button>
       </div>
-      <div id="prueba">
+      <div class="presentacionContainer" id="prueba">
+        <div class="presentacionTituloContainer" >
         <h2 class="headerPresentacion"></h2>
+        </div>
       </div>
     </main>
 
