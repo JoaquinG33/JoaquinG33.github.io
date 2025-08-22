@@ -26,6 +26,9 @@
         <div class="heroTituloContainer">
           <h1 class="heroTitulo">El mejor fotógrafo del MUNDO</h1>
         </div>
+        <div class="c">
+          <button>CONTACTO</button>
+        </div>
       </div>
       <div class="iconos" id="iconosId">
         <div class="menuDesplegableDiv" id="menuId">
@@ -34,7 +37,7 @@
           <div class="bar2 desplegar"></div>
           <div class="bar3 desplegar"></div>
           <div class="iconosMenuContainer">
-            <ul>
+            <ul class="listaMenu">
               <li class="iconosMenu" id="icoTodo">Todas</li>
               <li class="iconosMenu" id="icoComida">Culinario</li>
               <li class="iconosMenu" id="icoGente">Personas</li>
@@ -89,51 +92,145 @@
       <div class="flexContainerGlobal" id="containerId">
         <div class="containerGaleria" id="galeriaId">
           <div class="col">
-            <img class="ciudad foto global" src="/img/1.webp" loading="lazy" />
-            <img class="ciudad foto global" src="/img/1.webp" loading="lazy" />
-            <img class="ciudad foto global" src="/img/12.webp" loading="lazy" />
-            <img class="comida foto global" src="/img/9.webp" loading="lazy" />
+            <img
+              class="ciudad foto global"
+              src="/img/1.webp"
+              alt="Complejo por la noche"
+              loading="lazy"
+            />
+            <img
+              class="ciudad foto global"
+              src="/img/1.webp"
+              alt="Complejo por la noche"
+              loading="lazy"
+            />
+            <img
+              class="ciudad foto global"
+              src="/img/12.webp"
+              alt="Rambla Montevideo"
+              loading="lazy"
+            />
+            <img
+              class="comida foto global"
+              src="/img/9.webp"
+              alt="Plato de TarTar"
+              loading="lazy"
+            />
             <img
               class="naturaleza foto global"
               src="/img/14.webp"
+              alt="Perro"
               loading="lazy"
             />
-            <img class="comida foto global" src="/img/8.webp" loading="lazy" />
+            <img
+              class="comida foto global"
+              src="/img/8.webp"
+              alt="Plato de sushi"
+              loading="lazy"
+            />
           </div>
           <div class="col">
             <img
               class="naturaleza foto global"
               src="/img/13.webp"
+              alt="Flores rosadas"
               loading="lazy"
             />
-            <img class="gente foto global" src="/img/11.webp" loading="lazy" />
-            <img class="comida foto global" src="/img/7.webp" loading="lazy" />
-            <img class="comida foto global" src="/img/10.webp" loading="lazy" />
-            <img class="ciudad foto global" src="/img/3.webp" loading="lazy" />
+            <img
+              class="gente foto global"
+              src="/img/11.webp"
+              alt="Cantante, compositor y freestyler Luis Berrutti, tambien conocido como Morfeo"
+              loading="lazy"
+            />
+            <img
+              class="comida foto global"
+              src="/img/7.webp"
+              alt="Plato de sushi"
+              loading="lazy"
+            />
+            <img
+              class="comida foto global"
+              src="/img/10.webp"
+              alt="Ramen"
+              loading="lazy"
+            />
+            <img
+              class="ciudad foto global"
+              src="/img/3.webp"
+              alt="Estacion Axion"
+              loading="lazy"
+            />
           </div>
           <div class="col">
             <img
               class="naturaleza foto global"
               src="/img/5.webp"
+              alt="Paisaje mar"
               loading="lazy"
             />
-            <img class="ciudad foto global" src="/img/3.webp" loading="lazy" />
-            <img class="comida foto global" src="/img/6.webp" loading="lazy" />
+            <img
+              class="ciudad foto global"
+              src="/img/3.webp"
+              alt="Estacion Axion"
+              loading="lazy"
+            />
+            <img
+              class="comida foto global"
+              src="/img/6.webp"
+              alt="Plato de sushi"
+              loading="lazy"
+            />
             <img
               class="naturaleza foto global"
               src="/img/14.webp"
+              alt="Perro"
               loading="lazy"
             />
-            <img class="ciudad foto global" src="/img/4.webp" loading="lazy" />
+            <img
+              class="ciudad foto global"
+              src="/img/4.webp"
+              alt="Avenida"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
       <div class="botonContainer">
-        <button id="btnVerTodo">ver más</button>
+        <button class="btnVerTodo">ver más</button>
       </div>
       <div class="presentacionContainer" id="prueba">
-        <div class="presentacionTituloContainer" >
-        <h2 class="headerPresentacion"></h2>
+        <div id="fotoMarcosContainer">
+        <img
+          class="fotoPresentacion global"
+          alt="fotoMarcos"
+          id="fotoMarcos"
+          src="/img/fotoMarcos3.jpg"
+          />
+          </div>
+
+          <div id="listaPresentacionContainer">
+          <ul class="listaPresentacion global">
+            <li >- Fumador</li>
+            <li >- Falsificaciones digitales</li>
+            <li >- 15 años de experiencia en boxeo</li>
+            <li >- Toda clase de servicios de follografía</li>
+            <li >- Egresado de la facultad de la vida y la calle</li>
+          </ul>
+          </div>
+               
+      </div>
+      <div id="seccionFormularioContainer">
+        <div id="contactameTextoContainer">
+          <span id="contactameTexto" class="global">Contáctame</span>
+        </div>
+        <div id="formularioContainer">
+          <form id="formulario" class="global">
+            <label class="labelFormulario">Nombre y Apellido</label>
+            <input type="text" placeholder="Omar Núñez" class="inputFormulario"/>
+             <label class="labelFormulario">Email o Celular</label>
+            <input type="text" placeholder="marcosnunez99@hotmail.com" class="inputFormulario"/>
+            <button class="btnVerTodo btnFormulario" type="submit" >Enviar</button>
+          </form>
         </div>
       </div>
     </main>

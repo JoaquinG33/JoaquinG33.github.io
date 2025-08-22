@@ -8,6 +8,7 @@ const fondoContainer = document.getElementById("containerId");
 const titulo = document.getElementById("tituloId");
 const iconosFondo = document.getElementById("iconosId");
 const containerIconosMenu = document.querySelector(".iconosMenuContainer");
+const fotoMarcos = document.getElementById("fotoMarcos");
 let menuClick = document.querySelector(".menuDesplegableDivClick");
 let menu = document.querySelector(".menuDesplegableDiv");
 
@@ -56,13 +57,11 @@ const observer = new IntersectionObserver((entries)=>{
     if(entry.isIntersecting){
       
       entry.target.classList.add("animacionGaleria");
-    }else{
-      // entry.target.classList.remove("animacionGaleria");
     }
   })
-}, {})
+}, {threshold: 0.1})
  global.forEach(global => observer.observe(global));
-
+ anim1.forEach(anim1 => observer.observe(anim1));
 
 
 function todas(){

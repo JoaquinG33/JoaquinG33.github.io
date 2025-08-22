@@ -5,13 +5,13 @@
   --ciudadFondo: #eeeeee;
   --ciudadBorde: #d4d4d4;
   --genteFondo: #ffebdf;
-  --genteBorde: #FEE8D9;
+  --genteBorde: #fee8d9;
   --comidaFondo: #fff6c8;
   --comidaBorde: #ffec80;
 
   --titulo: black;
   --colorFondo: #fffefc;
-  --fondoGaleria: #ffffff;
+  --fondoGaleria: #fffefc;
   --colorBtn: rgb(0, 0, 0);
 }
 * {
@@ -66,6 +66,7 @@ html {
   height: 100%;
   object-fit: cover;
   animation: animScroll1 500ms ease 0ms;
+  animation-duration: 500ms;
   animation-timeline: scroll(block nearest);
 }
 
@@ -74,7 +75,9 @@ html {
   font-size: 2rem;
   text-align: center;
 }
-
+.c{
+  margin: auto;
+}
 .heroTituloContainer {
   position: fixed;
   z-index: -2;
@@ -114,6 +117,7 @@ html {
 }
 .foto {
   width: 100%;
+  opacity: 0;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
@@ -132,7 +136,7 @@ html {
   text-align: center;
   text-wrap: nowrap;
   color: var(--titulo);
-  
+
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -206,14 +210,21 @@ html {
   left: -200px;
   transition: all 350ms ease;
 }
-li {
+.iconosMenu {
   list-style: none;
   cursor: pointer;
-  border-left: 5px solid rgb(238, 238, 238);
   font-size: 1.3rem;
- font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: normal;
+
+  border-left: 0px solid rgb(238, 238, 238);
+
+  width: 130px;
+  background-color: #fffefc;
+  padding: 10px;
+  transition: border-color 350ms ease-out, border 350ms ease-out, 350ms ease-out,
+    translate 150ms ease-out;
 }
 
 .animacionMenu {
@@ -225,20 +236,15 @@ li {
   animation-fill-mode: forwards;
 }
 .animacionGaleria {
-  animation: animGaleria 450ms ease-in-out 0ms;
+  animation: animGaleria 1200ms ease 0ms;
+  animation-fill-mode: forwards;
 }
 
 .animacionTextos {
   animation: animacionTextos 250ms ease 0ms;
   animation-fill-mode: forwards;
 }
-.iconosMenu {
-  width: 130px;
-  background-color: rgb(255, 255, 255);
-  padding: 10px;
-  transition: border-color 350ms ease-out, border 350ms ease-out, 350ms ease-out,
-    translate 150ms ease-out;
-}
+
 #icoNaturaleza,
 #icoCiudad,
 #icoGente,
@@ -283,7 +289,7 @@ li {
   justify-content: center;
   align-content: center;
 }
-#btnVerTodo {
+.btnVerTodo {
   padding: 10px 30px 10px 30px;
   border: none;
   color: white;
@@ -292,29 +298,125 @@ li {
   font-size: 1.2rem;
   transition: all 200ms;
 }
-#btnVerTodo:hover {
+.btnVerTodo:hover {
   background-color: rgb(65, 65, 65);
   transition: all 200ms;
 }
-#btnVerTodo:active {
+.btnVerTodo:active {
   transform: scale(0.95, 0.95);
   transition: all 200ms;
 }
 
 /* PRESENTACION */
 
-.presentacionContainer{
+.presentacionContainer {
   display: flex;
-  height: 150vh;
-  border: 2px solid red;
+  background-color: var(--fondoGaleria);
+  justify-content: flex-start;
+  align-items: center;
+  margin: 200px auto auto auto;
+  width: 70%;
+  height: 50vh;
+  /* border: 2px solid red; */
 }
-.presentacionTituloContainer{
+.fotoPresentacion {
+  opacity: 0;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  box-shadow: 5px 5px 10px rgb(201, 201, 201);
+  border-radius: 100%;
+}
+.listaPresentacion {
+   opacity: 0;
+  list-style: none;
+  line-height: 30px;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+#listaPresentacionContainer {
  
-  
-  border: 10px solid green;
-  width: 100%;
-  height: 100%;
 }
+
+/*Formulario*/
+
+#seccionFormularioContainer {
+  display: flex;
+  background-color: var(--fondoGaleria);
+  justify-content: flex-end;
+  align-items: start;
+  margin: auto auto 200px auto;
+  width: 70%;
+  height: auto;
+  border-top: 3px solid rgb(237, 237, 237);
+  border-bottom: 3px solid rgb(237, 237, 237);
+  /* border: 2px solid red; */
+}
+#formulario {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  
+  padding: 10px;
+  /* border: 2px solid green; */
+}
+.labelFormulario {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+.inputFormulario {
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 400px;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid lightgray;
+}
+.inputFormulario::placeholder{
+font-size: 1.1rem;
+color: rgb(195, 195, 195);
+font-weight: 300;
+}
+.inputFormulario:focus {
+  
+  outline: none;
+  border: none;
+  border-radius: 0;
+  border-bottom: 3px solid rgb(178, 178, 178);
+  transition: border-bottom 100ms ease 0ms, border-radius 100ms ease 0ms;
+}
+.btnFormulario {
+  width: 50%;
+  margin: 10px auto;
+}
+
+#contactameTextoContainer{
+/* border: 2px solid red; */
+width: 100%;
+
+}
+
+#contactameTexto{
+  opacity: 0;
+font-family: "Playfair Display", serif;
+font-size: 9rem;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+text-align: center;
+}
+
 
 /* ANIMACIONES */
 @keyframes animIconos {
