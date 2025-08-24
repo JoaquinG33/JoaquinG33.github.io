@@ -29,6 +29,7 @@ html {
   cursor: pointer;
 }
 
+
 .bar1,
 .bar2,
 .bar3 {
@@ -37,6 +38,7 @@ html {
   background-color: var(--colorBtn);
   margin: 3px;
   transition: 0.4s;
+  
 }
 
 .change .bar1 {
@@ -55,18 +57,18 @@ html {
 .heroContainer {
   display: flex;
   height: 120dvh;
-  /* border: 2px solid green; */
+  /* border: 5px solid green; */
   /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
 }
 .heroImagen {
   position: fixed;
-  /* border: 2px solid red; */
+  /* border: 5px solid red; */
   z-index: -2;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: animScroll1 500ms ease 0ms;
-  animation-duration: 500ms;
+  animation: animScroll1 200ms linear 0ms;
+  animation-duration: 200ms;
   animation-timeline: scroll(block nearest);
 }
 
@@ -75,61 +77,117 @@ html {
   font-size: 2rem;
   text-align: center;
 }
-.c{
-  margin: auto;
+.btnContactoContainer{
+  opacity: 0;
+  display: flex;
+  justify-content: space-evenly;
+
+   position: fixed;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: auto;
+  margin:  auto;
+ 
+}
+.btnContacto{
+ 
+  padding: 15px 40px 15px 40px;
+  font-family: "Lato", sans-serif;
+  color: var(--colorFondo);
+  border-radius: 30px;
+  border: 2px solid;
+  border-color: var(--colorFondo);
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 150ms;
+}
+.btnContacto:hover{
+  background-color: rgba(255, 255, 255, 0.152);
+  transition: 150ms;
 }
 .heroTituloContainer {
+  
   position: fixed;
-  z-index: -2;
-  width: 100%;
-  top: 50%;
+  z-index: 0;
+  width: 70%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   animation: animScroll1 500ms ease 0ms;
   animation-timeline: scroll(block nearest);
 }
 .heroTitulo {
-  font-size: 2.5rem;
-  color: rgba(0, 0, 0, 0.822);
-  font-family: "Montserrat", sans-serif;
+  opacity: 0;
+  text-wrap-mode:nowrap;
+  font-size: 8rem;
+  color: rgb(255, 250, 238);
+  font-family: "Playfair Display", serif;
   letter-spacing: -1px;
   font-weight: 300;
   text-align: center;
-  background-color: #f0dcb244;
+  /* background-color: #f0dcb244; */
+}
+#svg1{
+  /* border: 2px solid red; */
+  position: relative;
+  opacity: 0;
+  left: 59%;
+  
+ 
+}
+#fotografiaTexto{
+  font-family: "Lato", sans-serif;
+  position:relative;
+  left: 64%;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
 }
 
 /* Galeria principal */
+#contenedorGlobalFondoBlanco{
+  background-color: var(--colorFondo);
+  border: 5px solid var(--colorFondo);
+}
 .flexContainerGlobal {
   display: flex;
-  background-color: white;
-  margin-bottom: 20px;
+  
+  
   background-color: var(--colorFondo);
 }
 
 .containerGaleria {
-  background-color: var(--fondoGaleria);
-  display: flex;
+  background-color: var(--colorFondo);
+  /* display: flex; */
   width: 70%;
   margin: auto;
-  justify-content: center;
+  /* justify-content: center; */
+  columns: 3 300px;
+  column-gap: 15px;
+  z-index: 1;
   padding: 0 4px;
-  gap: 9px;
+  
 }
 .foto {
+  display: block;
+
   width: 100%;
-  opacity: 0;
+  opacity: 0; 
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
-  padding: 4.5px;
+  margin-bottom: 15px;
 }
 
-.col {
+
+/* .col {
   width: 60%;
   display: flex;
   flex-direction: column;
   gap: 9px;
-}
+} */
 
 .titulo {
   font-size: 2.5rem;
@@ -149,15 +207,20 @@ html {
   width: 33%;
   /* border: 2px solid red; */
 }
+#linkGaleria{
+  border-bottom: 3px solid black;
+  text-decoration: none;
 
+}
 /* ICONOS Y MENU DESPLEGABLE */
 .iconos {
+  
   position: sticky;
   padding: 20px 0px 20px 0px;
   top: 0;
   width: 100%;
   margin: auto;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   justify-content: space-evenly;
   background-color: rgb(255, 255, 255);
@@ -181,6 +244,7 @@ html {
   margin: auto 0 auto 0;
 }
 .iconoContacto {
+  visibility: hidden;
   margin: auto 0 auto 0;
   height: 32px;
   width: 32px;
@@ -194,8 +258,9 @@ html {
 }
 
 .menuDesplegableDivClick {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
+  cursor: pointer;
   height: 40px;
   width: 50px;
   /* border: 2px solid red; */
@@ -227,23 +292,7 @@ html {
     translate 150ms ease-out;
 }
 
-.animacionMenu {
-  animation: animIconos 250ms ease 0ms;
-  animation-fill-mode: forwards;
-}
-.animacionMenuInv {
-  animation: animMenuInv 250ms ease 0ms;
-  animation-fill-mode: forwards;
-}
-.animacionGaleria {
-  animation: animGaleria 1200ms ease 0ms;
-  animation-fill-mode: forwards;
-}
 
-.animacionTextos {
-  animation: animacionTextos 250ms ease 0ms;
-  animation-fill-mode: forwards;
-}
 
 #icoNaturaleza,
 #icoCiudad,
@@ -286,6 +335,8 @@ html {
 
 .botonContainer {
   display: flex;
+  background-color: var(--colorFondo);
+  padding: 20px 0 150px 0;
   justify-content: center;
   align-content: center;
 }
@@ -293,7 +344,7 @@ html {
   padding: 10px 30px 10px 30px;
   border: none;
   color: white;
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: var(--colorBtn);
   font-size: 1.2rem;
   transition: all 200ms;
@@ -310,24 +361,39 @@ html {
 /* PRESENTACION */
 
 .presentacionContainer {
+  
   display: flex;
+  
   background-color: var(--fondoGaleria);
-  justify-content: flex-start;
-  align-items: center;
-  margin: 200px auto auto auto;
+  justify-content: flex-start ;
+  border-top: 3px solid rgb(237, 237, 237);
+  opacity: 1;
+  padding: 100px 0 100px 0;
+  margin: auto;
+  
   width: 70%;
-  height: 50vh;
+ 
   /* border: 2px solid red; */
 }
 .fotoPresentacion {
   opacity: 0;
   object-fit: cover;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   box-shadow: 5px 5px 10px rgb(201, 201, 201);
   border-radius: 100%;
+  transition: 500ms all;
+  pointer-events: none;
 }
+/* .fotoPresentacion:hover{
+  width:450px;
+  height: 450px;
+  
+  transition: 500ms all;
+} */
 .listaPresentacion {
+   position: relative;
+   top: 50%;
    opacity: 0;
   list-style: none;
   line-height: 30px;
@@ -341,14 +407,64 @@ html {
  
 }
 
+#redesSocialesContainer{
+ opacity: 0;
+display: flex;
+position: relative;
+bottom: 50px;
+height: 100%;
+width: 100%;
+flex-direction: column;
+align-items: flex-end ; 
+justify-content: flex-start ;
+
+}
+
+#redesSocialesTexto{
+
+font-family: "Playfair Display", serif;
+font-size: 9rem;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+padding-bottom: 80px;
+
+}
+#redesSocialesIconos{
+  /* border: 2px solid red; */
+  display: flex;
+  padding-right: 10px;
+  gap: 50px;
+  
+}
+.icoRedes{
+  
+  clip-path: circle();
+  background-color: var(--colorFondo);
+  padding: 7px;
+  transition: 300ms ease;
+}
+.icoRedes:hover{
+  background-color: rgb(226, 226, 226);
+  transition: 300ms ease;
+}
+
+#linkRedes{
+  text-decoration: none;
+  color: black;
+}
+
 /*Formulario*/
 
 #seccionFormularioContainer {
+  
   display: flex;
+  opacity: 0;
   background-color: var(--fondoGaleria);
   justify-content: flex-end;
   align-items: start;
   margin: auto auto 200px auto;
+  padding: 100px 0 100px 0;
   width: 70%;
   height: auto;
   border-top: 3px solid rgb(237, 237, 237);
@@ -356,7 +472,7 @@ html {
   /* border: 2px solid red; */
 }
 #formulario {
-  opacity: 0;
+  opacity: 1;
   display: flex;
   flex-direction: column;
   
@@ -364,11 +480,12 @@ html {
   /* border: 2px solid green; */
 }
 .labelFormulario {
-  font-family: "Lato", sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 5px;
+  line-height: 30px;
+  font-size: 1.5rem;
   letter-spacing: 1px;
+  font-family: "Lato", sans-serif;
   font-weight: 300;
+  font-style: normal;
 }
 .inputFormulario {
   font-size: 1.3rem;
@@ -408,7 +525,7 @@ width: 100%;
 }
 
 #contactameTexto{
-  opacity: 0;
+  opacity: 1;
 font-family: "Playfair Display", serif;
 font-size: 9rem;
   font-optical-sizing: auto;
@@ -453,13 +570,68 @@ text-align: center;
     opacity: 1;
   }
 }
+@keyframes animPresentacion{
+  from{
+    opacity: 0;
+
+  }to{
+    opacity:.9;
+  }
+}
 @keyframes animacionTextos {
   from {
-    opacity: 0;
-    transform: translate(0 100px);
+ 
   }
   to {
     opacity: 1;
-    transform: translate(0 0);
+    top: 0;
   }
+}
+@keyframes animacionBotones {
+  from {
+ 
+  }
+  to {
+    opacity: 1;
+    top: 70%;
+  }
+}
+
+.animacionMenu {
+  animation: animIconos 250ms ease 0ms;
+  animation-fill-mode: forwards;
+}
+.animacionMenuInv {
+  animation: animMenuInv 250ms ease 0ms;
+  animation-fill-mode: forwards;
+}
+.animacionGaleria {
+  animation: animGaleria 400ms linear 0ms;
+  animation-fill-mode: forwards;
+}
+
+.animacionPresentacion{
+  animation: animPresentacion 1000ms ease 800ms;
+  animation-fill-mode: forwards;
+}
+.animacionTituloHero{
+  animation: animPresentacion 1500ms ease 600ms;
+  animation-fill-mode: forwards;
+}
+.animacionFotografiaTexto{
+  animation: animPresentacion 600ms linear 0ms;
+  animation-fill-mode: forwards;
+}
+.animacionFormulario{
+  animation: animPresentacion 500ms ease 300ms;
+  animation-fill-mode: forwards;
+}
+
+.animacionTextos {
+  animation: animacionTextos 500ms ease 600ms;
+  animation-fill-mode: forwards;
+}
+.animacionBotones{
+  animation: animacionBotones 900ms ease-in-out 600ms;
+  animation-fill-mode: forwards;
 }

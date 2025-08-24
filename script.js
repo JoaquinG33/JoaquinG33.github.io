@@ -52,16 +52,23 @@ if(menu.classList.toggle("change")){
 }
 //Intersection Observer para animaciones en scroll
 
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach((entry)=>{
-    if(entry.isIntersecting){
-      
-      entry.target.classList.add("animacionGaleria");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const anim = entry.target.dataset.anim;
+      entry.target.classList.add(anim);
+      observer.unobserve(entry.target); 
     }
-  })
-}, {threshold: 0.1})
- global.forEach(global => observer.observe(global));
- anim1.forEach(anim1 => observer.observe(anim1));
+  });
+}, {
+  threshold: 0.2 
+});
+
+
+document.querySelectorAll(".anim").forEach(el => observer.observe(el));
+
+
+
 
 
 function todas(){
