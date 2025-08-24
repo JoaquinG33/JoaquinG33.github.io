@@ -73,7 +73,7 @@ html {
 }
 
 .headerPresentacion {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Playfair Display", serif;
   font-size: 2rem;
   text-align: center;
 }
@@ -95,6 +95,7 @@ html {
  
   padding: 15px 40px 15px 40px;
   font-family: "Lato", sans-serif;
+  font-weight: 600;
   color: var(--colorFondo);
   border-radius: 30px;
   border: 2px solid;
@@ -105,8 +106,19 @@ html {
   transition: 150ms;
 }
 .btnContacto:hover{
-  background-color: rgba(255, 255, 255, 0.152);
+  background-color: rgba(255, 255, 255, 0.252);
   transition: 150ms;
+}
+#btnGaleria, #btnClips{
+border: none;
+font-weight: 400;
+
+}
+#btnGaleria:hover, #btnClips:hover{
+background: none;
+
+
+
 }
 .heroTituloContainer {
   
@@ -145,6 +157,9 @@ html {
   font-size: 3rem;
   color: rgb(255, 255, 255);
 }
+
+
+
 
 /* Galeria principal */
 #contenedorGlobalFondoBlanco{
