@@ -30,7 +30,8 @@
   </head>
   <body>
     <main>
-      <div class="heroContainer">
+      
+      <section class="heroContainer">
         <img class="heroImagen" src="/img/Caravana_FA_-_Minas.webp" />
         <div class="heroTituloContainer">
           <h1 class="heroTitulo anim" data-anim="animacionTituloHero">Marcos Núñez</h1>
@@ -57,10 +58,13 @@
           <a id="linkContacto" href="#prueba"><button class="btnContacto" >Contacto</button></a>
           <button class="btnContacto" id="btnClips">Videoclips</button>
         </div>
-      </div>
+      </section>
+      
+
+     
       <div id="contenedorGlobalFondoBlanco">
       <div class="iconos" id="iconosId">
-        <div class="menuDesplegableDiv" id="menuId">
+        <section class="menuDesplegableDiv" id="menuId">
           <div class="menuDesplegableDivClick"></div>
           <div class="bar1 desplegar"></div>
           <div class="bar2 desplegar"></div>
@@ -99,7 +103,7 @@
               id="icoGente"
             /> -->
           </div>
-        </div>
+        </section>
 
         <!-- <div class="botonesDiv">
           <button id="btnNaturaleza" class="boton">N</button>
@@ -119,10 +123,11 @@
           />
         </div>
       </div>
-      <div class="flexContainerGlobal" id="containerId">
+      <section class="flexContainerGlobal" id="containerId">
         <div class="containerGaleria" id="galeriaId">
           <!-- <div class="col"> -->
             <a href="/img/1.webp" data-lightbox="image-1" data-title="Complejo por la noche">
+             
           <img
             class="ciudad foto anim global"
             data-anim="animacionGaleria"
@@ -256,11 +261,12 @@
           /></a>
           <!-- </div> -->
         </div>
-      </div>
+      </section>
       <div class="botonContainer">
         <button class="btnVerTodo">ver más</button>
       </div>
-      <div class="presentacionContainer" data-anim="animacionPresentacion" id="prueba">
+   
+      <section class="presentacionContainer" data-anim="animacionPresentacion" id="prueba">
         <div id="fotoMarcosContainer">
           <img
             class="fotoPresentacion anim"
@@ -271,7 +277,7 @@
           />
         </div>
 
-        <div id="listaPresentacionContainer">
+        <article id="listaPresentacionContainer">
           <ul class="listaPresentacion anim" data-anim="animacionTextos">
             <li>- Fumador</li>
             <li>- Falsificaciones digitales</li>
@@ -279,7 +285,7 @@
             <li>- Toda clase de servicios de follografía</li>
             <li>- Egresado de la facultad de la vida y la calle</li>
           </ul>
-        </div>
+        </article>
         <div id="redesSocialesContainer" class="anim" data-anim="animacionPresentacion" >
           <h1 id="redesSocialesTexto" >Mis redes</h1>
 
@@ -288,12 +294,12 @@
            <a id="linkRedes"  href="https://www.linkedin.com/in/marcos-nuñez-32ba731ba" target="_blank">  <i class="fa fa-linkedin-square icoRedes" style="font-size:64px"></i></a>
           </div>
         </div>
-      </div>
-      <div id="seccionFormularioContainer" class="anim" data-anim="animacionPresentacion">
-        <div id="contactameTextoContainer">
+      </section>
+      <section id="seccionFormularioContainer" class="anim" data-anim="animacionPresentacion">
+        <article id="contactameTextoContainer">
           <span id="contactameTexto" class="">Contáctame</span>
-        </div>
-        <div id="formularioContainer">
+        </article>
+        <section id="formularioContainer">
           <form id="formulario" >
             <label class="labelFormulario">Nombre y Apellido</label>
             <input
@@ -311,8 +317,8 @@
               Enviar
             </button>
           </form>
-        </div>
-      </div>
+        </section>
+      </section>
       <h2 style="text-align:center;font-size:2rem; margin-top: 500px; z-index: 3">HECHO POR <span style="color: red; font-size: 8rem">JOAQUIN GUILLEN</span></h2>
       </div>
     </main>
@@ -323,9 +329,9 @@
 
 <script>
     lightbox.option({
-      'resizeDuration': 600,
+      'resizeDuration': 150,
       'disableScrolling': true,
-      'imageFadeDuration': 450,
+      'imageFadeDuration': 0,
       
       'wrapAround': true
       
