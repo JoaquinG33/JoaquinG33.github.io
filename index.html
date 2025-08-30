@@ -27,6 +27,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    
   </head>
   <body>
     <main>
@@ -34,7 +35,8 @@
       <section class="heroContainer">
         <img class="heroImagen" src="/img/Caravana_FA_-_Minas.webp" />
         <div class="heroTituloContainer">
-          <h1 class="heroTitulo anim" data-anim="animacionTituloHero">Marcos Núñez</h1>
+          <h1 class="heroTitulo anim" data-anim="animacionTituloHero">Marcos  Núñez</h1>
+          <!-- <img id="icoCamara" width="50" height="50" src="https://img.icons8.com/ios-filled/50/camera--v1.png" alt="camera--v1"/> -->
            <!-- <span id="fotografiaTexto">fotografía</span> -->
             
 <svg class="anim" data-anim="animacionFotografiaTexto" width="290.33099" height="100.433" viewBox="0 0 132.37924 53.03123" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" style="">
@@ -76,6 +78,7 @@
               <li class="iconosMenu" id="icoGente">Personas</li>
               <li class="iconosMenu" id="icoNaturaleza">Naturaleza</li>
               <li class="iconosMenu" id="icoCiudad">Urbano</li>
+              <li class="iconosMenu" id="icoClip">Videoclips</li>
             </ul>
             <!-- <img
               class="iconosMenu"
@@ -263,7 +266,7 @@
         </div>
       </section>
       <div class="botonContainer">
-        <button class="btnVerTodo">ver más</button>
+        <button class="btnVerTodo">ver todo</button>
       </div>
    
       <section class="presentacionContainer" data-anim="animacionPresentacion" id="prueba">
@@ -278,12 +281,12 @@
         </div>
 
         <article id="listaPresentacionContainer">
-          <ul class="listaPresentacion anim" data-anim="animacionTextos">
-            <li>- Fumador</li>
-            <li>- Falsificaciones digitales</li>
-            <li>- 15 años de experiencia en boxeo</li>
-            <li>- Toda clase de servicios de follografía</li>
-            <li>- Egresado de la facultad de la vida y la calle</li>
+          <ul class="listaPresentacion" >
+            <li class="lista anim" data-anim="animacionTextos">Fumador</li>
+            <li class="lista anim" data-anim="animacionTextos">Falsificaciones digitales</li>
+            <li class="lista anim" data-anim="animacionTextos">15 años de experiencia en boxeo</li>
+            <li class="lista anim" data-anim="animacionTextos">Toda clase de servicios de follografía</li>
+            <li class="lista anim" data-anim="animacionTextos">Egresado de la facultad de la vida y la calle</li>
           </ul>
         </article>
         <div id="redesSocialesContainer" class="anim" data-anim="animacionPresentacion" >
@@ -297,21 +300,35 @@
       </section>
       <section id="seccionFormularioContainer" class="anim" data-anim="animacionPresentacion">
         <article id="contactameTextoContainer">
-          <span id="contactameTexto" class="">Contáctame</span>
+          <span id="contactameTexto" class="">Contacto</span>
         </article>
         <section id="formularioContainer">
           <form id="formulario" >
-            <label class="labelFormulario">Nombre y Apellido</label>
+            <label class="labelFormulario">Nombre y Apellido *</label>
             <input
               type="text"
               placeholder="Omar Núñez"
               class="inputFormulario"
+              spellcheck="false"
+              maxlength="50"
+              required
             />
-            <label class="labelFormulario">Email o Celular</label>
+            <label class="labelFormulario">Email o Celular *</label>
             <input
               type="text"
               placeholder="marcosnunez99@hotmail.com"
               class="inputFormulario"
+              spellcheck="false"
+              maxlength="50"
+              required
+            />
+            <label class="labelFormulario">Comentarios</label>
+            <input
+              type="text"
+              class="inputFormulario"
+              maxlength="50"
+              spellcheck="false"
+              placeholder="Tengo una consulta sobre..."
             />
             <button class="btnVerTodo btnFormulario" type="submit">
               Enviar
@@ -319,7 +336,7 @@
           </form>
         </section>
       </section>
-      <h2 style="text-align:center;font-size:2rem; margin-top: 500px; z-index: 3">HECHO POR <span style="color: red; font-size: 8rem">JOAQUIN GUILLEN</span></h2>
+      
       </div>
     </main>
 
