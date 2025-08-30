@@ -377,8 +377,8 @@ html {
   opacity: 0;
   object-fit: cover;
 
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
   /* box-shadow: 5px 5px 10px rgb(201, 201, 201); */
   border-radius: 100%;
   transition: 500ms all;
@@ -389,12 +389,17 @@ html {
   position: relative;
 
   list-style: none;
-  line-height: 30px;
+  line-height: 40px;
   font-size: 1.5rem;
   letter-spacing: 1px;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: normal;
+}
+#listaPresentacionContainer{
+  width: 100%;
+  
+
 }
 
 .lista:nth-child(1) {
@@ -546,6 +551,20 @@ html {
   text-align: center;
 }
 
+#linkFooter{
+ text-decoration: none;
+ color: rgb(192, 192, 192);
+}
+footer{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px; 
+  font-size: 1rem;
+  font-family: "Lato", serif;
+  font-weight: 300;
+  color: rgb(192, 192, 192);
+}
 /* ANIMACIONES */
 @keyframes animIconos {
   from {
@@ -586,7 +605,7 @@ html {
     opacity: 0;
   }
   to {
-    opacity: 0.9;
+    opacity: 1;
   }
 }
 @keyframes animacionTextos {
@@ -658,7 +677,7 @@ html {
   }
   .heroImagen {
     width: 100dvw;
-    height: 100dvh;
+    height: 110dvh;
   
   }
   .btnContactoContainer {
@@ -677,21 +696,22 @@ html {
     z-index: -1;
 
     width: 100%;
-    top: 40%;
+    top: 30%;
     left: 0;
     transform: translate(0, 0);
   }
   .heroTitulo {
     font-size: 3.7rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   #svg1 {
     
     position: relative;
     opacity: 0;
-    left: 55%;
-    width: 170px;
-    height: 100px;
+    left: 60%;
+    
+    width: 160px;
+    height: 50px;
   }
 
   /* GALERIA */
@@ -709,13 +729,11 @@ html {
   .titulo {
     font-size: 2rem;
   }
-  .iconosMenu {
-    font-weight: 400;
-  }
+ 
   /* PRESENTACION */
   .presentacionContainer {
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     padding: 20px 0 20px 0;
     align-items: center;
   }
@@ -725,7 +743,7 @@ html {
   }
   .lista {
     font-size: 1.1rem;
-    font-weight: 400;
+    
     line-height: 30px;
     text-align: center;
   }
@@ -733,13 +751,15 @@ html {
     padding: 20px 0 0 0;
   }
 
+
   #redesSocialesTexto {
-    font-size: 5rem;
+    font-size: 4.5rem;
     padding: 0;
 
     text-wrap: nowrap;
   }
   #redesSocialesContainer {
+    padding-top:60px;
     bottom: 0;
     justify-content: center;
     align-items: center;
@@ -747,7 +767,7 @@ html {
   }
 
   #redesSocialesIconos {
-    padding:20px 0 20px 0;
+    padding:40px 0 40px 0;
   }
 /* SI NO HAGO ESTO, EL NAVEGADOR SE BUGUEA Y NO MUESTRA LA LISTA */
   .lista:nth-child(1),
@@ -770,18 +790,18 @@ html {
 }
 #formulario {
  
-    padding: 0;
+   padding:40px 0 40px 0;
 
   width: 100%;
 }
 .labelFormulario {
   line-height: 30px;
   font-size: 1.3rem;
- font-weight: 400;
+ 
 }
 .inputFormulario {
   font-size: 1.2rem;
-  font-weight: 400;
+  
   width:320px;
   height: 40px;
  
@@ -794,10 +814,12 @@ html {
  
   width: 100%;
 }
+#contactameTexto{
+font-size: 4rem;
+}
 
-#contactameTexto {
+.btnFormulario {
   
-  font-size: 5rem;
-  
+  margin: 40px auto;
 }
 }
