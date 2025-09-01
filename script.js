@@ -31,21 +31,14 @@ menuClick.onclick = desplegar;
 //Menu desplegable
 function desplegar(){
 if(menu.classList.toggle("change")){
-  //PONERLE OPACITY 1 A LOS BOTONES ACA
-    
     containerIconosMenu.classList.toggle("animacionMenu");
     containerIconosMenu.classList.remove("animacionMenuInv");
-  //  global.forEach((global) => {
-  //   global.style.opacity = "40%";
-  // });
+
 }else{
   containerIconosMenu.classList.toggle("animacionMenuInv");
   containerIconosMenu.classList.remove("animacionMenu");
   
-  //      global.forEach((global) => {
-  //   global.style.opacity = "100%";
-  //   global.style.display = "block";
-  // });
+  
 }
 
  
@@ -174,34 +167,3 @@ function animacionGaleria(){
 }
 
 
-// if(menu.isChecked = true){
-//   console.log("anduvo");
-// }else{
-//   console.log("off")
-// }
-//resetear al hacer click
-
-// document.addEventListener("click", function () {
-//   if (event.target.closest("button")) return;
-//   titulo.style.background = "var(--color-fondo)";
-//   fondoGaleria.style.background = "white";
-//   fondoGaleria.style.borderColor = "var(--color-fondo)";
-//   fondoContainer.style.background = "white";
-
-//   imgNaturaleza.forEach((imgNaturaleza) => {
-//     imgNaturaleza.style.opacity = "100%";
-//   });
-
-//   imgCiudad.forEach((imgCiudad) => {
-//     imgCiudad.style.opacity = "100%";
-//   });
-
-//   botones.forEach((botones) => {
-//     botones.style.background = "lightgray";
-//     botones.style.color = "var(--color-fondo)";
-//   });
-
-//   imgGente.forEach((imgGente) => {
-//     imgGente.style.opacity = "100%";
-//   });
-// });

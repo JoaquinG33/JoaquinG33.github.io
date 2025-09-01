@@ -28,7 +28,6 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 30px;
   background-color: var(--colorFondo);
-
 }
 
 /* Menu Animacion w3schools */
@@ -64,12 +63,10 @@ html {
   display: flex;
   height: 120dvh;
   z-index: -2;
-  /* border: 5px solid green; */
-  /* clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%); */
+
 }
 .heroImagen {
   position: fixed;
-  /* border: 5px solid red; */
   z-index: -2;
   width: 100%;
   height: 100%;
@@ -137,11 +134,9 @@ html {
   letter-spacing: -1px;
   font-weight: 300;
   text-align: center;
-  /* background-color: #f0dcb244; */
-}
+ }
 #svg1 {
-  /* border: 2px solid red; */
-  position: relative;
+   position: relative;
   opacity: 0;
   left: 59%;
 }
@@ -159,10 +154,8 @@ html {
 
 .containerGaleria {
   background-color: var(--colorFondo);
-  /* display: flex; */
   width: 70%;
   margin: auto;
-  /* justify-content: center; */
   columns: 3 300px;
   column-gap: 15px;
   z-index: 1;
@@ -184,13 +177,6 @@ html {
   transition: 200ms;
 }
 
-/* .col {
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-} */
-
 .titulo {
   font-size: 2.5rem;
   text-align: center;
@@ -207,13 +193,12 @@ html {
   justify-content: center;
   align-content: center;
   width: 33%;
-  /* border: 2px solid red; */
-}
+  }
 #linkGaleria {
   border-bottom: 3px solid black;
   text-decoration: none;
 }
-#linkMenu{
+#linkMenu {
   text-decoration: none;
   color: black;
 }
@@ -242,7 +227,7 @@ html {
   justify-content: flex-end;
   align-content: center;
   width: 33%;
-  /* border: 2px solid red; */
+ 
 }
 .botonContactoDiv a {
   margin: auto 0 auto 0;
@@ -267,7 +252,7 @@ html {
   cursor: pointer;
   height: 40px;
   width: 50px;
-  /* border: 2px solid red; */
+  
 }
 
 .iconosMenuContainer {
@@ -292,47 +277,35 @@ html {
   width: 130px;
   background-color: #fffefc;
   padding: 10px;
-  transition: border-color 350ms ease-out, border 350ms ease-out, 350ms ease-out,
+  transition: border-color 150ms ease-out, border 150ms ease-out, 150ms ease-out,
     translate 150ms ease-out;
 }
 
-#icoNaturaleza:hover {
+#icoNaturaleza:hover,
+#icoCiudad:hover,
+#icoGente:hover,
+#icoComida:hover,
+#icoTodo:hover,
+#icoClip:hover {
   border-left: 13px solid;
-  border-color: var(--naturalezaBorde);
-
   transition: border 150ms ease-in, border-color 150ms ease-in,
     translate 150ms ease-in;
 }
 #icoCiudad:hover {
-  border-left: 13px solid;
   border-color: var(--ciudadBorde);
-  transition: border 150ms ease-in, border-color 150ms ease-in,
-    translate 150ms ease-in;
-}
+ }
 #icoGente:hover {
-  border-left: 13px solid;
-  border-color: var(--genteBorde);
-  transition: border 150ms ease-in, border-color 150ms ease-in,
-    translate 150ms ease-in;
-}
+   border-color: var(--genteBorde);
+  }
 
 #icoComida:hover {
-  border-left: 13px solid;
   border-color: var(--comidaBorde);
-  transition: border 150ms ease-in, border-color 150ms ease-in,
-    translate 150ms ease-in;
-}
+ }
 #icoTodo:hover {
-  border-left: 13px solid;
-  border-color: rgb(55, 55, 55);
-  transition: border 150ms ease-in, border-color 150ms ease-in,
-    translate 150ms ease-in;
+   border-color: rgb(55, 55, 55);
 }
 #icoClip:hover {
-  border-left: 13px solid;
   border-color: rgb(218, 62, 62);
-  transition: border 150ms ease-in, border-color 150ms ease-in,
-    translate 150ms ease-in;
 }
 
 .botonContainer {
@@ -373,18 +346,14 @@ html {
   opacity: 1;
   padding: 100px 0 100px 0;
   margin: auto;
-
   width: 70%;
 
-  /* border: 2px solid red; */
 }
 .fotoPresentacion {
   opacity: 0;
   object-fit: cover;
-
   width: 230px;
   height: 230px;
-  /* box-shadow: 5px 5px 10px rgb(201, 201, 201); */
   border-radius: 100%;
   transition: 500ms all;
   pointer-events: none;
@@ -401,40 +370,31 @@ html {
   font-weight: 300;
   font-style: normal;
 }
-#listaPresentacionContainer{
+#listaPresentacionContainer {
   width: 100%;
-  
-
 }
 
-.lista:nth-child(1) {
+.lista:nth-child(1),
+.lista:nth-child(2),
+.lista:nth-child(3),
+.lista:nth-child(4),
+.lista:nth-child(5) {
   transform: translateX(-100%);
-
   opacity: 0;
+ }
+.lista:nth-child(1) {
   animation-delay: 200ms;
 }
 .lista:nth-child(2) {
-  transform: translateX(-100%);
-
-  opacity: 0;
-  animation-delay: 300ms;
+   animation-delay: 300ms;
 }
 .lista:nth-child(3) {
-  transform: translateX(-100%);
-
-  opacity: 0;
   animation-delay: 400ms;
 }
 .lista:nth-child(4) {
-  transform: translateX(-100%);
-
-  opacity: 0;
-  animation-delay: 500ms;
+   animation-delay: 500ms;
 }
 .lista:nth-child(5) {
-  transform: translateX(-100%);
-
-  opacity: 0;
   animation-delay: 600ms;
 }
 
@@ -459,7 +419,6 @@ html {
   padding-bottom: 80px;
 }
 #redesSocialesIconos {
-  /* border: 2px solid red; */
   display: flex;
   padding-right: 10px;
   gap: 50px;
@@ -471,7 +430,7 @@ html {
   transition: 300ms ease;
 }
 .icoRedes:hover {
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(240, 240, 240);
   transition: 300ms ease;
 }
 
@@ -494,15 +453,14 @@ html {
   height: auto;
   border-top: 3px solid rgb(237, 237, 237);
   border-bottom: 3px solid rgb(237, 237, 237);
-  /* border: 2px solid red; */
+ 
 }
 #formulario {
   opacity: 1;
   display: flex;
   flex-direction: column;
-
   padding: 10px;
-  /* border: 2px solid green; */
+ 
 }
 .labelFormulario {
   line-height: 30px;
@@ -542,8 +500,7 @@ html {
 }
 
 #contactameTextoContainer {
-  /* border: 2px solid red; */
-  width: 100%;
+   width: 100%;
 }
 
 #contactameTexto {
@@ -556,15 +513,15 @@ html {
   text-align: center;
 }
 
-#linkFooter{
- text-decoration: none;
- color: rgb(192, 192, 192);
+#linkFooter {
+  text-decoration: none;
+  color: rgb(192, 192, 192);
 }
-footer{
-  display:flex;
+footer {
+  display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px; 
+  margin-top: 100px;
   font-size: 1rem;
   font-family: "Lato", serif;
   font-weight: 300;
@@ -597,7 +554,7 @@ footer{
   }
 }
 @keyframes animGaleria {
-  /* anim1 */
+  
   from {
     opacity: 0;
   }
@@ -678,12 +635,10 @@ footer{
   .heroContainer {
     width: 100dvw;
     height: 120dvh;
-
   }
   .heroImagen {
     width: 100dvw;
     height: 110dvh;
-  
   }
   .btnContactoContainer {
     flex-direction: column;
@@ -710,11 +665,10 @@ footer{
     font-weight: 600;
   }
   #svg1 {
-    
     position: relative;
     opacity: 0;
     left: 60%;
-    
+
     width: 160px;
     height: 50px;
   }
@@ -735,7 +689,7 @@ footer{
   .titulo {
     font-size: 2rem;
   }
- 
+
   /* PRESENTACION */
   .presentacionContainer {
     flex-direction: column;
@@ -749,14 +703,13 @@ footer{
   }
   .lista {
     font-size: 1.1rem;
-    
+
     line-height: 30px;
     text-align: center;
   }
   .listaPresentacion {
     padding: 20px 0 0 0;
   }
-
 
   #redesSocialesTexto {
     font-size: 4.5rem;
@@ -765,7 +718,7 @@ footer{
     text-wrap: nowrap;
   }
   #redesSocialesContainer {
-    padding-top:60px;
+    padding-top: 60px;
     bottom: 0;
     justify-content: center;
     align-items: center;
@@ -773,59 +726,51 @@ footer{
   }
 
   #redesSocialesIconos {
-    padding:40px 0 40px 0;
+    padding: 40px 0 40px 0;
   }
-/* SI NO HAGO ESTO, EL NAVEGADOR SE BUGUEA Y NO MUESTRA LA LISTA */
+  /* SI NO HAGO ESTO, EL NAVEGADOR SE BUGUEA Y NO MUESTRA LA LISTA */
   .lista:nth-child(1),
   .lista:nth-child(2),
   .lista:nth-child(3),
   .lista:nth-child(4),
   .lista:nth-child(5) {
-   transform: translate(0,0);
+    transform: translate(0, 0);
   }
 
   #seccionFormularioContainer {
- 
-  
-  flex-direction: column;
-  padding: 20px 0 20px 0;
-  
+    flex-direction: column;
+    padding: 20px 0 20px 0;
+
     align-items: center;
     width: 100%;
-  
-}
-#formulario {
- 
-   padding:40px 0 40px 0;
+  }
+  #formulario {
+    padding: 40px 0 40px 0;
 
-  width: 100%;
-}
-.labelFormulario {
-  line-height: 30px;
-  font-size: 1.3rem;
- 
-}
-.inputFormulario {
-  font-size: 1.2rem;
-  
-  width:320px;
-  height: 40px;
- 
-}
+    width: 100%;
+  }
+  .labelFormulario {
+    line-height: 30px;
+    font-size: 1.3rem;
+  }
+  .inputFormulario {
+    font-size: 1.2rem;
 
+    width: 320px;
+    height: 40px;
+  }
 
-#contactameTextoContainer {
-   text-align: center;
+  #contactameTextoContainer {
+    text-align: center;
     padding: 0 0 20px 0;
- 
-  width: 100%;
-}
-#contactameTexto{
-font-size: 4rem;
-}
 
-.btnFormulario {
-  
-  margin: 40px auto;
-}
+    width: 100%;
+  }
+  #contactameTexto {
+    font-size: 4rem;
+  }
+
+  .btnFormulario {
+    margin: 40px auto;
+  }
 }
