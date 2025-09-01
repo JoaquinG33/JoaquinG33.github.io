@@ -212,6 +212,10 @@ html {
   border-bottom: 3px solid black;
   text-decoration: none;
 }
+#linkMenu{
+  text-decoration: none;
+  color: black;
+}
 /* ICONOS Y MENU DESPLEGABLE */
 .iconos {
   position: sticky;
