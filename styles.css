@@ -355,7 +355,6 @@ html {
 
   width: 200px;
   height: 200px;
-  /* box-shadow: 5px 5px 10px rgb(201, 201, 201); */
   border-radius: 100%;
   transition: 500ms all;
   pointer-events: none;
@@ -706,7 +705,7 @@ footer {
     height: 200px;
   }
   .lista {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     
     line-height: 30px;
     text-align: center;
