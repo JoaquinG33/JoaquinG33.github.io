@@ -353,8 +353,8 @@ html {
   opacity: 0;
   object-fit: cover;
 
-  width: 230px;
-  height: 230px;
+  width: 200px;
+  height: 200px;
   /* box-shadow: 5px 5px 10px rgb(201, 201, 201); */
   border-radius: 100%;
   transition: 500ms all;
