@@ -518,17 +518,19 @@ html {
 
 #linkFooter {
   text-decoration: none;
-  color: rgb(192, 192, 192);
+ 
+  color: #999;
 }
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  
   margin-top: 100px; 
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-family: "Lato", serif;
-  font-weight: 300;
-  color: rgb(192, 192, 192);
+  font-weight: 400;
+  color: #999;
 }
 /* ANIMACIONES */
 @keyframes animIconos {
