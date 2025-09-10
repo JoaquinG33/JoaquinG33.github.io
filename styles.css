@@ -498,7 +498,7 @@ html {
   transition: border-bottom 100ms ease 0ms, border-radius 100ms ease 0ms;
 }
 .btnFormulario {
-  width: 50%;
+  width: 100%;
   margin: 10px auto;
 }
 
