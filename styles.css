@@ -637,12 +637,12 @@ footer {
     scroll-padding-top: 90px;
   }
   .heroContainer {
-    width: 100dvw;
-    height: 120dvh;
+    width: 100vw;
+    height: 120vh;
   }
   .heroImagen {
-    width: 100dvw;
-    height: 110dvh;
+    width: 100vw;
+    height: 110vh;
   }
   .btnContactoContainer {
     flex-direction: column;
