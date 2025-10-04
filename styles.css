@@ -1,5 +1,5 @@
 :root {
-  --parrafo1: rgb(38, 38, 38);
+  
   --naturalezaBorde: oklch(76.8% 0.233 130.85);
   --ciudadBorde: oklch(86.9% 0.005 56.366);
   --genteBorde: oklch(96.9% 0.015 12.422);
@@ -9,9 +9,15 @@
   --titulo: oklch(26.8% 0.007 34.298);
   --colorBorde: oklch(92.3% 0.003 48.717);
   --colorFondo: oklch(98.5% 0.001 106.423);
-  --fondoGaleria: oklch(98.5% 0.001 106.423);
   --colorBtn: oklch(14.7% 0.004 49.25);
+
+  --tituloDM: #fff ;
+  --colorBordeDM: #fff;
+  --colorFondoDM:oklch(.13 .028 261.692) ;
+  --colorBtnDM: oklch(39.8% 0.195 277.366);
 }
+
+
 
 /* SCROLLBAR */
 *::-webkit-scrollbar {
@@ -115,7 +121,7 @@ html {
   opacity: 0;
   display: flex;
   justify-content: space-evenly;
-
+z-index: 0;
   position: fixed;
   top: 85%;
   left: 50%;
@@ -178,6 +184,7 @@ html {
 
 /* Galeria principal */
 #contenedorGlobalFondoBlanco {
+ position: relative;
   background-color: var(--colorFondo);
   border: 5px solid var(--colorFondo);
 }
@@ -353,6 +360,8 @@ html {
   padding: 20px 0 150px 0;
   justify-content: center;
   align-content: center;
+position: relative;
+ 
 }
 .btnVerTodo {
   z-index: 1;
@@ -364,6 +373,7 @@ html {
   font-size: 1.2rem;
   transition: all 200ms;
 }
+
 .btnVerTodo:hover {
   background-color: rgb(65, 65, 65);
   transition: all 200ms;
@@ -378,14 +388,15 @@ html {
 
 .presentacionContainer {
   display: flex;
-
-  background-color: var(--fondoGaleria);
+opacity: 1;
+  background-color: var(--colorFondo);
   justify-content: flex-start;
   border-top:3px solid var(--colorBorde);
-  opacity: 1;
+  position: relative;
   padding: 100px 0 100px 0;
   margin: auto;
   width: 70%;
+  
 
 }
 .fotoPresentacion {
@@ -401,7 +412,7 @@ html {
 
 .listaPresentacion {
   position: relative;
-
+color: var(--titulo);
   list-style: none;
   line-height: 40px;
   font-size: clamp(1.3rem, 1vw, 1.6rem);
@@ -409,9 +420,11 @@ html {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-style: normal;
+ 
 }
 #listaPresentacionContainer {
   width: 100%;
+  
 }
 
 .lista:nth-child(1),
@@ -448,6 +461,7 @@ html {
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-start;
+ 
 }
 
 
@@ -457,6 +471,7 @@ html {
 }
 .icoRedes {
   clip-path: circle();
+  color: var(--titulo);
   background-color: var(--colorFondo);
   padding: 7px;
   transition: 300ms ease;
@@ -476,7 +491,7 @@ html {
 #seccionFormularioContainer {
   display: flex;
   opacity: 0;
-  background-color: var(--fondoGaleria);
+  background-color: var(--colorFondo);
   justify-content: flex-end;
   align-items: center;
   margin: auto auto 200px auto;
@@ -485,8 +500,10 @@ html {
   height: auto;
   border-top:3px solid var(--colorBorde);
   border-bottom: 3px solid var(--colorBorde);
- 
+  
+  
 }
+
 
 
 #formulario {
@@ -812,4 +829,82 @@ font-size: 4rem;
   .btnFormulario {
     margin: 40px auto;
   }
+}
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  #contenedorGlobalFondoBlanco, .containerGaleria, .flexContainerGlobal, .botonContainer{
+  background-color: var(--colorFondoDM);
+}
+#contenedorGlobalFondoBlanco{
+  border: none;
+  
+}
+  .titulo, #contactameTexto, #redesSocialesTexto{
+    color: var(--tituloDM);
+  }
+  .presentacionContainer{
+    background-color: var(--colorFondoDM);
+  border-top: 3px solid var(--colorBordeDM);
+}
+#seccionFormularioContainer{
+   background-color: var(--colorFondoDM);
+  border-bottom: 3px solid var(--colorBordeDM);
+}
+.iconos{
+  background-color: var(--colorFondoDM);
+  color: var(--tituloDM);
+}
+.iconosMenu{
+  background-color: var(--colorFondoDM);
+  color: var(--tituloDM);
+}
+li{
+  color: var(--tituloDM);
+}
+label{
+  color: var(--tituloDM);
+}
+.icoRedes{
+  color: var(--tituloDM);
+  background-color: var(--colorFondoDM);
+}
+.icoRedes:hover{
+  background-color: oklch(.33 .028 261.692);
+}
+
+
+
+.inputFormulario {
+  background: var(--colorFondoDM);
+  border: none;
+  border-bottom: 3px solid var(--colorBordeDM);
+}
+.inputFormulario::placeholder {
+  color: var(--tituloDM);
+  
+}
+.inputFormulario:focus {
+  border-bottom: 3px solid var(--colorBordeDM);
+  
+}
+
+.btnVerTodo{
+  background-color: var(--colorBtnDM);
+}
+.btnVerTodo:hover{
+  background-color: oklch(45.8% 0.195 277.366);
+}
+.bar1,
+.bar2,
+.bar3{
+  background-color: #fff;
+}
+
+
+#linkFooter, footer {
+  
+ 
+  color: var(--tituloDM);
+}
+
 }
