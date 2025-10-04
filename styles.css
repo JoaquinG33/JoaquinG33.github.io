@@ -417,7 +417,7 @@ color: var(--titulo);
   list-style: none;
   line-height: 40px;
   font-size: clamp(1.3rem, 1vw, 1.6rem);
-  letter-spacing: 1px;
+  letter-spacing: 0;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -518,7 +518,7 @@ color: var(--titulo);
 .labelFormulario {
   line-height: 30px;
   font-size: 1.4rem;
-  letter-spacing: 1px;
+  letter-spacing: 0;
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -527,7 +527,7 @@ color: var(--titulo);
   font-size: 1.3rem;
   font-weight: 400;
   font-family: "Lato", sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0;
 
   margin-bottom: 30px;
   width: 400px;
@@ -540,6 +540,7 @@ color: var(--titulo);
   font-size: 1rem;
   color: rgb(195, 195, 195);
   font-weight: 400;
+  letter-spacing: 0;
 }
 .inputFormulario:focus {
   outline: none;
@@ -564,6 +565,7 @@ color: var(--titulo);
   font-size: clamp(4.4rem, 6vw, 8.2rem);
   font-optical-sizing: auto;
   font-weight: 500;
+  
   font-style: normal;
   text-align: center;
 }
