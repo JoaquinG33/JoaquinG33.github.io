@@ -11,9 +11,9 @@
   --colorFondo: oklch(98.5% 0.001 106.423);
   --colorBtn: oklch(14.7% 0.004 49.25);
 
-  --tituloDM: #fff ;
-  --colorBordeDM: #fff;
-  --colorFondoDM:oklch(.13 .028 261.692) ;
+  --tituloDM: oklch(98.5% 0.002 247.839) ;
+  --colorBordeDM: oklch(98.5% 0.002 247.839);
+  --colorFondoDM:oklch(20.5% 0 0) ;
   --colorBtnDM: oklch(39.8% 0.195 277.366);
 }
 
@@ -239,6 +239,7 @@ z-index: 0;
 #linkGaleria {
   /* border-bottom: 3px solid black; */
   text-decoration: none;
+  
 }
 #linkMenu {
   text-decoration: none;
@@ -570,7 +571,7 @@ color: var(--titulo);
 #linkFooter {
   text-decoration: none;
  
-  color: #999;
+  color: oklch(55.3% 0.013 58.071);
 }
 footer {
   display: flex;
@@ -581,7 +582,7 @@ footer {
   font-size: 0.8rem;
   font-family: "Lato", serif;
   font-weight: 400;
-  color: #999;
+  color: oklch(55.3% 0.013 58.071);
 }
 /* ANIMACIONES */
 @keyframes animIconos {
@@ -706,6 +707,7 @@ footer {
   }
   .btnContacto {
     font-size: 1.5rem;
+    
   }
 
   .heroTituloContainer {
@@ -863,6 +865,7 @@ li{
 }
 label{
   color: var(--tituloDM);
+  
 }
 .icoRedes{
   color: var(--tituloDM);
