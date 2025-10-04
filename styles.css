@@ -14,7 +14,7 @@
   --tituloDM: oklch(98.5% 0.002 247.839) ;
   --colorBordeDM: oklch(98.5% 0.002 247.839);
   --colorFondoDM:oklch(20.5% 0 0) ;
-  --colorBtnDM: oklch(39.8% 0.195 277.366);
+  --colorBtnDM: oklch(55.3% 0.013 58.071);
 }
 
 
@@ -419,7 +419,7 @@ color: var(--titulo);
   font-size: clamp(1.3rem, 1vw, 1.6rem);
   letter-spacing: 1px;
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
  
 }
@@ -517,10 +517,10 @@ color: var(--titulo);
 }
 .labelFormulario {
   line-height: 30px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   letter-spacing: 1px;
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
 }
 .inputFormulario {
@@ -539,7 +539,7 @@ color: var(--titulo);
 .inputFormulario::placeholder {
   font-size: 1rem;
   color: rgb(195, 195, 195);
-  font-weight: 300;
+  font-weight: 400;
 }
 .inputFormulario:focus {
   outline: none;
@@ -862,11 +862,13 @@ font-size: 4rem;
 }
 li{
   color: var(--tituloDM);
+  
 }
 label{
   color: var(--tituloDM);
   
 }
+
 .icoRedes{
   color: var(--tituloDM);
   background-color: var(--colorFondoDM);
@@ -881,6 +883,7 @@ label{
   background: var(--colorFondoDM);
   border: none;
   border-bottom: 2px solid var(--colorBordeDM);
+  
   
 }
 .inputFormulario::placeholder {
