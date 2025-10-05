@@ -316,7 +316,7 @@ z-index: 0;
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 52px;
+  top: 65px;
   left: -200px;
   transition: all 350ms ease;
   border-radius: 8px;
@@ -781,6 +781,9 @@ footer {
   }
   .iconos{
     width: 92.5%
+  }
+  .iconosMenuContainer{
+    top:55px;
   }
 
   /* PRESENTACION */
