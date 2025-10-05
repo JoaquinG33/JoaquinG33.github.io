@@ -2,19 +2,23 @@
   
   --naturalezaBorde: oklch(76.8% 0.233 130.85);
   --ciudadBorde: oklch(86.9% 0.005 56.366);
-  --genteBorde: oklch(96.9% 0.015 12.422);
+  --genteBorde: oklch(.746 .16 232.661);
   --comidaBorde: oklch(90.5% 0.182 98.111);
   --videoClipBorde: oklch(63.7% 0.237 25.331);
 
+
+  /*Los colores son los de la paleta GRAY de Tailwind*/
   --titulo: oklch(.278 .033 256.848);
-  --colorBorde: oklch(92.3% 0.003 48.717);
+  --colorBorde: oklch(.928 .006 264.531);
   --colorFondo:  oklch(.97 .001 106.424) ;
   --colorBtn: oklch(.373 .034 259.733);
+  --textoSecundario: oklch(.446 .03 256.802);
 
-  --tituloDM: oklch(98.5% 0.002 247.839) ;
-  --colorBordeDM: oklch(98.5% 0.002 247.839);
-  --colorFondoDM:oklch(20.5% 0 0) ;
-  --colorBtnDM: oklch(55.3% 0.013 58.071);
+  --tituloDM: oklch(.985 .002 247.839) ;
+  --colorBordeDM: oklch(.985 .002 247.839);
+  --colorFondoDM:oklch(.13 .028 261.692) ;
+  --colorBtnDM: oklch(.373 .034 259.733);
+  --textoSecundarioDM: oklch(.985 .002 247.839);
 }
 
 
@@ -144,6 +148,7 @@ z-index: 0;
   cursor: pointer;
   transition: 150ms;
   
+  
 }
 .btnContacto:hover {
   background-color: rgba(255, 255, 255, 0.252);
@@ -172,7 +177,7 @@ z-index: 0;
   opacity: 0;
   text-wrap-mode: nowrap;
   font-size: 8rem;
-  color: oklch(.97 .001 106.424);
+  color: white;
   font-family: "Playfair Display", serif;
   letter-spacing: -1px;
   font-weight: 500;
@@ -188,7 +193,7 @@ z-index: 0;
 #contenedorGlobalFondoBlanco {
  position: relative;
   background-color: var(--colorFondo);
-  border: 5px solid var(--colorFondo);
+
 }
 .flexContainerGlobal {
   display: flex;
@@ -250,17 +255,21 @@ z-index: 0;
 /* ICONOS Y MENU DESPLEGABLE */
 .iconos {
   position: sticky;
-  padding: 20px 0px 20px 0px;
-  top: 0;
+  padding: 5px 0px 5px 0px;
+  top:6px;
+  
   width: 100%;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  margin: auto;
+  
+  
   z-index: 2;
   display: flex;
   justify-content: space-evenly;
-  border-radius: 10px;
-  background-color: var(--colorFondo);
-  
+  border-radius: 12px;
+  /* border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; */
+  background-color: oklch(96.987% 0.00122 107.796 / 0.90);
+  backdrop-filter: blur(10px);
 }
 
 .boton {
@@ -307,27 +316,38 @@ z-index: 0;
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: 75px;
+  top: 52px;
   left: -200px;
   transition: all 350ms ease;
+  border-radius: 8px;
+  
+  box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .iconosMenu {
   list-style: none;
   cursor: pointer;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
+  color: var(--textoSecundario);
   font-style: normal;
-
-  border-left: 0px solid rgb(238, 238, 238);
-
+  letter-spacing: 0;
+  border-left: 0px solid var(--colorFondo);
+  
   width: 130px;
   background-color: var(--colorFondo);
   padding: 10px;
   transition: border-color 150ms ease-out, border 150ms ease-out, 150ms ease-out,
     translate 150ms ease-out;
 }
-
+#icoClip{
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+#icoTodo{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
 #icoNaturaleza:hover,
 #icoCiudad:hover,
 #icoGente:hover,
@@ -380,7 +400,7 @@ position: relative;
 }
 
 .btnVerTodo:hover {
-  background-color: rgb(65, 65, 65);
+  filter: contrast(1.2);
   transition: all 200ms;
   cursor: pointer;
 }
@@ -407,7 +427,7 @@ opacity: 1;
 .fotoPresentacion {
   opacity: 0;
   object-fit: cover;
-
+filter: drop-shadow(0 4px 4px rgb(0 0 0 / 0.15));
   width: 200px;
   height: 200px;
   border-radius: 100%;
@@ -417,7 +437,7 @@ opacity: 1;
 
 .listaPresentacion {
   position: relative;
-color: var(--titulo);
+color: var(--textoSecundario);
   list-style: none;
   line-height: 40px;
   font-size: clamp(1.4rem, 1vw, 1.6rem);
@@ -474,6 +494,7 @@ color: var(--titulo);
   display: flex;
   gap: 50px;
   
+  
 }
 .icoRedes {
   clip-path: circle();
@@ -484,7 +505,7 @@ color: var(--titulo);
   transition: 300ms ease;
 }
 .icoRedes:hover {
-  background-color: oklch(92.3% 0.003 48.717);
+  background-color: oklch(.928 .006 264.531);
   transition: 300ms ease;
 }
 
@@ -528,7 +549,7 @@ color: var(--titulo);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: var(--titulo);
+  color: var(--textoSecundario);
 }
 .inputFormulario {
   font-size: 1.3rem;
@@ -541,8 +562,8 @@ color: var(--titulo);
   height: 40px;
   background: oklch(98.5% 0 0);
   border: none;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  /* border-bottom: 3px solid var(--colorBorde); */
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  
 }
 .inputFormulario::placeholder {
   font-size: 1rem;
@@ -582,7 +603,7 @@ color: var(--titulo);
 #linkFooter {
   text-decoration: none;
  
-  color: oklch(55.3% 0.013 58.071);
+  color: oklch(.373 .034 259.733);
 }
 footer {
   display: flex;
@@ -593,7 +614,7 @@ footer {
   font-size: 0.8rem;
   font-family: "Lato", serif;
   font-weight: 400;
-  color: oklch(55.3% 0.013 58.071);
+  color: oklch(.373 .034 259.733);
 }
 /* ANIMACIONES */
 @keyframes animIconos {
@@ -848,10 +869,7 @@ font-size: 4rem;
   #contenedorGlobalFondoBlanco, .containerGaleria, .flexContainerGlobal, .botonContainer{
   background-color: var(--colorFondoDM);
 }
-#contenedorGlobalFondoBlanco{
-  border: none;
-  
-}
+
   .titulo, #contactameTexto, #redesSocialesTexto{
     color: var(--tituloDM);
   }
@@ -864,7 +882,7 @@ font-size: 4rem;
   border-bottom: 3px solid var(--colorBordeDM);
 }
 .iconos{
-  background-color: var(--colorFondoDM);
+  background-color: oklch(12.964% 0.02739 261.707 / 0.80);
   color: var(--tituloDM);
 }
 .iconosMenu{
@@ -872,12 +890,12 @@ font-size: 4rem;
   color: var(--tituloDM);
 }
 li{
-  color: var(--tituloDM);
-  font-weight: 400;
+  color: var(--textoSecundarioDM);
+  
 }
-label{
-  color: var(--tituloDM);
-  font-weight: 400;
+.labelFormulario{
+  color: var(--textoSecundarioDM);
+  
 }
 
 .icoRedes{
@@ -898,7 +916,7 @@ label{
   
 }
 .inputFormulario::placeholder {
-  color: #cdcdcd;
+  color: oklch(.707 .022 261.325);
   
 }
 .inputFormulario:focus {
@@ -910,7 +928,7 @@ label{
   background-color: var(--colorBtnDM);
 }
 .btnVerTodo:hover{
-  background-color: oklch(45.8% 0.195 277.366);
+ filter: contrast(1.2);
 }
 .bar1,
 .bar2,
