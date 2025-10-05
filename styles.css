@@ -779,7 +779,9 @@ footer {
   .titulo {
     font-size: 2rem;
   }
-  
+  .iconos{
+    width: 92.5%
+  }
 
   /* PRESENTACION */
   .presentacionContainer {
