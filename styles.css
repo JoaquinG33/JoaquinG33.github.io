@@ -894,7 +894,8 @@ font-size: 4rem;
   border-bottom: 3px solid var(--colorBordeDM);
 }
 .iconos{
-  background-color: oklch(12.964% 0.02739 261.707 / 0.80);
+  background-color: oklch(12.964% 0.02739 261.707 / 0.70);
+  
   color: var(--tituloDM);
 }
 .iconosMenu{
