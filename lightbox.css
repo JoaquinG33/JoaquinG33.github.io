@@ -7,8 +7,8 @@ body.lb-disable-scrolling {
   top: 0;
   left: 0;
   z-index: 9999;
-  background-color: black;
-  opacity: 0.8;
+  background-color: oklch(30.118% 0.00003 271.152 / 0.45);
+  backdrop-filter: blur(25px);
   display: none;
 }
 
