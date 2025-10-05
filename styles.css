@@ -320,7 +320,7 @@ z-index: 0;
   transition: all 350ms ease;
   border-radius: 8px;
   
-  box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  
 }
 .iconosMenu {
   list-style: none;
@@ -332,7 +332,7 @@ z-index: 0;
   font-style: normal;
   letter-spacing: 0;
   border-left: 0px solid var(--colorFondo);
-  
+  box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   width: 130px;
   background-color: var(--colorFondo);
   padding: 10px;
