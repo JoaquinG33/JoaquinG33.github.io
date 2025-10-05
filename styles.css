@@ -318,7 +318,7 @@ z-index: 0;
 }
 
 .iconosMenuContainer {
-  opacity: 1;
+  opacity: 0;
   position: absolute;
   display: flex;
   flex-direction: column;
