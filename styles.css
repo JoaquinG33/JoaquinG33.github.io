@@ -257,7 +257,7 @@ z-index: 0;
   position: sticky;
   padding: 5px 0px 5px 0px;
   top:6px;
-  
+  margin: auto;
   width: 100%;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   
@@ -766,7 +766,7 @@ footer {
   /* GALERIA */
 
   .containerGaleria {
-    width: 100%;
+    width: 95%;
     padding-top: 10px;
     margin: auto;
     columns: 2 180px;
@@ -779,6 +779,7 @@ footer {
   .titulo {
     font-size: 2rem;
   }
+  
 
   /* PRESENTACION */
   .presentacionContainer {
