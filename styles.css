@@ -6,10 +6,10 @@
   --comidaBorde: oklch(90.5% 0.182 98.111);
   --videoClipBorde: oklch(63.7% 0.237 25.331);
 
-  --titulo: oklch(26.8% 0.007 34.298);
+  --titulo: oklch(.278 .033 256.848);
   --colorBorde: oklch(92.3% 0.003 48.717);
-  --colorFondo: oklch(98.5% 0.001 106.423);
-  --colorBtn: oklch(14.7% 0.004 49.25);
+  --colorFondo:  oklch(.97 .001 106.424) ;
+  --colorBtn: oklch(.373 .034 259.733);
 
   --tituloDM: oklch(98.5% 0.002 247.839) ;
   --colorBordeDM: oklch(98.5% 0.002 247.839);
@@ -63,6 +63,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  
 }
 
 html {
@@ -142,6 +143,7 @@ z-index: 0;
   font-size: 1.5rem;
   cursor: pointer;
   transition: 150ms;
+  
 }
 .btnContacto:hover {
   background-color: rgba(255, 255, 255, 0.252);
@@ -170,7 +172,7 @@ z-index: 0;
   opacity: 0;
   text-wrap-mode: nowrap;
   font-size: 8rem;
-  color: oklch(98.5% 0.001 106.423);
+  color: oklch(.97 .001 106.424);
   font-family: "Playfair Display", serif;
   letter-spacing: -1px;
   font-weight: 500;
@@ -251,12 +253,14 @@ z-index: 0;
   padding: 20px 0px 20px 0px;
   top: 0;
   width: 100%;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   margin: auto;
   z-index: 2;
   display: flex;
   justify-content: space-evenly;
-
+  border-radius: 10px;
   background-color: var(--colorFondo);
+  
 }
 
 .boton {
@@ -416,7 +420,7 @@ opacity: 1;
 color: var(--titulo);
   list-style: none;
   line-height: 40px;
-  font-size: clamp(1.3rem, 1vw, 1.6rem);
+  font-size: clamp(1.4rem, 1vw, 1.6rem);
   letter-spacing: 0;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -469,11 +473,13 @@ color: var(--titulo);
 #redesSocialesIconos {
   display: flex;
   gap: 50px;
+  
 }
 .icoRedes {
   clip-path: circle();
   color: var(--titulo);
   background-color: var(--colorFondo);
+  
   padding: 7px;
   transition: 300ms ease;
 }
@@ -522,24 +528,27 @@ color: var(--titulo);
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: var(--titulo);
 }
 .inputFormulario {
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Lato", sans-serif;
   letter-spacing: 0;
-
+  border-radius: 5px;
   margin-bottom: 30px;
   width: 400px;
   height: 40px;
   background: oklch(98.5% 0 0);
   border: none;
-  border-bottom: 3px solid var(--colorBorde);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  /* border-bottom: 3px solid var(--colorBorde); */
 }
 .inputFormulario::placeholder {
   font-size: 1rem;
-  color: rgb(195, 195, 195);
+  color: oklch(.872 .01 258.338);
   font-weight: 400;
+  padding-left: 1px;
   letter-spacing: 0;
 }
 .inputFormulario:focus {
@@ -864,11 +873,11 @@ font-size: 4rem;
 }
 li{
   color: var(--tituloDM);
-  
+  font-weight: 400;
 }
 label{
   color: var(--tituloDM);
-  
+  font-weight: 400;
 }
 
 .icoRedes{
