@@ -1,7 +1,12 @@
+
+
 const botonNaturaleza = document.getElementById("icoNaturaleza");
 const botonCiudad = document.getElementById("icoCiudad");
 const botonGente = document.getElementById("icoGente");
 const botonComida = document.getElementById("icoComida");
+const botonVideoclip = document.getElementById("icoClip");
+const botonHeroVideoclip = document.getElementById("btnClips");
+const botonHeroGaleria = document.getElementById("btnGaleria");
 const botonTodas = document.getElementById("icoTodo");
 const fondoGaleria = document.getElementById("galeriaId");
 const fondoContainer = document.getElementById("containerId");
@@ -16,14 +21,19 @@ const imgNaturaleza = document.querySelectorAll(".naturaleza");
 const imgCiudad = document.querySelectorAll(".ciudad");
 const imgGente = document.querySelectorAll(".gente");
 const imgComida = document.querySelectorAll(".comida")
+const videoclip = document.querySelectorAll(".videoclip");
 const global = document.querySelectorAll(".global");
 const botones = document.querySelectorAll(".boton");
 
 
 botonNaturaleza.onclick = fotosNaturaleza;
+
 botonCiudad.onclick = fotosCiudad;
 botonGente.onclick = fotosGente;
 botonComida.onclick = fotosComida;
+botonVideoclip.onclick = videoClips;
+botonHeroGaleria.onclick = todas;
+botonHeroVideoclip.onclick = videoClips;
 botonTodas.onclick = todas;
 menuClick.onclick = desplegar;
 
@@ -70,6 +80,9 @@ function todas(){
      
      global.style.display = "block";
    });
+    videoclip.forEach((videoclip) => {
+    videoclip.style.display = "none";
+  })
 }
 
 
@@ -92,6 +105,10 @@ function fotosNaturaleza() {
   imgComida.forEach((imgComida)=> {
     imgComida.style.display = "none";
   })
+
+  videoclip.forEach((videoclip) => {
+    videoclip.style.display = "none";
+  })
 }
 
 function fotosCiudad() {
@@ -112,6 +129,10 @@ function fotosCiudad() {
 
   imgComida.forEach((imgComida)=>{
     imgComida.style.display = "none";
+  })
+
+    videoclip.forEach((videoclip) => {
+    videoclip.style.display = "none";
   })
 }
 
@@ -134,6 +155,9 @@ function fotosGente() {
   imgComida.forEach((imgComida)=>{
     imgComida.style.display = "none";
   })
+    videoclip.forEach((videoclip) => {
+    videoclip.style.display = "none";
+  })
 }
 
 function fotosComida(){
@@ -155,6 +179,36 @@ function fotosComida(){
   imgGente.forEach((imgGente)=>{
     imgGente.style.display = "none";
   })
+    videoclip.forEach((videoclip) => {
+    videoclip.style.display = "none";
+  })
+}
+
+function videoClips(){
+animacionGaleria();
+titulo.innerText = "Videoclips";
+videoclip.forEach((videoclip) =>{
+  videoclip.style.opacity = "100%";
+  videoclip.style.display = "block";
+})
+  imgCiudad.forEach((imgCiudad) => {
+    imgCiudad.style.display = "none";
+  });
+
+  imgNaturaleza.forEach((imgNaturaleza) => {
+    imgNaturaleza.style.display = "none";
+  });
+
+  imgGente.forEach((imgGente)=>{
+    imgGente.style.display = "none";
+  })
+
+  imgComida.forEach((imgComida) => {
+    imgComida.style.display = "none";
+  });
+
+
+
 }
 
 function animacionGaleria(){

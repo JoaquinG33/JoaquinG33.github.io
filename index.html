@@ -28,7 +28,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    
+    <script src="https://player.vimeo.com/api/player.js"></script>
   </head>
   <body>
     <main>
@@ -37,8 +37,7 @@
         <img class="heroImagen" alt="Caravana Frente Amplio" src="/img/Caravana_FA_-_Minas.webp" />
         <div class="heroTituloContainer">
           <h1 class="heroTitulo anim" data-anim="animacionTituloHero">Marcos  Núñez</h1>
-          <!-- <img id="icoCamara" width="50" height="50" src="https://img.icons8.com/ios-filled/50/camera--v1.png" alt="camera--v1"/> -->
-           <!-- <span id="fotografiaTexto">fotografía</span> -->
+          
             
 <svg class="anim" data-anim="animacionFotografiaTexto" width="290.33099" height="100.433" viewBox="0 0 132.37924 53.03123" version="1.1" id="svg1" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" style="">
   <defs id="defs1">
@@ -57,9 +56,9 @@
         </div>
         <div class="btnContactoContainer anim" data-anim="animacionBotones">
           
-          <a id="linkContacto" href="#galeriaId"><button class="btnContacto" id="btnGaleria" >Galería</button>
+          <a id="linkGaleria" href="#galeriaId"><button class="btnContacto" id="btnGaleria" >Galería</button>
           <a id="linkContacto" href="#prueba"><button class="btnContacto" >Contacto</button></a>
-          <button class="btnContacto" id="btnClips" >Videoclips</button>
+         <a id="#linkVideoclips" href="#galeriaId"> <button class="btnContacto" id="btnClips" >Videoclips</button></a>
         </div>
       </section>
       
@@ -109,11 +108,7 @@
           </div>
         </section>
 
-        <!-- <div class="botonesDiv">
-          <button id="btnNaturaleza" class="boton">N</button>
-          <button id="btnCiudad" class="boton">C</button>
-          <button id="btnGente" class="boton">G</button>
-        </div> -->
+      
         <div class="tituloDiv">
           <a id="linkGaleria" href="#galeriaId">
             <h1 class="titulo" id="tituloId">Galería</h1></a
@@ -263,7 +258,14 @@
             alt="Avenida"
             loading="lazy"
           /></a>
-          <!-- </div> -->
+
+          <iframe class="videoclip" src="https://player.vimeo.com/video/1125727601?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Espacio 17a"></iframe>
+            
+          <iframe class="videoclip" src="https://player.vimeo.com/video/1125727601?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Espacio 17a"></iframe>
+          <iframe class="videoclip" src="https://player.vimeo.com/video/1125727601?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Espacio 17a"></iframe>
+          <iframe class="videoclip" src="https://player.vimeo.com/video/1125727601?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Espacio 17a"></iframe>
+          <iframe class="videoclip" src="https://player.vimeo.com/video/1125727601?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Espacio 17a"></iframe>
+          <iframe class="videoclip" src="https://player.vimeo.com/video/1125727601?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"  frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Espacio 17a"></iframe>
         </div>
       </section>
       
@@ -348,9 +350,12 @@
 
     <script src="./script.js"></script>
     <script src="./lightbox-plus-jquery.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
 
 <script>
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     lightbox.option({
       'resizeDuration': 150,
       'disableScrolling': true,
@@ -359,6 +364,15 @@
       'wrapAround': true
       
     })
+    
+
+//     gsap.to(".iconos",{
+//       scrollTrigger: {
+//         pin: true,
+      
+//       }
+      
+// })
 </script>
 
 
