@@ -1,5 +1,3 @@
-
-
 const botonNaturaleza = document.getElementById("icoNaturaleza");
 const botonCiudad = document.getElementById("icoCiudad");
 const botonGente = document.getElementById("icoGente");
@@ -20,11 +18,10 @@ let menu = document.querySelector(".menuDesplegableDiv");
 const imgNaturaleza = document.querySelectorAll(".naturaleza");
 const imgCiudad = document.querySelectorAll(".ciudad");
 const imgGente = document.querySelectorAll(".gente");
-const imgComida = document.querySelectorAll(".comida")
+const imgComida = document.querySelectorAll(".comida");
 const videoclip = document.querySelectorAll(".videoclip");
 const global = document.querySelectorAll(".global");
 const botones = document.querySelectorAll(".boton");
-
 
 botonNaturaleza.onclick = fotosNaturaleza;
 
@@ -37,63 +34,53 @@ botonHeroVideoclip.onclick = videoClips;
 botonTodas.onclick = todas;
 menuClick.onclick = desplegar;
 
-
 //Menu desplegable
-function desplegar(){
-if(menu.classList.toggle("change")){
+function desplegar() {
+  if (menu.classList.toggle("change")) {
     containerIconosMenu.classList.toggle("animacionMenu");
     containerIconosMenu.classList.remove("animacionMenuInv");
-
-}else{
-  containerIconosMenu.classList.toggle("animacionMenuInv");
-  containerIconosMenu.classList.remove("animacionMenu");
-  
-  
-}
-
- 
+  } else {
+    containerIconosMenu.classList.toggle("animacionMenuInv");
+    containerIconosMenu.classList.remove("animacionMenu");
+  }
 }
 //Intersection Observer para animaciones en scroll
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const anim = entry.target.dataset.anim;
-      entry.target.classList.add(anim);
-      observer.unobserve(entry.target); 
-    }
-  });
-}, {
-  threshold: 0.2 
-});
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const anim = entry.target.dataset.anim;
+        entry.target.classList.add(anim);
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.2,
+  }
+);
 
+document.querySelectorAll(".anim").forEach((el) => observer.observe(el));
 
-document.querySelectorAll(".anim").forEach(el => observer.observe(el));
-
-
-
-
-
-function todas(){
+function todas() {
   titulo.innerText = "Galería";
-    global.forEach((global) => {
-     
-     global.style.display = "block";
-   });
-    videoclip.forEach((videoclip) => {
+  global.forEach((global) => {
+    global.style.display = "block";
+  });
+  videoclip.forEach((videoclip) => {
     videoclip.style.display = "none";
-  })
+  });
 }
 
-
 function fotosNaturaleza() {
-   animacionGaleria();
-   titulo.innerText = "Naturaleza";
-    imgNaturaleza.forEach((imgNaturaleza) => {
+  animacionGaleria();
+  titulo.innerText = "Naturaleza";
+  imgNaturaleza.forEach((imgNaturaleza) => {
     imgNaturaleza.style.opacity = "100%";
     imgNaturaleza.style.display = "block";
   });
-  
+
   imgCiudad.forEach((imgCiudad) => {
     imgCiudad.style.display = "none";
   });
@@ -102,18 +89,18 @@ function fotosNaturaleza() {
     imgGente.style.display = "none";
   });
 
-  imgComida.forEach((imgComida)=> {
+  imgComida.forEach((imgComida) => {
     imgComida.style.display = "none";
-  })
+  });
 
   videoclip.forEach((videoclip) => {
     videoclip.style.display = "none";
-  })
+  });
 }
 
 function fotosCiudad() {
- animacionGaleria();
- titulo.innerText = "Urbano";
+  animacionGaleria();
+  titulo.innerText = "Urbano";
   imgCiudad.forEach((imgCiudad) => {
     imgCiudad.style.opacity = "100%";
     imgCiudad.style.display = "block";
@@ -127,20 +114,20 @@ function fotosCiudad() {
     imgGente.style.display = "none";
   });
 
-  imgComida.forEach((imgComida)=>{
+  imgComida.forEach((imgComida) => {
     imgComida.style.display = "none";
-  })
+  });
 
-    videoclip.forEach((videoclip) => {
+  videoclip.forEach((videoclip) => {
     videoclip.style.display = "none";
-  })
+  });
 }
 
 function fotosGente() {
   animacionGaleria();
   titulo.innerText = "Personas";
   imgGente.forEach((imgGente) => {
-    imgGente.style.opacity = "100%"
+    imgGente.style.opacity = "100%";
     imgGente.style.display = "block";
   });
 
@@ -152,19 +139,19 @@ function fotosGente() {
     imgNaturaleza.style.display = "none";
   });
 
-  imgComida.forEach((imgComida)=>{
+  imgComida.forEach((imgComida) => {
     imgComida.style.display = "none";
-  })
-    videoclip.forEach((videoclip) => {
+  });
+  videoclip.forEach((videoclip) => {
     videoclip.style.display = "none";
-  })
+  });
 }
 
-function fotosComida(){
+function fotosComida() {
   animacionGaleria();
   titulo.innerText = "Culinario";
   imgComida.forEach((imgComida) => {
-    imgComida.style.opacity = "100%"
+    imgComida.style.opacity = "100%";
     imgComida.style.display = "block";
   });
 
@@ -176,21 +163,21 @@ function fotosComida(){
     imgNaturaleza.style.display = "none";
   });
 
-  imgGente.forEach((imgGente)=>{
+  imgGente.forEach((imgGente) => {
     imgGente.style.display = "none";
-  })
-    videoclip.forEach((videoclip) => {
+  });
+  videoclip.forEach((videoclip) => {
     videoclip.style.display = "none";
-  })
+  });
 }
 
-function videoClips(){
-animacionGaleria();
-titulo.innerText = "Videoclips";
-videoclip.forEach((videoclip) =>{
-  videoclip.style.opacity = "100%";
-  videoclip.style.display = "block";
-})
+function videoClips() {
+  animacionGaleria();
+  titulo.innerText = "Videoclips";
+  videoclip.forEach((videoclip) => {
+    videoclip.style.opacity = "100%";
+    videoclip.style.display = "block";
+  });
   imgCiudad.forEach((imgCiudad) => {
     imgCiudad.style.display = "none";
   });
@@ -199,25 +186,20 @@ videoclip.forEach((videoclip) =>{
     imgNaturaleza.style.display = "none";
   });
 
-  imgGente.forEach((imgGente)=>{
+  imgGente.forEach((imgGente) => {
     imgGente.style.display = "none";
-  })
+  });
 
   imgComida.forEach((imgComida) => {
     imgComida.style.display = "none";
   });
-
-
-
 }
 
-function animacionGaleria(){
+function animacionGaleria() {
   fondoContainer.classList.toggle("animacionGaleria");
 
-  function removerClase(){
+  function removerClase() {
     fondoContainer.classList.remove("animacionGaleria");
   }
- setTimeout(removerClase, 500);
+  setTimeout(removerClase, 500);
 }
-
-
