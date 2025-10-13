@@ -8,20 +8,29 @@
 
 
   /*Los colores son los de la paleta GRAY de Tailwind*/
-  --titulo: oklch(.278 .033 256.848);
+  --titulo: oklch(27.837% 0.03355 257.693);
   --colorBorde: oklch(.928 .006 264.531);
+  --colorBar: oklch(96.987% 0.00122 107.796 / 0.75);
   --colorFondo:  oklch(.97 .001 106.424) ;
+  --placeHolder: oklch(83.162% 0.00657 255.711);
+  --colorBtnHero: oklch(.97 .001 106.424);
   --colorBtn: oklch(.373 .034 259.733);
   --textoSecundario: oklch(.446 .03 256.802);
 
-  --tituloDM: oklch(.985 .002 247.839) ;
-  --colorBordeDM: oklch(.985 .002 247.839);
-  --colorFondoDM:oklch(.13 .028 261.692) ;
-  --colorBtnDM: oklch(.373 .034 259.733);
-  --textoSecundarioDM: oklch(.985 .002 247.839);
+
+  
 }
 
-
+.darkMode{
+  --titulo: oklch(.985 .002 247.839) ;
+  --placeHolder: oklch(.707 .022 261.325);
+  --colorBorde: oklch(.985 .002 247.839);
+  --colorBtnHero: oklch(.97 .001 106.424);
+  --colorFondo:oklch(.13 .028 261.692) ;
+  --colorBar: oklch(12.964% 0.02739 261.707 / 0.70);
+  --colorBtn: oklch(.373 .034 259.733);
+  --textoSecundario: oklch(.985 .002 247.839);
+}
 
 /* SCROLLBAR */
 *::-webkit-scrollbar {
@@ -88,7 +97,7 @@ html {
 .bar3 {
   width: 30px;
   height: 4px;
-  background-color: var(--colorBtn);
+  background-color: var(--titulo);
   margin: 3px;
   transition: 0.4s;
 }
@@ -141,10 +150,10 @@ z-index: 0;
   padding: 15px 40px 15px 40px;
   font-family: "Lato", sans-serif;
   font-weight: 600;
-  color: var(--colorFondo);
+  color: var(--colorBtnHero);
   border-radius: 30px;
-  border: 3px solid var(--colorFondo);
-  border-color: var(--colorFondo);
+  border: 3px solid var(--colorBtnHero);
+  border-color: var(--colorBtnHero);
   background-color: transparent;
   font-size: 1.5rem;
   cursor: pointer;
@@ -284,7 +293,7 @@ transition: 200ms;
   justify-content: space-evenly;
   border-radius: 24px;
   
-  background-color: oklch(96.987% 0.00122 107.796 / 0.75);
+  background-color: var(--colorBar);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
   
@@ -301,18 +310,43 @@ transition: 200ms;
   justify-content: flex-end;
   align-content: center;
   width: 33%;
+  
  
 }
 .botonContactoDiv a {
   margin: auto 0 auto 0;
 }
-.iconoContacto {
-  
+.iconoToggle {
+ 
   margin: auto 0 auto 0;
-  height: 32px;
-  width: 32px;
-  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.iconoToggle svg{
+  fill: var(--titulo);
+  
+}
+.iconoToggle svg:last-child{
+  display: none;
+}
+
+.darkMode .iconoToggle svg:first-child{
+  display: none;
+}
+
+.darkMode .iconoToggle svg:last-child{
+  display: block;
+}
+.iconoToggle:hover{
+  cursor: pointer;
+}
+
 .menuDesplegableDiv {
   display: flex;
   flex-direction: column;
@@ -576,18 +610,19 @@ color: var(--textoSecundario);
   font-weight: 300;
   font-family: "Lato", sans-serif;
   letter-spacing: 0;
-  border-radius: 5px;
+  
   margin-bottom: 30px;
   width: 400px;
   height: 40px;
-  background: oklch(98.5% 0 0);
+  background: var(--colorFondo);
   border: none;
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  border-bottom:2px solid var(--colorBorde);
+  
   
 }
 .inputFormulario::placeholder {
   font-size: 1rem;
-  color: oklch(.872 .01 258.338);
+  color: var(--placeHolder); 
   font-weight: 400;
   padding-left: 1px;
   letter-spacing: 0;
@@ -623,7 +658,7 @@ color: var(--textoSecundario);
 #linkFooter {
   text-decoration: none;
  
-  color: oklch(.373 .034 259.733);
+  color: var(--titulo);
 }
 footer {
   display: flex;
@@ -634,7 +669,7 @@ footer {
   font-size: 0.8rem;
   font-family: "Lato", serif;
   font-weight: 400;
-  color: oklch(.373 .034 259.733);
+  color: var(--titulo);
 }
 /* ANIMACIONES */
 @keyframes animIconos {
@@ -893,85 +928,4 @@ font-size: 4rem;
   .btnFormulario {
     margin: 40px auto;
   }
-}
-/* DARK MODE */
-@media (prefers-color-scheme: dark) {
-  #contenedorGlobalFondoBlanco, .containerGaleria, .flexContainerGlobal, .botonContainer{
-  background-color: var(--colorFondoDM);
-}
-
-  .titulo, #contactameTexto, #redesSocialesTexto{
-    color: var(--tituloDM);
-  }
-  .presentacionContainer{
-    background-color: var(--colorFondoDM);
-  border-top: 3px solid var(--colorBordeDM);
-}
-#seccionFormularioContainer{
-   background-color: var(--colorFondoDM);
-  border-bottom: 3px solid var(--colorBordeDM);
-}
-.iconos{
-  background-color: oklch(12.964% 0.02739 261.707 / 0.70);
-  
-  color: var(--tituloDM);
-}
-.iconosMenu{
-  background-color: var(--colorFondoDM);
-  color: var(--tituloDM);
-}
-li{
-  color: var(--textoSecundarioDM);
-  
-}
-.labelFormulario{
-  color: var(--textoSecundarioDM);
-  
-}
-
-.icoRedes{
-  color: var(--tituloDM);
-  background-color: var(--colorFondoDM);
-}
-.icoRedes:hover{
-  background-color: oklch(.33 .028 261.692);
-}
-
-
-
-.inputFormulario {
-  background: var(--colorFondoDM);
-  border: none;
-  border-bottom: 2px solid var(--colorBordeDM);
-  
-  
-}
-.inputFormulario::placeholder {
-  color: oklch(.707 .022 261.325);
-  
-}
-.inputFormulario:focus {
-  border-bottom: 2px solid var(--textoSecundarioDM);
-  
-}
-
-.btnVerTodo{
-  background-color: var(--colorBtnDM);
-}
-.btnVerTodo:hover{
- filter: contrast(1.2);
-}
-.bar1,
-.bar2,
-.bar3{
-  background-color: #fff;
-}
-
-
-#linkFooter, footer {
-  
- 
-  color: var(--tituloDM);
-}
-
 }

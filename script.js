@@ -11,6 +11,7 @@ const fondoContainer = document.getElementById("containerId");
 const titulo = document.getElementById("tituloId");
 const iconosFondo = document.getElementById("iconosId");
 const containerIconosMenu = document.querySelector(".iconosMenuContainer");
+const modeToggle = document.querySelector(".iconoToggle");
 const fotoMarcos = document.getElementById("fotoMarcos");
 let menuClick = document.querySelector(".menuDesplegableDivClick");
 let menu = document.querySelector(".menuDesplegableDiv");
@@ -32,6 +33,7 @@ botonVideoclip.onclick = videoClips;
 botonHeroGaleria.onclick = todas;
 botonHeroVideoclip.onclick = videoClips;
 botonTodas.onclick = todas;
+modeToggle.onclick = toggle;
 menuClick.onclick = desplegar;
 
 //Menu desplegable
@@ -44,6 +46,16 @@ function desplegar() {
     containerIconosMenu.classList.remove("animacionMenu");
   }
 }
+//Toggle de Dark/Light mode
+function toggle() {
+  if (document.body.classList.contains("darkMode")) {
+    document.body.classList.remove("darkMode");
+  } else {
+    document.body.classList.add("darkMode");
+  }
+}
+
+
 //Intersection Observer para animaciones en scroll
 
 const observer = new IntersectionObserver(
@@ -62,6 +74,8 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".anim").forEach((el) => observer.observe(el));
+
+
 
 function todas() {
   titulo.innerText = "Galería";
