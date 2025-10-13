@@ -46,6 +46,14 @@ function desplegar() {
     containerIconosMenu.classList.remove("animacionMenu");
   }
 }
+document.addEventListener('click', (e) => {
+  
+  if (!menu.contains(e.target) && e.target !== menuClick) {
+   
+    containerIconosMenu.classList.remove("animacionMenu");
+    menu.classList.remove("change");
+  }
+});
 //Toggle de Dark/Light mode
 function toggle() {
   if (document.body.classList.contains("darkMode")) {
