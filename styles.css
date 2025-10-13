@@ -262,9 +262,7 @@ transition: 200ms;
 }
 
 
-/* .titulo:hover{
-  filter: brightness(1.6);
-} */
+
 .tituloDiv {
   display: flex;
   justify-content: center;
@@ -272,13 +270,14 @@ transition: 200ms;
   width: 33%;
   }
 #linkGaleria {
-  /* border-bottom: 3px solid black; */
+  
   text-decoration: none;
   
 }
 #linkMenu {
   text-decoration: none;
   color: black;
+ 
 }
 /* ICONOS Y MENU DESPLEGABLE */
 .iconos {
@@ -374,7 +373,7 @@ transition: 200ms;
   display: flex;
   flex-direction: column;
   top: 65px;
-  left: -200px;
+  left: -600px;
   transition: all 350ms ease;
   border-radius: 8px;
   
@@ -689,7 +688,7 @@ footer {
     opacity: 1;
   }
   to {
-    left: -200px;
+    left: -600px;
     opacity: 0;
   }
 }
