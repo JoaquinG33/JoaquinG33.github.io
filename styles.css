@@ -647,7 +647,7 @@ footer {
     transform: scale(1);
   }
   to {
-    filter: brightness(0.5);
+    filter: brightness(0.7);
     transform: scale(1.2);
   }
 }
