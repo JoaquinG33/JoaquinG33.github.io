@@ -121,7 +121,7 @@ html {
 
   object-fit: cover;
   /* animation: animScroll1 200ms linear 0ms; */
-  animation: blur 2000ms ease-in-out 800ms forwards;
+  animation: blur 2000ms ease-in-out 0ms forwards;
 
   /* animation-timeline: scroll(block nearest); */
 }
@@ -762,7 +762,7 @@ footer {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    transform: translate(-50%, -20%);
+    /* transform: translate(-50%, -20%); */
     width: 100%;
   }
   .btnContacto {
@@ -773,7 +773,7 @@ footer {
     z-index: -1;
 
     width: 100%;
-    top: 25%;
+    /* top: 25%; */
     left: 0;
     transform: translate(0, 0);
   }
