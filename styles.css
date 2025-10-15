@@ -173,7 +173,7 @@ html {
   width: 70%;
   top: 30%;
   left: 15%;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   animation: animScroll1 500ms ease 0ms;
   animation-timeline: scroll(block nearest);
 }
