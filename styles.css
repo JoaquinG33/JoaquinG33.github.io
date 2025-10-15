@@ -663,12 +663,12 @@ footer {
 }
 @keyframes animScroll1 {
   from {
-    filter: blur();
+    filter: blur() brightness(1);
     transform: scale(1);
   }
   to {
-    transform: scale(0.7);
-    filter: blur(2px);
+    transform: scale(0.7) ;
+    filter: blur(2px) brightness(.5);
   }
 }
 @keyframes animGaleria {
