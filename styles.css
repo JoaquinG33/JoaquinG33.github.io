@@ -110,7 +110,7 @@ html {
 /* HERO */
 .heroContainer {
   display: flex;
-  height: 120svh;
+  height: 120dvh;
   z-index: -2;
 }
 .heroImagen {
@@ -751,11 +751,11 @@ footer {
   }
   .heroContainer {
     width: 100vw;
-    height: 120vh;
+    height: 120svh;
   }
   .heroImagen {
     width: 100vw;
-    height: 120vh;
+    height: 120svh;
   }
   .btnContactoContainer {
     flex-direction: column;
