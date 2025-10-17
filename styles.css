@@ -278,8 +278,8 @@ html {
   border-radius: 24px;
 
   background-color: var(--colorBar);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter:saturate(120%) blur(20px);
+  -webkit-backdrop-filter:saturate(100%) blur(20px);
 }
 
 .boton {
@@ -747,15 +747,15 @@ footer {
 /* Celulares */
 @media only screen and (max-width: 600px) {
   html {
-    scroll-padding-top: 90px;
+    scroll-padding-top: 55px;
   }
   .heroContainer {
     width: 100vw;
-    height: 120svh;
+    height: 120vh;
   }
   .heroImagen {
     width: 100vw;
-    height: 120svh;
+    height: 120vh;
   }
   .btnContactoContainer {
     flex-direction: column;
