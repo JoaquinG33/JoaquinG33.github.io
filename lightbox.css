@@ -157,8 +157,9 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-caption {
+  opacity: 0;
   font-family: "Lato", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: #fffefc; 
   font-weight: 600;
   line-height: 1em;
@@ -169,6 +170,7 @@ body.lb-disable-scrolling {
 }
 
 .lb-data .lb-number {
+  opacity: 0;
   font-family: "Lato", sans-serif;
   display: block;
   clear: left;

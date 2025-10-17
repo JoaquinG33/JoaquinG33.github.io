@@ -5,6 +5,7 @@ const botonComida = document.getElementById("icoComida");
 const botonVideoclip = document.getElementById("icoClip");
 const botonHeroVideoclip = document.getElementById("btnClips");
 const botonHeroGaleria = document.getElementById("btnGaleria");
+const botonVerTodo = document.getElementById("verTodo");
 const botonTodas = document.getElementById("icoTodo");
 const fondoGaleria = document.getElementById("galeriaId");
 const fondoContainer = document.getElementById("containerId");
@@ -22,10 +23,11 @@ const imgGente = document.querySelectorAll(".gente");
 const imgComida = document.querySelectorAll(".comida");
 const videoclip = document.querySelectorAll(".videoclip");
 const global = document.querySelectorAll(".global");
+const oculto = document.querySelectorAll(".oculto");
 const botones = document.querySelectorAll(".boton");
 
-botonNaturaleza.onclick = fotosNaturaleza;
 
+botonNaturaleza.onclick = fotosNaturaleza;
 botonCiudad.onclick = fotosCiudad;
 botonGente.onclick = fotosGente;
 botonComida.onclick = fotosComida;
@@ -35,7 +37,7 @@ botonHeroVideoclip.onclick = videoClips;
 botonTodas.onclick = todas;
 modeToggle.onclick = toggle;
 menuClick.onclick = desplegar;
-
+botonVerTodo.onclick = verTodo;
 //Menu desplegable
 function desplegar() {
   if (menu.classList.toggle("change")) {
@@ -83,7 +85,17 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".anim").forEach((el) => observer.observe(el));
 
+oculto.forEach((oculto) =>{
+  oculto.style.display = "none";
+})
 
+function verTodo(){
+  oculto.forEach((oculto) =>{
+  oculto.style.display = "block";
+})
+  botonVerTodo.style.display = "none";
+ 
+}
 
 function todas() {
   titulo.innerText = "Galería";
