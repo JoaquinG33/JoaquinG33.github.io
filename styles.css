@@ -3,6 +3,7 @@
   --ciudadBorde: oklch(86.9% 0.005 56.366);
   --genteBorde: oklch(0.746 0.16 232.661);
   --comidaBorde: oklch(90.5% 0.182 98.111);
+  --panoBorde: oklch(71.003% 0.1962 307.099);
   --videoClipBorde: oklch(63.7% 0.237 25.331);
 
   /*Los colores son los de la paleta GRAY de Tailwind*/
@@ -224,6 +225,11 @@ html {
   margin-bottom: 16px;
   transition: 200ms;
 }
+
+.panoramica{
+  
+  height: 60vh;
+}
 .videoclip {
   border-radius: 12px;
   display: none;
@@ -382,6 +388,7 @@ html {
 #icoGente:hover,
 #icoComida:hover,
 #icoTodo:hover,
+#icoPano:hover,
 #icoClip:hover {
   border-left: 10px solid;
 
@@ -396,6 +403,9 @@ html {
 }
 #icoGente:hover {
   border-color: var(--genteBorde);
+}
+#icoPano:hover{
+  border-color: var(--panoBorde);
 }
 
 #icoComida:hover {
@@ -805,6 +815,10 @@ footer {
     border-radius: 3px;
     margin-bottom: 10px;
   }
+  .panoramica{
+  
+  height: 25vh;
+}
   .titulo {
     font-size: 2rem;
   }
