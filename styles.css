@@ -216,7 +216,8 @@ html {
 }
 .foto {
   display: block;
-
+max-inline-size: 100%;
+  block-size: auto;
   width: 100%;
   opacity: 0;
   height: 100%;
@@ -227,7 +228,8 @@ html {
 }
 
 .panoramica{
-  
+  max-inline-size: 100%;
+  block-size: auto;
   height: 60vh;
 }
 .videoclip {
@@ -814,9 +816,10 @@ footer {
   .foto {
     border-radius: 3px;
     margin-bottom: 10px;
+   
   }
   .panoramica{
-  
+ 
   height: 25vh;
 }
   .titulo {
