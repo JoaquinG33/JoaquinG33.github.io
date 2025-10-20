@@ -214,6 +214,9 @@ html {
   z-index: 1;
   padding-top: 80px;
 }
+.oculto{
+  opacity: 1!important;
+}
 .foto {
   display: block;
 max-inline-size: 100%;
