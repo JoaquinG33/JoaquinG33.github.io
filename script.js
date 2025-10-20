@@ -41,6 +41,8 @@ botonTodas.onclick = todas;
 modeToggle.onclick = toggle;
 menuClick.onclick = desplegar;
 botonVerTodo.onclick = verTodo;
+let mediaQ = window.matchMedia("(max-width: 600px)");
+
 //Menu desplegable
 function desplegar() {
   if (menu.classList.toggle("change")) {
@@ -89,6 +91,15 @@ oculto.forEach((oculto) => {
   oculto.style.display = "none";
 });
 
+function checkearMediaQ() {
+  if (mediaQ.matches) {
+    containerGaleria.style.columns = "2 180px";
+    console.log("cel");
+  } else {
+    containerGaleria.style.columns = "3 300px";
+    console.log("pc");
+  }
+}
 function verTodo() {
   oculto.forEach((oculto) => {
     oculto.style.display = "block";
@@ -98,10 +109,11 @@ function verTodo() {
 
 function todas() {
   titulo.innerText = "Galería";
+  checkearMediaQ();
   global.forEach((global) => {
     global.style.display = "block";
   });
-   containerGaleria.style.columns = "3 300px";
+
   videoclip.forEach((videoclip) => {
     videoclip.style.display = "none";
   });
@@ -140,8 +152,9 @@ function fotosPanoramicas() {
 }
 function fotosNaturaleza() {
   animacionGaleria();
+  checkearMediaQ();
   titulo.innerText = "Naturaleza";
-  containerGaleria.style.columns = "3 300px";
+
   imgNaturaleza.forEach((imgNaturaleza) => {
     imgNaturaleza.style.opacity = "100%";
     imgNaturaleza.style.display = "block";
@@ -170,8 +183,9 @@ function fotosNaturaleza() {
 
 function fotosCiudad() {
   animacionGaleria();
+  checkearMediaQ();
   titulo.innerText = "Urbano";
-  containerGaleria.style.columns = "3 300px";
+
   imgCiudad.forEach((imgCiudad) => {
     imgCiudad.style.opacity = "100%";
     imgCiudad.style.display = "block";
@@ -200,8 +214,9 @@ function fotosCiudad() {
 
 function fotosGente() {
   animacionGaleria();
+  checkearMediaQ();
   titulo.innerText = "Personas";
-  containerGaleria.style.columns = "3 300px";
+
   imgGente.forEach((imgGente) => {
     imgGente.style.opacity = "100%";
     imgGente.style.display = "block";
@@ -230,8 +245,9 @@ function fotosGente() {
 
 function fotosComida() {
   animacionGaleria();
+  checkearMediaQ();
   titulo.innerText = "Culinario";
-  containerGaleria.style.columns = "3 300px";
+
   imgComida.forEach((imgComida) => {
     imgComida.style.opacity = "100%";
     imgComida.style.display = "block";
@@ -260,8 +276,9 @@ function fotosComida() {
 
 function videoClips() {
   animacionGaleria();
+  checkearMediaQ();
   titulo.innerText = "Videoclips";
-  containerGaleria.style.columns = "3 300px";
+
   videoclip.forEach((videoclip) => {
     videoclip.style.opacity = "100%";
     videoclip.style.display = "block";
