@@ -1,8 +1,7 @@
 :root {
   --naturalezaBorde: oklch(76.8% 0.233 130.85);
   --ciudadBorde: oklch(86.9% 0.005 56.366);
-  --genteBorde: oklch(0.746 0.16 232.661);
-  --comidaBorde: oklch(90.5% 0.182 98.111);
+   --comidaBorde: oklch(90.5% 0.182 98.111);
   --panoBorde: oklch(71.003% 0.1962 307.099);
   --videoClipBorde: oklch(63.7% 0.237 25.331);
 
@@ -390,7 +389,6 @@ max-inline-size: 100%;
 }
 #icoNaturaleza:hover,
 #icoCiudad:hover,
-#icoGente:hover,
 #icoComida:hover,
 #icoTodo:hover,
 #icoPano:hover,
@@ -406,9 +404,7 @@ max-inline-size: 100%;
 #icoCiudad:hover {
   border-color: var(--ciudadBorde);
 }
-#icoGente:hover {
-  border-color: var(--genteBorde);
-}
+
 #icoPano:hover{
   border-color: var(--panoBorde);
 }

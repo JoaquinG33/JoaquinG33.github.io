@@ -1,6 +1,5 @@
 const botonNaturaleza = document.getElementById("icoNaturaleza");
 const botonCiudad = document.getElementById("icoCiudad");
-const botonGente = document.getElementById("icoGente");
 const botonComida = document.getElementById("icoComida");
 const botonVideoclip = document.getElementById("icoClip");
 const botonPanoramicas = document.getElementById("icoPano");
@@ -21,7 +20,6 @@ let menu = document.querySelector(".menuDesplegableDiv");
 
 const imgNaturaleza = document.querySelectorAll(".naturaleza");
 const imgCiudad = document.querySelectorAll(".ciudad");
-const imgGente = document.querySelectorAll(".gente");
 const imgComida = document.querySelectorAll(".comida");
 const videoclip = document.querySelectorAll(".videoclip");
 const imgPano = document.querySelectorAll(".panoramica");
@@ -31,7 +29,6 @@ const botones = document.querySelectorAll(".boton");
 
 botonNaturaleza.onclick = fotosNaturaleza;
 botonCiudad.onclick = fotosCiudad;
-botonGente.onclick = fotosGente;
 botonComida.onclick = fotosComida;
 botonPanoramicas.onclick = fotosPanoramicas;
 botonVideoclip.onclick = videoClips;
@@ -137,10 +134,6 @@ function fotosPanoramicas() {
     imgCiudad.style.display = "none";
   });
 
-  imgGente.forEach((imgGente) => {
-    imgGente.style.display = "none";
-  });
-
   imgComida.forEach((imgComida) => {
     imgComida.style.display = "none";
   });
@@ -162,10 +155,6 @@ function fotosNaturaleza() {
 
   imgCiudad.forEach((imgCiudad) => {
     imgCiudad.style.display = "none";
-  });
-
-  imgGente.forEach((imgGente) => {
-    imgGente.style.display = "none";
   });
 
   imgComida.forEach((imgComida) => {
@@ -198,9 +187,6 @@ function fotosCiudad() {
     imgNaturaleza.style.display = "none";
   });
 
-  imgGente.forEach((imgGente) => {
-    imgGente.style.display = "none";
-  });
 
   imgComida.forEach((imgComida) => {
     imgComida.style.display = "none";
@@ -212,36 +198,6 @@ function fotosCiudad() {
   botonVerTodo.style.display = "none";
 }
 
-function fotosGente() {
-  animacionGaleria();
-  checkearMediaQ();
-  titulo.innerText = "Personas";
-
-  imgGente.forEach((imgGente) => {
-    imgGente.style.opacity = "100%";
-    imgGente.style.display = "block";
-  });
-
-  imgPano.forEach((imgPano) => {
-    imgPano.style.display = "none";
-  });
-
-  imgCiudad.forEach((imgCiudad) => {
-    imgCiudad.style.display = "none";
-  });
-
-  imgNaturaleza.forEach((imgNaturaleza) => {
-    imgNaturaleza.style.display = "none";
-  });
-
-  imgComida.forEach((imgComida) => {
-    imgComida.style.display = "none";
-  });
-  videoclip.forEach((videoclip) => {
-    videoclip.style.display = "none";
-  });
-  botonVerTodo.style.display = "none";
-}
 
 function fotosComida() {
   animacionGaleria();
@@ -265,9 +221,7 @@ function fotosComida() {
     imgNaturaleza.style.display = "none";
   });
 
-  imgGente.forEach((imgGente) => {
-    imgGente.style.display = "none";
-  });
+ 
   videoclip.forEach((videoclip) => {
     videoclip.style.display = "none";
   });
@@ -293,10 +247,6 @@ function videoClips() {
 
   imgNaturaleza.forEach((imgNaturaleza) => {
     imgNaturaleza.style.display = "none";
-  });
-
-  imgGente.forEach((imgGente) => {
-    imgGente.style.display = "none";
   });
 
   imgComida.forEach((imgComida) => {
