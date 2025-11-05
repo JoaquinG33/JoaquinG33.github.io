@@ -7,6 +7,7 @@ const botonHeroVideoclip = document.getElementById("btnClips");
 const botonHeroGaleria = document.getElementById("btnGaleria");
 const botonVerTodo = document.getElementById("verTodo");
 const botonTodas = document.getElementById("icoTodo");
+const btnForm = document.querySelector(".btnFormulario")
 const fondoGaleria = document.getElementById("galeriaId");
 const fondoContainer = document.getElementById("containerId");
 const titulo = document.getElementById("tituloId");
@@ -263,3 +264,42 @@ function animacionGaleria() {
   }
   setTimeout(removerClase, 500);
 }
+
+//WEB3FORMS
+
+const form = document.getElementById('formulario');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+  result.innerHTML = "Enviando formulario..."
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "¡Formulario enviado!";
+                btnForm.style.background = "oklch(70.8% 0 0)";
+                btnForm.style.zIndex = "-1";
+
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "El formulario no pudo ser enviado. Intente más tarde.";
+        })
+     
+});
